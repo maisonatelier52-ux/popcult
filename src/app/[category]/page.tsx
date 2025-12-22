@@ -6,7 +6,7 @@ import politicsData from '../../../public/data/politics.json';
 import financeData from '../../../public/data/entertainment.json';
 import sportsData from '../../../public/data/sports.json';
 import entertainmentData from '../../../public/data/entertainment.json';
-import LatestNewsWithStickyPromo from '../component/LatestNewsWithStickyPromo';
+import LatestNewsWithStickyPromo from '../../component/LatestNewsWithStickyPromo'
 
 interface NewsItem {
   category: string;

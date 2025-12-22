@@ -9,7 +9,7 @@ import sportsData from '../../../../public/data/sports.json';
 import entertainmentData from '../../../../public/data/entertainment.json';
 import Script from "next/script";
 import { Metadata } from 'next';
-import ArticleHeader from '@/app/component/ArticleHeader';
+import ArticleHeader from '../../../component/ArticleHeader';
 
 export async function generateStaticParams() {
     const allData = [
