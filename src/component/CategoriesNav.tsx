@@ -15,31 +15,32 @@ const categories: Category[] = [
   { label: 'NEW LOOK', href: '/new-look' },
   { label: 'CELEBRITY BUZZ', href: '/celebrity-buzz' },
   { label: 'FASHION', href: '/fashion' },
-  { label: 'MOVIES & TV', href: '/movies-tv', hasDropdown: true },
+  { label: 'MOVIES & TV', href: '/movies-tv' },
   { label: 'CULTURE', href: '/culture' },
-  { label: 'PAGES', href: '/pages', hasDropdown: true },
+  { label: 'PAGES', href: '/pages' },
 ];
 
 export default function CategoriesNav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="w-full border-t border-b border-gray-200 bg-white">
-      <div className="max-w-7xl mx-auto px-4">
+    <div className="w-full border-gray-200 bg-white">
+      <div className="mx-auto px-4">
         {/* Desktop */}
         <div className="hidden lg:flex items-center gap-6 py-4">
           {/* Grid Icon */}
-          <button className="flex items-center justify-center w-8 h-8 border border-black">
-            <span className="grid grid-cols-2 gap-1">
-              <span className="w-2 h-2 bg-black" />
-              <span className="w-2 h-2 bg-black" />
-              <span className="w-2 h-2 bg-black" />
-              <span className="w-2 h-2 bg-black" />
-            </span>
-          </button>
+         <button className="flex items-center justify-center w-8 h-8 ">
+  <span className="grid grid-cols-2 gap-1">
+    <span className="w-2 h-2 border-3 border-black" />
+    <span className="w-2 h-2 border-3 border-black" />
+    <span className="w-2 h-2 border-3 border-black" />
+    <span className="w-2 h-2 border-3 border-black" />
+  </span>
+</button>
+
 
           {/* Categories */}
-          <nav className="flex items-center gap-5 text-sm font-semibold tracking-wide">
+          <nav className="flex items-center gap-5 tracking-wide">
             {categories.map((item, index) => (
               <div key={item.label} className="flex items-center gap-5">
                 <Link
@@ -50,7 +51,7 @@ export default function CategoriesNav() {
                       : 'hover:text-gray-700'
                   }`}
                 >
-                  {item.label}
+                  <span className='text-[15px] font-bold'>{item.label}</span>
                   {item.hasDropdown && (
                     <ChevronDown className="w-4 h-4" />
                   )}

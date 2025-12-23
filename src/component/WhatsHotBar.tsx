@@ -18,24 +18,23 @@ interface Props {
 
 export default function WhatsHotBar({data}: Props) {
   return (
-    <div className="w-full bg-red-600">
-      <div className="max-w-7xl mx-auto px-4">
-         <Link
-        href={`/${data.category}/${data.slug}`}
-        title={data.title}
-        style={{ color: "inherit" }}
-      
-          className="flex items-center gap-2 py-3 text-white text-sm sm:text-base font-semibold truncate"
-        >
-          <span className="whitespace-nowrap font-bold">
-            What&apos;s Hot:
-          </span>
+<div className="w-full bg-[#ff0f0f] text-white">
+  <div className="mx-auto px-4">
+    <Link
+      href={`/${data.category}/${data.slug}`}
+      title={data.title}
+      className="flex items-center gap-2 py-3 truncate"
+    >
+      <span className="whitespace-nowrap font-bold text-[16px]">
+        What&apos;s Hot:
+      </span>
 
-          <span className="truncate">
-            {data.title}
-          </span>
-        </Link>
-      </div>
-    </div>
+      <span className="truncate text-[17px] font-semibold">
+        {data.title}
+      </span>
+    </Link>
+  </div>
+</div>
+
   );
 }
