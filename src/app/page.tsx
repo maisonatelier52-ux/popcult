@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div>
       <WhatsHotBar data={businessData[0]} />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className=" mx-auto px-4 sm:px-6 lg:px-8">
         <FeaturedEditorialGrid data={[businessData[0], politicsData[0], financeData[0], usData[0]]} />
         <HeroSection data={[politicsData[1], businessData[1], financeData[1], worldData[1], sportsData[0], entertainmentData[0], usData[1], businessData[2]]} />
         <EditorialGrid data={[politicsData[3], politicsData[4], politicsData[5], politicsData[6]]} />

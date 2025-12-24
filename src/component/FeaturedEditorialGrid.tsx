@@ -1,59 +1,55 @@
-  import Image from 'next/image';
-  import Link from 'next/link';
+import Image from 'next/image';
+import Link from 'next/link';
 
-  interface NewsData {
-    slug: string;
-    category: string;
-    title: string;
-    shortdescription: string;
-    description: string;
-    date: string;
-    image: string;
-  }
+interface NewsData {
+  slug: string;
+  category: string;
+  title: string;
+  shortdescription: string;
+  description: string;
+  date: string;
+  image: string;
+}
 
-  interface Props {
-    data: NewsData[];
-  }
+interface Props {
+  data: NewsData[];
+}
 
-  export default function FeaturedEditorialGrid({ data }: Props) {
-    return (
-      <section className="border-b border-l border-r border-black">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-black">
-          {data.map((item) => (
-            <article
-              key={item.slug}
-              className="flex gap-4 p-4"
-            >
-              <Link
-                href={`/${item.category}/${item.slug}`}
-                title={item.title}
-                className="block w-full"
-                style={{ color: "inherit" }}
-              >
-                {/* Image */}
-                <div className="relative w-24 h-32 flex-shrink-0">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </Link>
+export default function FeaturedEditorialGrid({ data }: Props) {
+  return (
+ <section className="border-l border-r border-b border-black">
+  <div className="flex flex-wrap">
+    {data.map((item, index) => (
+      <article
+        key={item.slug}
+        className="
+          relative flex p-2
+          w-full md:w-1/2 lg:w-1/4
+        "
+      >
+        <div className="flex gap-4 w-full">
+          <div className="relative w-[110px] h-[140px] shrink-0">
+            <Image src={item.image} alt={item.title} fill className="object-cover" />
+          </div>
 
-              {/* Content */}
-              <div className="flex flex-col gap-2">
-                <span className="inline-block bg-red-600 text-white text-[12px] font-bold px-2 py-1 w-fit">
-                  {item.category}
-                </span>
+          <div className="relative flex flex-col gap-2 overflow-hidden">
+            <span className="absolute top-3 right-0 text-[60px] font-serif font-bold text-black opacity-[0.08] leading-none select-none">
+              {String(index + 1).padStart(2, "0")}
+            </span>
 
-                <h3 className="font-serif text-[16px] font-semibold leading-tight line-clamp-3 hover:underline cursor-pointer">
-                  {item.title}
-                </h3>
-              </div>
-            </article>
-          ))}
+            <span className="bg-red-600 text-white text-xs font-bold px-2 py-1 w-fit">
+              {item.category}
+            </span>
+
+            <h3 className="relative z-10 font-serif text-base font-semibold leading-snug line-clamp-3">
+              {item.title}
+            </h3>
+          </div>
         </div>
-      </section>
-    );
-  }
+      </article>
+    ))}
+  </div>
+</section>
+
+  );
+}
