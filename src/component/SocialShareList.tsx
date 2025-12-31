@@ -9,7 +9,7 @@ import { HiLink } from 'react-icons/hi2';
 
 export default function SocialShareList() {
   return (
-    <div className="flex flex-col sticky top-5 items-center gap-2 text-black hidden md:flex">
+    <div className="flex flex-col sticky top-5 items-center gap-2 text-black">
        {/* Share */}
       <button className="flex flex-col items-center gap-1">
         <FiShare className="text-lg" />

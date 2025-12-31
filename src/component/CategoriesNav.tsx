@@ -12,7 +12,7 @@ type Category = {
 };
 
 const categories: Category[] = [
-  { label: 'HOME', href: '/' },
+  { label: 'Home', href: '/' },
   { label: 'Business', href: '/business' },
   { label: 'Politics', href: '/politics' },
   { label: 'World', href: '/world' },

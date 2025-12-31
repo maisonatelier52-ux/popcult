@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import CategoryCard from "./CategoryCard";
 import UpgradePromoCard from "./UpgradePromoCard";
+import Pagination from "./Pagintation";
 
 interface NewsData {
   slug: string;
@@ -18,24 +19,21 @@ interface Props {
   data: NewsData[];
 }
 
+const ITEMS_PER_PAGE = 5;
+
 export default function CategoryContent({ data }: Props) {
   const leftRef = useRef<HTMLDivElement>(null);
   const stopRef = useRef<HTMLDivElement>(null);
-  const [stopScroll, setStopScroll] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setStopScroll(entry.isIntersecting);
-      },
-      { root: null, threshold: 0.1 }
-    );
+  const [currentPage, setCurrentPage] = useState(1);
 
-    if (stopRef.current) observer.observe(stopRef.current);
+  const totalPages = Math.ceil(data.length / ITEMS_PER_PAGE);
 
-    return () => observer.disconnect();
-  }, []);
-
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const paginatedData = data.slice(
+    startIndex,
+    startIndex + ITEMS_PER_PAGE
+  );
 
   return (
     <div className="w-full mb-8">
@@ -43,25 +41,27 @@ export default function CategoryContent({ data }: Props) {
 
         {/* LEFT SECTION */}
         <div className="relative w-full" ref={leftRef}>
-          <div className={`transition-transform duration-500 ${stopScroll ? "sticky top-[50px]" : ""}`}>
+          <div className="mt-4">
+            {paginatedData.map((item, index) => (
+              <div key={item.slug}>
+                <CategoryCard data={item} />
+                {index < paginatedData.length - 1 && (
+                  <hr className="my-5 border-gray-300" />
+                )}
+              </div>
+            ))}
 
-
-            <div className="mt-4">
-              {data.map((item, index) => (
-                <div key={index}>
-                  <CategoryCard data={item} />
-                  {index < data.length - 1 && (
-                    <hr style={{ margin: "20px 0" }} className="text-gray-300" />
-                  )}
-                </div>
-              ))}
-            </div>
-
+            {/* PAGINATION */}
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={setCurrentPage}
+            />
           </div>
         </div>
 
         {/* RIGHT SECTION */}
-        <div className="w-full lg:w-1/3 lg:mt-0">
+        <div className="w-full lg:w-1/3">
           <div className="sticky top-10">
             <UpgradePromoCard />
           </div>

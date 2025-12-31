@@ -16,7 +16,7 @@ interface Props {
 
 export default function LatestNewsList({data}:Props) {
   return (
-    <aside className="w-full">
+    <div className="w-full">
       {/* Heading */}
       <h2 className="text-[20px] md:text-[28px] font-semibold border-b-4 border-black inline-block mb-3">
         Latest News
@@ -48,6 +48,6 @@ export default function LatestNewsList({data}:Props) {
 </Link>
         ))}
       </div>
-    </aside>
+    </div>
   );
 }

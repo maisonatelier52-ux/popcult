@@ -19,7 +19,7 @@ export default function SecondEditorial({
   slug
 }: EditorialCardProps) {
   return (
-    <div className="mb-6">
+    <div className="mb-">
 
       {/* ================= MOBILE + TABLET ================= */}
               <Link
@@ -79,9 +79,9 @@ export default function SecondEditorial({
         </h3>
 
         {/* Meta */}
-        <div className="mt-2 text-[12px] text-gray-600">
+        <div className="mt-1 text-[12px] text-gray-600">
           <div>{date}</div>
-          <div className="mt-1">
+          <div className="">
             By{" "}
             <span className="text-[#000080] font-medium hover:underline cursor-pointer">
               {author}

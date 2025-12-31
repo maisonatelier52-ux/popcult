@@ -13,6 +13,7 @@ import usData from '../../public/data/us.json';
 import financeData from '../../public/data/finance.json';
 import sportsData from '../../public/data/sports.json';
 import entertainmentData from '../../public/data/entertainment.json';
+import ScrollToTop from "@/component/ScrollToTop";
 
 
 export default function Home() {
@@ -28,6 +29,7 @@ export default function Home() {
         <SecondSection data={[worldData[3], usData[4], financeData[7]]} />
         <LatestNewsWithStickyPromo data={[usData[4], usData[5], worldData[4], worldData[5], worldData[6], worldData[7], usData[6], worldData[8], usData[7]]} />
       </div>
+      <ScrollToTop />
     </div>
   );
 }

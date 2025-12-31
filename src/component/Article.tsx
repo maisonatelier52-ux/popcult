@@ -51,17 +51,20 @@ export default function Article({ article }: Props) {
                 <div className="w-full lg:w-300 mb-6 md:mb-0">
                     {/* Other components on the left */}
                     <ArticleImage src={article.image} alt={article.title} />
-                    <div className="flex flex-col md:flex-row space-x-12 mt-8">
-                        {/* SocialShareList - Sticky on Desktop and Hidden on Mobile */}
-                        <div className="hidden md:flex sticky top-5">
-                            <SocialShareList />
-                        </div>
+                 <div className="flex flex-col md:flex-row mt-8 gap-12">
+  
+  {/* SocialShareList */}
+  <div className="hidden md:block sticky top-8 self-start">
+    <SocialShareList />
+  </div>
 
-                        {/* Article With Description */}
-                        <div ref={leftRef}>
-                            <ArticleWithDescr data={article} />
-                        </div>
-                    </div>
+  {/* Article content */}
+  <div ref={leftRef} className="flex-1">
+    <ArticleWithDescr data={article} />
+  </div>
+
+</div>
+
 
 
                     <ShareComponent />

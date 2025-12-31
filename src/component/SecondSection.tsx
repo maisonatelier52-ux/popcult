@@ -35,30 +35,32 @@ export default function SecondSection({ data }: Props) {
                 </div>
 
                 {/* Right: Latest News */}
-                <div className="lg:col-span-1 flex flex-col divide-y divide-gray-300 space-y-5">
-                    <div className="mb-5">
-                        <SecondEditorial
-                            key={data[1].slug}
-                            title={data[1].title}
-                            image={data[1].image}
-                            date={data[1].date}
-                            author="David"
-                            category={data[1].category}
-                            slug={data[1].slug}
-                        />
-                    </div>
-                    <div>
-                        <SecondEditorial
-                            key={data[2].slug}
-                            title={data[2].title}
-                            image={data[2].image}
-                            date={data[2].date}
-                            author="David"
-                            category={data[2].category}
-                            slug={data[2].slug}
-                        />
-                    </div>
-                </div>
+             <div className="lg:col-span-1 flex flex-col divide-y divide-gray-200">
+  <div className="py-4">
+    <SecondEditorial
+      key={data[1].slug}
+      title={data[1].title}
+      image={data[1].image}
+      date={data[1].date}
+      author="David"
+      category={data[1].category}
+      slug={data[1].slug}
+    />
+  </div>
+
+  <div className="py-6">
+    <SecondEditorial
+      key={data[2].slug}
+      title={data[2].title}
+      image={data[2].image}
+      date={data[2].date}
+      author="David"
+      category={data[2].category}
+      slug={data[2].slug}
+    />
+  </div>
+</div>
+
 
             </div>
         </section>
