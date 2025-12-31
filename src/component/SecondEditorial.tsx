@@ -10,7 +10,7 @@ export type EditorialCardProps = {
   slug:string;
 };
 
-export default function EditorialCard({
+export default function SecondEditorial({
   title,
   image,
   date,
@@ -19,18 +19,18 @@ export default function EditorialCard({
   slug
 }: EditorialCardProps) {
   return (
-    <div>
+    <div className="mb-6">
 
       {/* ================= MOBILE + TABLET ================= */}
-                <Link
+              <Link
   href={`/${category}/${slug}`}
   title={title}
 >
-      <div className="flex gap-4 lg:hidden">
 
+      <div className="flex gap-4 lg:hidden">
         {/* Text */}
         <div className="flex-1">
-          <h3 className="text-[18px] font-semibold leading-[1.2] tracking-tight hover:underline cursor-pointer">
+          <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.2] tracking-tight hover:underline cursor-pointer">
             {title}
           </h3>
 
@@ -46,25 +46,25 @@ export default function EditorialCard({
         </div>
 
         {/* Image */}
-        <div className="relative w-[110px] md:w-[160px] h-[90px] md:h-[110px] flex-shrink-0">
-          <Image
-            src={image}
-            alt={title}
-            fill
-            className="object-cover"
-          />
-        </div>
+         <div className="relative w-[110px] md:w-[160px] h-[90px] md:h-[110px] flex-shrink-0">
+                  <Image
+                    src={image}
+                    alt={title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
       </div>
 </Link>
 
       {/* ================= DESKTOP (UNCHANGED) ================= */}
               <Link
-  href={`/${category}/${slug}`}
-  title={title}
-> 
+        href={`/${category}/${slug}`}
+        title={title}
+      >
       <div className="hidden lg:block">
         {/* Image */}
-        <div className="relative w-full h-46 mb-3">
+        <div className="relative w-full h-60 mb-3">
           <Image
             src={image}
             alt={title}
@@ -74,7 +74,7 @@ export default function EditorialCard({
         </div>
 
         {/* Title */}
-        <h3 className="text-[18px] font-semibold leading-[1.2] tracking-tight hover:underline cursor-pointer">
+        <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.2] tracking-tight hover:underline cursor-pointer">
           {title}
         </h3>
 
@@ -89,7 +89,7 @@ export default function EditorialCard({
           </div>
         </div>
       </div>
-</Link>
+      </Link>
 
     </div>
   );

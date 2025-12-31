@@ -1,3 +1,6 @@
+// Add this at the top of your file to make this a Client Component
+"use client";
+
 import { FaFacebookF, FaLink, FaTwitter } from "react-icons/fa";
 
 interface ShareArticleProps {

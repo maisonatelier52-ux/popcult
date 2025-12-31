@@ -7,6 +7,9 @@ import financeData from '../../../public/data/entertainment.json';
 import sportsData from '../../../public/data/sports.json';
 import entertainmentData from '../../../public/data/entertainment.json';
 import LatestNewsWithStickyPromo from '../../component/LatestNewsWithStickyPromo'
+import CategoryHeader from '@/component/CategoryHeader';
+import WhatsHotBar from '@/component/WhatsHotBar';
+import CategoryContent from '@/component/CategoryContent';
 
 interface NewsItem {
   category: string;
@@ -58,8 +61,10 @@ export default async function CategoryPage({
 
   return (
     <>
-      <div className="w-full max-w-7xl px-5 md:px-8 mx-auto md:py-8 py-0">
-      <LatestNewsWithStickyPromo data={data}/>
+    <WhatsHotBar data={data[0]}/>
+        <CategoryHeader />
+       <div className=" mx-auto px-4 sm:px-6 lg:px-8">
+      <CategoryContent data={data}/>
       </div>
     </>
   );

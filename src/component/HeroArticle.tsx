@@ -1,5 +1,6 @@
 import Image from "next/image";
 import BelowHeroArticle from "./BelowHeroArticle";
+import Link from "next/link";
 
 interface NewsData {
   slug: string;
@@ -16,38 +17,48 @@ interface Props {
 }
 
 export default function HeroArticle({
-data
+  data
 }: Props) {
   return (
-    <article className="w-full border-b border-black pb-8">
-      <div className="relative w-full aspect-[16/10]">
-        <Image
-          src={data[0].image}
-          alt={data[0].title}
-          fill
-          priority
-          className="object-cover"
-        />
-      </div>
-      <div className="max-w-4xl mx-auto px-4 text-center mt-8">
-        <span className="inline-block bg-red-600 text-white text-xs font-bold px-4 py-2 uppercase tracking-wide">
-          {data[0].category}
-        </span>
-        <h1 className="mt-6 font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight">
-          {data[0].title}
-        </h1>
-        <div className="mt-6 text-sm text-gray-600">
-          <span>{data[0].date}</span>
-          <span className="mx-2">•</span>
-          <span>
-            By{" "}
-            <span className="font-semibold text-black cursor-pointer hover:underline">
-              david
-            </span>
-          </span>
+    <article className="w-full">
+      <Link
+        href={`/${data[0].category}/${data[0].slug}`}
+        title={data[0].title}
+      >
+
+        <div className="relative w-full h-60 sm:h-84 md:h-94 lg:h-110">
+          <Image
+            src={data[0].image}
+            alt={data[0].title}
+            fill
+            priority
+            className="object-cover"
+          />
+          {/* Red small box with part inside the image */}
+          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-[#000080] text-white text-[9px] sm:text-[10px] md:text-[11px] lg:text-[12px] font-bold px-4 py-2 uppercase tracking-wide text-center" style={{ marginBottom: '-10px' }}>
+            {data[0].category}
+          </div>
         </div>
-      </div>
-      <BelowHeroArticle data={[data[1],data[2],data[3]]}/>
+
+        <div className=" mx-auto text-center">
+
+
+          <h1 className="mt-6 text-[25px] sm:text-[30px] md:text-[40px] lg:text-[50px] font-semibold tracking-tight leading-[1.1]">
+            {data[0].title}
+          </h1>
+          <div className="mt-1 md:mt-3 text-[13px] text-gray-600">
+            <span>{data[0].date}</span>
+            <span className="mx-2">•</span>
+            <span>
+              By{" "}
+              <span className="font-semibold text-[#000080] cursor-pointer hover:underline">
+                David
+              </span>
+            </span>
+          </div>
+        </div>
+      </Link>
+      <BelowHeroArticle data={[data[1], data[2], data[3]]} />
     </article>
   );
 }

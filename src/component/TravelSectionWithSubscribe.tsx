@@ -1,3 +1,6 @@
+"use client"
+  
+import { useEffect, useRef, useState } from "react";
 import SubscribeNewsletter from "./SubscribeNewsletter";
 import CategorySectionHeader from "./CategorySectionHeader";
 import EditorialGrid2x2 from "./EditorialGrid2x2";
@@ -16,24 +19,42 @@ interface Props {
   data: NewsData[];
 }
 
+export default function TravelSectionWithSubscribe({ data }: Props) {
+  const leftRef = useRef<HTMLDivElement>(null);
+  const stopRef = useRef<HTMLDivElement>(null);
+  const [stopScroll, setStopScroll] = useState(false);
 
-export default function TravelSectionWithSubscribe({data}:Props) {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setStopScroll(entry.isIntersecting);
+      },
+      { root: null, threshold: 0.1 }
+    );
+
+    if (stopRef.current) observer.observe(stopRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="max-w-7xl mx-auto px-4 lg:px-8 mt-12">
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-10">
+    <section className="mx-auto mt-5">
+      <div className="flex flex-col lg:flex-row gap-15">
+
         {/* LEFT: Subscribe */}
-        <div className="lg:col-span-1">
-          <SubscribeNewsletter />
+        <div className="w-full lg:w-70" >
+          <div className="sticky top-10">
+            <SubscribeNewsletter />
+          </div>
         </div>
 
-        {/* RIGHT: Category + Grid */}
-        <div className="lg:col-span-3">
-          {/* Category Header */}
+        {/* RIGHT: Category */}
+        <div className="w-full" ref={leftRef} >
           <CategorySectionHeader title="Finance" />
-
-          {/* 2x2 Editorial Grid */}
           <div className="mt-8">
-            <EditorialGrid2x2 data={[data[0],data[1],data[2],data[3]]}/>
+            <EditorialGrid2x2
+              data={[data[0], data[1], data[2], data[3]]}
+            />
           </div>
         </div>
       </div>

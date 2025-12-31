@@ -18,7 +18,7 @@ interface Props {
 export default function HeroSection({data}:Props) {
   return (
     <section className="mx-auto  mt-8">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-7 md:gap-15">
         <div className="lg:col-span-2">
           <HeroArticle data={[data[0],data[1],data[2],data[3]]}/>
         </div>

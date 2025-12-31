@@ -20,7 +20,7 @@ export default function Home() {
     <div>
       <WhatsHotBar data={businessData[0]} />
       <div className=" mx-auto px-4 sm:px-6 lg:px-8">
-        <FeaturedEditorialGrid data={[businessData[0], politicsData[0], financeData[0], usData[0]]} />
+        <FeaturedEditorialGrid data={[businessData[2], politicsData[0], financeData[3], usData[1]]} />
         <HeroSection data={[politicsData[1], businessData[1], financeData[1], worldData[1], sportsData[0], entertainmentData[0], usData[1], businessData[2]]} />
         <EditorialGrid data={[politicsData[3], politicsData[4], politicsData[5], politicsData[6]]} />
         <SecondSection data={[businessData[3], businessData[3], businessData[4]]} />

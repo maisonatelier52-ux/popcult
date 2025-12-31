@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface NewsData {
   slug: string;
   category: string;
@@ -16,26 +18,34 @@ export default function LatestNewsList({data}:Props) {
   return (
     <aside className="w-full">
       {/* Heading */}
-      <h2 className="text-xl font-serif font-bold border-b-4 border-black inline-block pb-2 mb-6">
+      <h2 className="text-[20px] md:text-[28px] font-semibold border-b-4 border-black inline-block mb-3">
         Latest News
       </h2>
 
       {/* List */}
-      <div className="flex flex-col divide-y">
+      <div className="flex flex-col divide-y divide-gray-200">
         {data.map((item) => (
-          <div key={item.slug} className="py-5">
-            <h3 className="font-serif text-lg font-semibold leading-snug hover:underline cursor-pointer">
+                     <Link
+      key={item.slug}
+      href={`/${item.category}/${item.slug}`}
+      title={item.title}
+      className="block"
+    >
+
+          <div key={item.slug} className="py-2">
+            <h3 className="text-[18px] font-semibold leading-tight hover:underline cursor-pointer">
               {item.title}
             </h3>
 
-            <div className="mt-2 text-sm text-gray-600">
+            <div className="mt-2 text-[12px] text-gray-600">
               <span>{item.date}</span>
               <span className="mx-2">|</span>
-              <span className="text-red-600 font-medium">
+              <span className="text-[#000080] font-medium">
                 {item.category}
               </span>
             </div>
           </div>
+</Link>
         ))}
       </div>
     </aside>

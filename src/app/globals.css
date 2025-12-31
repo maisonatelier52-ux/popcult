@@ -24,3 +24,17 @@
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 } */
+
+:root {
+  --font-system-helvetica:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+body {
+  font-family: var(--font-system-helvetica);
+}

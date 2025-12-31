@@ -18,7 +18,8 @@ interface Props {
 
 export default function WhatsHotBar({data}: Props) {
   return (
-<div className="w-full bg-[#ff0f0f] text-white">
+<div className="hidden md:block w-full bg-[#000080] text-white">
+
   <div className="mx-auto px-4">
     <Link
       href={`/${data.category}/${data.slug}`}

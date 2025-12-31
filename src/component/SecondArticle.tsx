@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 type HeroArticleProps = {
   image: string;
@@ -6,6 +7,8 @@ type HeroArticleProps = {
   title: string;
   author: string;
   date: string;
+  shortdescription: string
+  slug:string
 };
 
 export default function SecondArticle({
@@ -13,45 +16,51 @@ export default function SecondArticle({
   category,
   title,
   author,
+  slug,
   date,
+  shortdescription
 }: HeroArticleProps) {
   return (
-    <article className="w-full border-b border-black pb-8">
+    <article className="w-full">
+              <Link
+  href={`/${category}/${slug}`}
+  title={title}
+>
+
       {/* Image */}
-      <div className="relative w-full aspect-[16/10]">
-        <Image
-          src={image}
-          alt={title}
-          fill
-          priority
-          className="object-cover"
-        />
-      </div>
+     <div className="relative w-full h-60 sm:h-84 md:h-94 lg:h-110">
+            <Image
+              src={image}
+              alt={title}
+              fill
+              priority
+              className="object-cover"
+            />
+            {/* Red small box with part inside the image */}
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-[#000080] text-white text-[9px] sm:text-[10px] md:text-[11px] lg:text-[12px] font-bold px-4 py-2 uppercase tracking-wide text-center" style={{ marginBottom: '-10px' }}>
+              {category}
+            </div>
+          </div>
 
-      {/* Content */}
-      <div className="max-w-4xl mx-auto px-4 text-center mt-8">
-        {/* Category */}
-        <span className="inline-block bg-red-600 text-white text-xs font-bold px-4 py-2 uppercase tracking-wide">
-          {category}
-        </span>
 
-        {/* Title */}
-        <h1 className="mt-6 font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight">
+      <div className=" mx-auto text-center">
+    <h2 className="mt-6 text-[25px] sm:text-[30px] md:text-[40px] lg:text-[50px] font-semibold tracking-tight leading-[1.1]">
           {title}
-        </h1>
+        </h2>
+        <p className="mt-1 text-[15px] md:text-[18px] text-[#666666] tracking-tight leading-[1.1]">{shortdescription}</p>
 
-        {/* Meta */}
-        <div className="mt-6 text-sm text-gray-600">
+        <div className="mt-2 text-[12px] text-gray-600">
           <span>{date}</span>
           <span className="mx-2">•</span>
           <span>
             By{" "}
-            <span className="font-semibold text-black cursor-pointer hover:underline">
-              {author}
+            <span className="font-semibold text-[#000080] cursor-pointer hover:underline">
+              David
             </span>
           </span>
         </div>
       </div>
+</Link>
     </article>
   );
 }

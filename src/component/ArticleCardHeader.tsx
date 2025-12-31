@@ -2,22 +2,19 @@ type CategorySectionHeaderProps = {
   title: string;
 };
 
-export default function CategorySectionHeader({
+export default function ArticleCardHeader({
   title,
 }: CategorySectionHeaderProps) {
   return (
     <div className="w-full flex items-center">
       {/* Label box */}
       <div className="border border-black">
-        <div className="border-t-4 border-black px-8 py-1">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#000080]">
+        <div className="border-t-4 border-black px-20 py-1">
+          <h2 className="text-[18px] font-semibold">
             {title}
-          </h2>
+          </h2> 
         </div>
       </div>
-
-      {/* Line */}
-      <div className="flex-1 border-t border-black" />
     </div>
   );
 }

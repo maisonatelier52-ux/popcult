@@ -2,10 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "../component/Header";
-import CategoriesNav from "../component/CategoriesNav";
-import HeroSection from "../component/HeroSection";
 import Footer from "../component/Footer";
-import { Outfit } from 'next/font/google'
+import { Outfit } from 'next/font/google';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,6 +20,7 @@ const outfit = Outfit({
   weight: ['300','400','500','600','700','800'],
   variable: '--font-outfit',
 })
+
 
 export const metadata: Metadata = {
   title: "Create Next App",

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import ArticleCardHeader from './ArticleCardHeader';
 
 interface NewsData {
   slug: string;
@@ -15,21 +16,24 @@ interface Props {
   data: NewsData[];
 }
 
-export default function FeaturedEditorialGrid({ data }: Props) {
+export default function ArticleCard({ data }: Props) {
   return (
-    <section className="border-l border-r border-b border-black">
-      <div className="flex flex-wrap pt-5 ">
+    <section>
+   <div className="w-full border border-black">
+    <div className="border-t-4 border-black py-2 flex justify-center">
+      <h2 className="text-[18px] font-semibold tracking-wide">
+        POPULAR
+      </h2>
+    </div>
+  </div>
+      <div className="flex flex-col justify-start gap-4 pt-4">
         {data.map((item, index) => (
-
           <article
             key={item.slug}
-            className="
-          relative flex p-2 
-          w-full md:w-1/2 lg:w-1/4
-        "
+            className="relative w-full "
           >
-            <div className="flex gap-4 w-full">
-              <div className="relative w-18 h-16 sm:w-22 sm:h-20 md:w-24 md:h-26 lg:w-27 lg:h-35 shrink-0">
+               <div className="flex gap-4 w-full">
+              <div className="relative w-18 h-16 sm:w-22 sm:h-20 md:w-24 md:h-26 lg:w-25 lg:h-28 shrink-0">
                 <Link
                   href={`/${item.category}/${item.slug}`}
                   title={item.title}
@@ -39,9 +43,7 @@ export default function FeaturedEditorialGrid({ data }: Props) {
                 </Link>
               </div>
               <div className="relative flex flex-col gap-2 overflow-hidden">
-                <span className="absolute top-3 right-0 text-[30px] md:text-[40px] lg:text-[60px] font-serif font-bold text-black opacity-[0.08] leading-none select-none ">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
+           
                 <span className="bg-[#000080] text-white text-xs font-bold px-2 py-1 w-fit hidden md:inline-block">
                   {item.category}
                 </span>
@@ -55,6 +57,5 @@ export default function FeaturedEditorialGrid({ data }: Props) {
         ))}
       </div>
     </section>
-
   );
 }

@@ -1,4 +1,5 @@
 import EditorialCard from "./EditorialCard";
+import SecondEditorial from "./SecondEditorial";
 
 interface NewsData {
   slug: string;
@@ -14,18 +15,24 @@ interface Props {
   data: NewsData[];
 }
 
-export default function EditorialGrid2x2({data}:Props) {
+export default function EditorialGrid2x2({ data }: Props) {
   return (
-    <section className="max-w-7xl mx-auto px-4 lg:px-8 mt-10">
+    <section className="mx-auto">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-        {data.map((item) => (
-          <EditorialCard
+        {data.map((item, index) => (
+          <div
             key={item.slug}
-            title={item.title}
-            image={item.image}
-            date={item.date}
-            author='David'
-          />
+            className='flex flex-col'
+          >
+            <SecondEditorial
+              title={item.title}
+              image={item.image}
+              date={item.date}
+              author="David"
+              category={item.category}
+              slug={item.slug}
+            />
+          </div>
         ))}
       </div>
     </section>

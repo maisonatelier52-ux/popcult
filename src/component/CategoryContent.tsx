@@ -1,9 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import HorizontalFeaturedArticle from "./HorizontalFeaturedArticle";
+import CategoryCard from "./CategoryCard";
 import UpgradePromoCard from "./UpgradePromoCard";
-import CategorySectionHeader from "./CategorySectionHeader";
 
 interface NewsData {
   slug: string;
@@ -19,7 +18,7 @@ interface Props {
   data: NewsData[];
 }
 
-export default function LatestNewsWithStickyPromo({ data }: Props) {
+export default function CategoryContent({ data }: Props) {
   const leftRef = useRef<HTMLDivElement>(null);
   const stopRef = useRef<HTMLDivElement>(null);
   const [stopScroll, setStopScroll] = useState(false);
@@ -39,25 +38,28 @@ export default function LatestNewsWithStickyPromo({ data }: Props) {
 
 
   return (
-    <div className="w-full mb-8 mt-8">
+    <div className="w-full mb-8">
       <div className="flex flex-col lg:flex-row gap-15">
 
         {/* LEFT SECTION */}
         <div className="relative w-full" ref={leftRef}>
           <div className={`transition-transform duration-500 ${stopScroll ? "sticky top-[50px]" : ""}`}>
-            <CategorySectionHeader title="More News" />
+
+
             <div className="mt-4">
               {data.map((item, index) => (
                 <div key={index}>
-                  <HorizontalFeaturedArticle data={item} />
+                  <CategoryCard data={item} />
                   {index < data.length - 1 && (
                     <hr style={{ margin: "20px 0" }} className="text-gray-300" />
                   )}
                 </div>
               ))}
             </div>
+
           </div>
         </div>
+
         {/* RIGHT SECTION */}
         <div className="w-full lg:w-1/3 lg:mt-0">
           <div className="sticky top-10">

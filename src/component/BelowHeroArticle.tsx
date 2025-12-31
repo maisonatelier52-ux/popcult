@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 
 interface NewsData {
@@ -14,14 +15,69 @@ interface Props {
   data: NewsData[];
 }
 
-export default function BelowHeroArticle({data}:Props) {
+export default function BelowHeroArticle({ data }: Props) {
   return (
-    <section className="max-w-7xl mx-auto px-4 lg:px-8 mt-12 border-t border-black pt-10">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section className="mx-auto mt-5 border-t border-black md:pt-5 pt-2">
+
+      {/* ================= MOBILE + TABLET (SAME LAYOUT) ================= */}
+      <div className="lg:hidden divide-y divide-gray-200">
+  {data.map((item) => (
+    <Link
+      key={item.slug}
+      href={`/${item.category}/${item.slug}`}
+      title={item.title}
+      className="block"
+    >
+    <article
+      key={item.slug}
+      className="flex items-start gap-4 py-3"
+    >
+
+      {/* TEXT */}
+      <div className="flex-1">
+        <h3 className="text-[18px] font-semibold leading-tight hover:underline cursor-pointer">
+          {item.title}
+        </h3>
+
+        <div className="mt-2 text-[12px] text-gray-600">
+          <div>{item.date}</div>
+          <div className="mt-1">
+            By{" "}
+            <span className="text-[#000080] font-medium hover:underline cursor-pointer">
+              David
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* IMAGE */}
+      <div className="relative w-[110px] md:w-[160px] h-[90px] md:h-[110px] flex-shrink-0">
+        <Image
+          src={item.image}
+          alt={item.title}
+          fill
+          className="object-cover"
+        />
+      </div>
+      
+    </article>
+</Link>
+  ))}
+</div>
+
+
+      {/* ================= DESKTOP (UNCHANGED GRID) ================= */}
+      <div className="hidden lg:grid grid-cols-3 gap-8">
         {data.map((item) => (
+                  <Link
+      key={item.slug}
+      href={`/${item.category}/${item.slug}`}
+      title={item.title}
+      className="block"
+    >
           <article key={item.slug}>
-            {/* Image */}
-            <div className="relative w-full aspect-[4/3] mb-5">
+
+            <div className="relative w-full h-36 mb-3">
               <Image
                 src={item.image}
                 alt={item.title}
@@ -30,24 +86,24 @@ export default function BelowHeroArticle({data}:Props) {
               />
             </div>
 
-            {/* Title */}
-            <h3 className="font-serif text-xl font-semibold leading-snug hover:underline cursor-pointer">
+            <h3 className="text-[17px] font-semibold tracking-tight leading-[1.2] hover:underline cursor-pointer">
               {item.title}
             </h3>
 
-            {/* Meta */}
-            <div className="mt-4 text-sm text-gray-600">
+            <div className="mt-2 text-[12px] text-gray-600">
               <div>{item.date}</div>
               <div className="mt-1">
                 By{" "}
-                <span className="text-red-600 font-medium hover:underline cursor-pointer">
+                <span className="text-[#000080] font-medium hover:underline cursor-pointer">
                   David
                 </span>
               </div>
             </div>
           </article>
+            </Link>
         ))}
       </div>
+
     </section>
   );
 }

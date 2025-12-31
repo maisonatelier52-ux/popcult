@@ -1,3 +1,7 @@
+import React from 'react';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+
+// Define the types for the items and the props
 interface SocialItem {
   id: string;
   label: string;
@@ -10,14 +14,42 @@ interface SocialFollowListProps {
   items: SocialItem[];
 }
 
-export default function SocialFollowList({ items }: SocialFollowListProps) {
+// Dummy data to pass into the component
+const dummyData: SocialItem[] = [
+  {
+    id: '1',
+    label: 'Facebook',
+    count: '1,200',
+    action: 'Follow',
+    icon: <FaFacebook />,
+  },
+  {
+    id: '2',
+    label: 'Twitter',
+    count: '980',
+    action: 'Follow',
+    icon: <FaTwitter />,
+  },
+  {
+    id: '3',
+    label: 'Instagram',
+    count: '2,500',
+    action: 'Follow',
+    icon: <FaInstagram />,
+  },
+  {
+    id: '4',
+    label: 'LinkedIn',
+    count: '1,800',
+    action: 'Follow',
+    icon: <FaLinkedin />,
+  },
+];
+export default function   SocialFollowList({ items }: SocialFollowListProps) {
   return (
     <div className="w-full space-y-6">
       {items.map((item) => (
-        <div
-          key={item.id}
-          className="flex items-center justify-between"
-        >
+        <div key={item.id} className="flex items-center justify-between">
           {/* Left */}
           <div className="flex items-center gap-4">
             {/* Icon */}
@@ -41,3 +73,7 @@ export default function SocialFollowList({ items }: SocialFollowListProps) {
     </div>
   );
 }
+
+
+
+
