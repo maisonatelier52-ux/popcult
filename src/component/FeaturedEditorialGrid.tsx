@@ -1,60 +1,61 @@
-import Image from 'next/image';
-import Link from 'next/link';
+  import Image from 'next/image';
+  import Link from 'next/link';
 
-interface NewsData {
-  slug: string;
-  category: string;
-  title: string;
-  shortdescription: string;
-  description: string;
-  date: string;
-  image: string;
-}
+  interface NewsData {
+    slug: string;
+    category: string;
+    title: string;
+    shortdescription: string;
+    description: string;
+    date: string;
+    image: string;
+  }
 
-interface Props {
-  data: NewsData[];
-}
+  interface Props {
+    data: NewsData[];
+  }
 
-export default function FeaturedEditorialGrid({ data }: Props) {
-  return (
-    <section className="border-l border-r border-b border-black">
-      <div className="flex flex-wrap pt-5 ">
-        {data.map((item, index) => (
+  export default function FeaturedEditorialGrid({ data }: Props) {
+    return (
+<section className="border-l border-r border-b border-black">
 
-          <article
-            key={item.slug}
-            className="
-          relative flex p-2 
-          w-full md:w-1/2 lg:w-1/4
-        "
-          >
-            <div className="flex gap-4 w-full">
-              <div className="relative w-18 h-16 sm:w-22 sm:h-20 md:w-24 md:h-26 lg:w-27 lg:h-35 shrink-0">
-                <Link
-                  href={`/${item.category}/${item.slug}`}
-                  title={item.title}
-                  className="flex items-center gap-2 py-3 truncate"
-                >
-                  <Image src={item.image} alt={item.title} fill className="object-cover" />
-                </Link>
+        <div className="flex flex-wrap pt-5 ">
+          {data.map((item, index) => (
+
+            <article
+              key={item.slug}
+              className="
+            relative flex p-2 
+            w-full md:w-1/2 lg:w-1/4
+          "
+            >
+              <div className="flex gap-4 w-full">
+                <div className="relative w-18 h-16 sm:w-22 sm:h-20 md:w-24 md:h-26 lg:w-27 lg:h-35 shrink-0">
+                  <Link
+                    href={`/${item.category}/${item.slug}`}
+                    title={item.title}
+                    className="flex items-center gap-2 py-3 truncate"
+                  >
+                    <Image src={item.image} alt={item.title} fill className="object-cover" />
+                  </Link>
+                </div>
+                <div className="relative flex flex-col gap-2 overflow-hidden">
+                  <span className="absolute top-3 right-0 text-[30px] md:text-[40px] lg:text-[60px] font-serif font-bold text-black opacity-[0.08] leading-none select-none ">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="bg-[#000080] text-white text-xs font-bold px-2 py-1 w-fit hidden md:inline-block">
+                    {item.category}
+                  </span>
+
+                  <h3 className="relative z-10 text-[14px] font-semibold leading-snug line-clamp-">
+                    {item.title}
+                  </h3>
+                </div>
               </div>
-              <div className="relative flex flex-col gap-2 overflow-hidden">
-                <span className="absolute top-3 right-0 text-[30px] md:text-[40px] lg:text-[60px] font-serif font-bold text-black opacity-[0.08] leading-none select-none ">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <span className="bg-[#000080] text-white text-xs font-bold px-2 py-1 w-fit hidden md:inline-block">
-                  {item.category}
-                </span>
+            </article>
+          ))}
+        </div>
+      </section>
 
-                <h3 className="relative z-10 text-[14px] font-semibold leading-snug line-clamp-">
-                  {item.title}
-                </h3>
-              </div>
-            </div>
-          </article>
-        ))}
-      </div>
-    </section>
-
-  );
-}
+    );
+  }

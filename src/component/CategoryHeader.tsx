@@ -1,12 +1,26 @@
+"use client";
+
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+
 export default function CategoryHeader() {
+  
+const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
+  
+  const linesCount = resolvedTheme === "dark" ? 40 : 100;
+
   return (
-    <header className="bg-white py-5  px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <header className={` py-5  px-4 sm:px-6 lg:px-8 relative overflow-hidden`}>
       {/* Vertical lines background */}
       <div className="absolute inset-0 flex">
-        {[...Array(100)].map((_, i) => (
+        {[...Array(linesCount)].map((_, i) => (
           <div
             key={i}
-            className="flex-1 border-r border-gray-100"
+            className={`flex-1 border-r ${resolvedTheme=='dark'?'border-gray-800':'border-gray-100'}`}
             style={{ minWidth: '1px' }}
           />
         ))}
@@ -14,7 +28,7 @@ export default function CategoryHeader() {
       
       {/* Content */}
       <div className="container relative z-10">
-        <h1 className="text-[35px] md:text-[40px] font-bold text-black">
+        <h1 className="text-[35px] md:text-[40px] font-bold">
           Celebrity Buzz
         </h1>
       </div>

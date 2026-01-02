@@ -1,10 +1,10 @@
 import React from 'react';
-import businessData from '../../../public/data/business.json';
+import prnewsData from '../../../public/data/prnews.json';
 import worldData from '../../../public/data/world.json';
 import usData from '../../../public/data/us.json';
-import politicsData from '../../../public/data/politics.json';
+import marketingData from '../../../public/data/marketing.json';
 import financeData from '../../../public/data/entertainment.json';
-import sportsData from '../../../public/data/sports.json';
+import techData from '../../../public/data/tech.json';
 import entertainmentData from '../../../public/data/entertainment.json';
 import LatestNewsWithStickyPromo from '../../component/LatestNewsWithStickyPromo'
 import CategoryHeader from '@/component/CategoryHeader';
@@ -22,12 +22,12 @@ interface NewsItem {
 }
 
 const allData: Record<string, NewsItem[]> = {
-  business: businessData,
+  prnews: prnewsData,
   world: worldData,
   us: usData,
   finance: financeData,
-  politics: politicsData,
-  sports: sportsData,
+  marketing: marketingData,
+  tech: techData,
   entertainment: entertainmentData
 };
 

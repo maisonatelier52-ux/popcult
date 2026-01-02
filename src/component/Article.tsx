@@ -9,7 +9,7 @@ import ArticleWithDescr from './ArticleWithDescr';
 import ShareComponent from './ShareComponent';
 import CommentForm from './CommentForm';
 import ArticleCard from './ArticleCard';
-import businessData from '../../public/data/business.json';
+import prnewsData from '../../public/data/prnews.json';
 
 interface NewsItem {
     category: string;
@@ -51,19 +51,19 @@ export default function Article({ article }: Props) {
                 <div className="w-full lg:w-300 mb-6 md:mb-0">
                     {/* Other components on the left */}
                     <ArticleImage src={article.image} alt={article.title} />
-                 <div className="flex flex-col md:flex-row mt-8 gap-12">
-  
-  {/* SocialShareList */}
-  <div className="hidden md:block sticky top-8 self-start">
-    <SocialShareList />
-  </div>
+                    <div className="flex flex-col md:flex-row mt-8 gap-12">
 
-  {/* Article content */}
-  <div ref={leftRef} className="flex-1">
-    <ArticleWithDescr data={article} />
-  </div>
+                        {/* SocialShareList */}
+                        <div className="hidden md:block sticky top-8 self-start">
+                            <SocialShareList />
+                        </div>
 
-</div>
+                        {/* Article content */}
+                        <div ref={leftRef} className="flex-1">
+                            <ArticleWithDescr data={article} />
+                        </div>
+
+                    </div>
 
 
 
@@ -80,10 +80,10 @@ export default function Article({ article }: Props) {
   ">
                     <ArticleCard
                         data={[
-                            businessData[0],
-                            businessData[1],
-                            businessData[2],
-                            businessData[3],
+                            prnewsData[0],
+                            prnewsData[1],
+                            prnewsData[2],
+                            prnewsData[3],
                         ]}
                     />
                 </div>

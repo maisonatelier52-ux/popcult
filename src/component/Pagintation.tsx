@@ -18,7 +18,7 @@ export default function Pagination({
           <button
             key={page}
             onClick={() => onPageChange(page)}
-            className={`w-10 h-10 flex items-center justify-center text-sm font-medium
+            className={`w-10 h-10 flex items-center justify-center cursor-pointer text-sm font-medium
               ${
                 page === currentPage
                   ? "bg-[#000080] text-white"

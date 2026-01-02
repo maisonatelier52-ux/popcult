@@ -34,7 +34,7 @@ export default function HorizontalFeaturedArticle({ data }: Props) {
 
             <div className="mt-2 text-[12px] text-gray-600">
               <div>{data.date}</div>
-              <div className="mt-1">
+              <div className="">
                 By{" "}
                 <span className="text-[#000080] font-medium hover:underline cursor-pointer">
                   David

@@ -1,5 +1,3 @@
-'use client';
-
 import { FiShare2, FiPrinter, FiMoreHorizontal, FiShare } from 'react-icons/fi';
 import { FaXTwitter, FaFacebookF, FaLink } from 'react-icons/fa6';
 

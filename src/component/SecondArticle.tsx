@@ -47,7 +47,9 @@ export default function SecondArticle({
     <h2 className="mt-6 text-[25px] sm:text-[30px] md:text-[40px] lg:text-[50px] font-semibold tracking-tight leading-[1.1]">
           {title}
         </h2>
-        <p className="mt-1 text-[15px] md:text-[18px] text-[#666666] tracking-tight leading-[1.1]">{shortdescription}</p>
+    <p className="hidden lg:block mt-1 text-[15px] md:text-[18px] text-[#666666] tracking-tight leading-[1.1]">
+  {shortdescription}
+</p>
 
         <div className="mt-2 text-[12px] text-gray-600">
           <span>{date}</span>

@@ -46,7 +46,7 @@ export default function CategoryContent({ data }: Props) {
               <div key={item.slug}>
                 <CategoryCard data={item} />
                 {index < paginatedData.length - 1 && (
-                  <hr className="my-5 border-gray-300" />
+                  <hr className="my-3 border-gray-300" />
                 )}
               </div>
             ))}
