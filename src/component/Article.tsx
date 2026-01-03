@@ -62,11 +62,7 @@ export default function Article({ article }: Props) {
                         <div ref={leftRef} className="flex-1">
                             <ArticleWithDescr data={article} />
                         </div>
-
                     </div>
-
-
-
                     <ShareComponent />
                     <CommentForm />
                 </div>

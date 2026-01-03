@@ -26,7 +26,7 @@ export default function HeroArticle({
         title={data[0].title}
       >
 
-        <div className="relative w-full h-60 sm:h-84 md:h-94 lg:h-110">
+        <div className="relative w-full h-60 sm:h-84 md:h-94 lg:h-100">
           <Image
             src={data[0].image}
             alt={data[0].title}
@@ -35,15 +35,15 @@ export default function HeroArticle({
             className="object-cover"
           />
           {/* Red small box with part inside the image */}
-          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-[#000080] text-white text-[9px] sm:text-[10px] md:text-[11px] lg:text-[12px] font-bold px-4 py-2 uppercase tracking-wide text-center" style={{ marginBottom: '-10px' }}>
-            {data[0].category}
+          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-[#000080] text-white text-[9px] sm:text-[10px] md:text-[11px] lg:text-[12px] font-bold px-4 py-2 capitalize tracking-wide text-center" style={{ marginBottom: '-10px' }}>
+       {data[0].category}
           </div>
         </div>
 
         <div className=" mx-auto text-center">
 
 
-          <h1 className="mt-6 text-[25px] sm:text-[30px] md:text-[40px] lg:text-[50px] font-semibold tracking-tight leading-[1.1]">
+          <h1 className="mt-6 text-[25px] sm:text-[30px] md:text-[40px] lg:text-[40px] font-semibold tracking-tight leading-[1.1]">
             {data[0].title}
           </h1>
           <div className="mt-1 md:mt-3 text-[13px] text-gray-600">

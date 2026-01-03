@@ -3,7 +3,10 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
-export default function CategoryHeader() {
+type CategoryHeaderProps = {
+  category: string;
+};
+export default function CategoryHeader({category}:CategoryHeaderProps) {
   
 const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -28,8 +31,8 @@ const { resolvedTheme } = useTheme();
       
       {/* Content */}
       <div className="container relative z-10">
-        <h1 className="text-[35px] md:text-[40px] font-bold">
-          Celebrity Buzz
+        <h1 className="text-[35px] md:text-[40px] font-bold capitalize">
+         {category}
         </h1>
       </div>
     </header>

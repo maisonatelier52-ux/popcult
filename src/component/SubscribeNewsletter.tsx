@@ -1,20 +1,28 @@
 'use client';
 
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function SubscribeNewsletter() {
   const [email, setEmail] = useState("");
-  const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const [success, setSuccess] = useState(false);
 
-  useEffect(() => setMounted(true), []);
-  if (!mounted) return null;
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    setSuccess(true);
+    setEmail("");
+
+    setTimeout(() => setSuccess(false), 3000);
+  };
 
   return (
-    <aside className={`w-full max-w-sm border ${resolvedTheme == 'dark' ? 'border-[#000080]' : 'border-black'} border-t-6 p-8`}>
-      {/* Top thick border */}
-      <div className="mb-4" />
+    <aside className="w-full max-w-sm border border-black p-8 relative">
+      {/* Success Popup */}
+      {success && (
+        <div className="absolute top-3 right-3 left-3 bg-black text-white text-sm px-4 py-2 rounded-md text-center">
+          ✅ Successfully subscribed to the newsletter!
+        </div>
+      )}
 
       {/* Title */}
       <h2 className="text-[42px] font-bold leading-[1.05] tracking-[-0.02em] mb-3">
@@ -27,29 +35,34 @@ export default function SubscribeNewsletter() {
         newsletter!
       </p>
 
-      {/* Input */}
-      <input
-        type="email"
-        placeholder="Your email address"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        className={`w-full border border-gray-300 px-3 py-2 text-[16px] ${resolvedTheme == 'dark' ? 'text-gray-200' : 'text-[#555555]'} mb-4 focus:outline-none`}
-      />
+      {/* Form */}
+      <form onSubmit={handleSubmit}>
+        {/* Email Input */}
+        <input
+          type="email"
+          placeholder="Your email address"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          className="w-full border border-gray-300 px-3 py-2 text-[16px] mb-4 focus:outline-none"
+        />
 
-      {/* Button */}
-      <button className={`p-8 ${resolvedTheme == 'dark' ? 'bg-white text-black' : 'bg-[#232323] text-white'} py-2 text-[12px] font-medium mb-3 hover:bg-gray-900 transition`}>
-        Sign Up Now
-      </button>
+        {/* Button */}
+        <button
+          type="submit"
+          className="w-full border border-black py-2 text-[14px] font-semibold hover:bg-black hover:text-white transition mb-3"
+        >
+          Sign Up Now
+        </button>
 
-      {/* Terms */}
-      <label className={`flex items-start gap-2 text-[16px] ${resolvedTheme == 'dark' ? 'text-white' : 'text-[#555555]'}`}>
-        <input type="checkbox" className="mt-1" />
-        <span>
-          I have read and agree to the{" "}
-
-          terms & conditions
-        </span>
-      </label>
+        {/* Terms */}
+        <label className="flex items-start gap-2 text-[14px]">
+          <input type="checkbox" required className="mt-1" />
+          <span>
+            I have read and agree to the <span className="underline">terms & conditions</span>
+          </span>
+        </label>
+      </form>
     </aside>
   );
 }

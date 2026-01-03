@@ -37,14 +37,14 @@ export default function SecondArticle({
               className="object-cover"
             />
             {/* Red small box with part inside the image */}
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-[#000080] text-white text-[9px] sm:text-[10px] md:text-[11px] lg:text-[12px] font-bold px-4 py-2 uppercase tracking-wide text-center" style={{ marginBottom: '-10px' }}>
+            <div className="absolute bottom-0  left-1/2 transform -translate-x-1/2 bg-[#000080] text-white text-[9px] sm:text-[10px] md:text-[11px] lg:text-[12px] font-bold px-4 py-2 capitalize tracking-wide text-center" style={{ marginBottom: '-10px' }}>
               {category}
             </div>
           </div>
 
 
       <div className=" mx-auto text-center">
-    <h2 className="mt-6 text-[25px] sm:text-[30px] md:text-[40px] lg:text-[50px] font-semibold tracking-tight leading-[1.1]">
+    <h2 className="mt-6 text-[25px] sm:text-[30px] md:text-[40px] lg:text-[42px] font-semibold tracking-tight leading-[1.1]">
           {title}
         </h2>
     <p className="hidden lg:block mt-1 text-[15px] md:text-[18px] text-[#666666] tracking-tight leading-[1.1]">

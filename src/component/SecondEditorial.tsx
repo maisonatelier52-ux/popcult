@@ -64,7 +64,7 @@ export default function SecondEditorial({
       >
       <div className="hidden lg:block">
         {/* Image */}
-        <div className="relative w-full h-60 mb-3">
+        <div className="relative w-full h-60 mb-2">
           <Image
             src={image}
             alt={title}
@@ -74,12 +74,12 @@ export default function SecondEditorial({
         </div>
 
         {/* Title */}
-        <h3 className="text-[18px] md:text-[20px] font-semibold leading-[1.2] tracking-tight hover:underline cursor-pointer">
+        <h3 className="text-[18px] font-semibold leading-[1.2] tracking-tight hover:underline cursor-pointer">
           {title}
         </h3>
 
         {/* Meta */}
-        <div className="mt-1 text-[12px] text-gray-600">
+        <div className="mt- text-[12px] text-gray-600">
           <div>{date}</div>
           <div className="">
             By{" "}

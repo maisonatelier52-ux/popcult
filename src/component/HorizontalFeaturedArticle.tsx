@@ -73,10 +73,13 @@ export default function HorizontalFeaturedArticle({ data }: Props) {
 
           {/* Content */}
           <div>
+                <span className="bg-[#000080] capitalize text-white text-xs font-bold px-8 py-1 mb-2 w-fit hidden md:inline-block">
+                    {data.category}
+                  </span>
             <h2 className="text-[24px] font-semibold tracking-tight leading-[1.1]">
               {data.title}
             </h2>
-
+<p className=" line-clamp-2">{data.shortdescription}</p>
             <div className="mt-2 text-[12px] text-gray-600">
               <div>{data.date}</div>
               <div className="mt-1">

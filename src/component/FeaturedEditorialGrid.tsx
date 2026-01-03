@@ -43,7 +43,7 @@
                   <span className="absolute top-3 right-0 text-[30px] md:text-[40px] lg:text-[60px] font-serif font-bold text-black opacity-[0.08] leading-none select-none ">
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <span className="bg-[#000080] text-white text-xs font-bold px-2 py-1 w-fit hidden md:inline-block">
+                  <span className="bg-[#000080] text-white text-xs font-bold px-2 py-1 w-fit hidden md:inline-block capitalize">
                     {item.category}
                   </span>
 

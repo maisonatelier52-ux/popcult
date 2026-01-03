@@ -13,12 +13,13 @@ type Category = {
 
 const categories: Category[] = [
   { label: 'Home', href: '/' },
-  { label: 'Business', href: '/business' },
-  { label: 'Politics', href: '/politics' },
+  { label: 'PR News', href: '/prnews' },
   { label: 'World', href: '/world' },
   { label: 'U.S', href: '/us' },
+  { label: 'Marketing', href: '/marketing' }, 
+  { label: 'Finance', href: '/finance' },
   { label: 'Entertainment', href: '/entertainment' },
-  { label: 'Sports', href: '/sports' },
+  { label: 'Technology', href: '/tech' },
 ];
 
 export default function CategoriesNav() {

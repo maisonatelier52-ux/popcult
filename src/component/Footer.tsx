@@ -1,71 +1,109 @@
-import Image from 'next/image';
+import Image from "next/image";
+import Link from "next/link";
+import {
+  FaTwitter,
+  FaFacebookF,
+  FaInstagram,
+  FaMediumM,
+} from "react-icons/fa";
+import { SiSubstack } from "react-icons/si";
+
 
 export default function Footer() {
   return (
     <footer className="bg-black text-white">
       <div className="mx-auto px-8 py-12">
         <div className="flex flex-col md:flex-row justify-between items-start">
-
           {/* Left Section */}
           <div className="mb-8 md:mb-0">
-            <Image 
-              src="/images/popcult-white-logo.png"  
-              alt="POPCULT Logo"
-              width={150}
-              height={50}
-              className="object-contain"
-            />
-            {/* Social Icons */}
-            <div className="flex gap-2 mt-4 text-xl">
-              <a href="#" aria-label="X" className="hover:text-gray-400">X</a>
-              <a href="#" aria-label="YouTube" className="hover:text-gray-400">▶</a>
-              <a href="#" aria-label="Instagram" className="hover:text-gray-400">◎</a>
-              <a href="#" aria-label="Facebook" className="hover:text-gray-400">f</a>
-              <a href="#" aria-label="RSS" className="hover:text-gray-400">⌁</a>
+            <div className="flex">
+              <Link href="/" className="select-none">
+                <span className="font-serif font-bold text-[25px] tracking-tight text-white uppercase">
+                  PR<span className="font-normal">PROMOTIONHUB</span>
+                </span>
+              </Link>
             </div>
+            {/* Social Icons */}
+          <div className="flex gap-4 mt-4 text-xl text-white">
+  <a
+    href="#"
+    aria-label="Twitter"
+    className="hover:text-gray-400 transition"
+  >
+    <FaTwitter />
+  </a>
+
+  <a
+    href="#"
+    aria-label="Facebook"
+    className="hover:text-gray-400 transition"
+  >
+    <FaFacebookF />
+  </a>
+
+  <a
+    href="#"
+    aria-label="Instagram"
+    className="hover:text-gray-400 transition"
+  >
+    <FaInstagram />
+  </a>
+
+  <a
+    href="#"
+    aria-label="Medium"
+    className="hover:text-gray-400 transition"
+  >
+    <FaMediumM />
+  </a>
+
+  <a
+    href="#"
+    aria-label="Substack"
+    className="hover:text-gray-400 transition"
+  >
+    <SiSubstack />
+  </a>
+</div>
 
             <p className="mt-4 text-sm text-gray-400 leading-relaxed">
-              Made by ThemeRuby using the Foxiz theme.
+              Published by PRPromotionHub.
               <br />
-              Powered by WordPress.
+              Covering PR, world, finance, and marketing news.
             </p>
           </div>
-
-          {/* Right Sections (Middle and Right Links) */}
-          <div className="flex flex-row  gap-8 md:gap-30 mr-40 w-full md:w-auto">
-            {/* Middle Links */}
+          <div className="flex flex-row  gap-7 md:gap-20 mr-40 w-full md:w-auto">
             <div className="space-y-2 flex-1">
               <a href="#" className="block hover:text-gray-300">
-                About Foxiz
+                About Us
               </a>
-              <a href="#" className="block hover:text-gray-300">
-                Contact Us
-              </a>
-              <a href="#" className="block hover:text-gray-300">
-                Newsletter
-              </a>
-              <a href="#" className="block font-semibold hover:text-gray-300">
-                Careers
-              </a>
-            </div>
-
-            {/* Right Links */}
-            <div className="space-y-2 flex-1">
               <a href="#" className="block hover:text-gray-300">
                 Contact
               </a>
-              <a href="#" className="block hover:text-gray-300">
-                Licensing
+              <a
+                href="#"
+                className="block font-semibold hover:text-gray-300 whitespace-nowrap"
+              >
+                Terms and Conditions
               </a>
-              <a href="#" className="block hover:text-gray-300">
-                Terms of Use
+            </div>
+
+            <div className="space-y-2 flex-1">
+              <a
+                href="#"
+                className="block font-semibold hover:text-gray-300 whitespace-nowrap"
+              >
+                Editorial Policy
               </a>
-              <a href="#" className="block hover:text-gray-300">
-                Advertise with Us
+
+              <a href="#" className="block font-semibold hover:text-gray-300">
+                Privacy Policy
+              </a>
+              <a href="#" className="block font-semibold hover:text-gray-300">
+                Faq
               </a>
             </div>
           </div>
-
         </div>
       </div>
     </footer>

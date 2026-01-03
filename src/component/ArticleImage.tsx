@@ -16,8 +16,8 @@ export default function ArticleImage({
         src={cleanedSrc}
         alt={alt}
         width={900}
-        height={675}
-        className="w-full h-auto object-cover"
+        height={0}
+        className="w-full h-150 object-cover"
         priority
       />
     </div>

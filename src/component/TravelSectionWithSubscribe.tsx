@@ -50,7 +50,7 @@ export default function TravelSectionWithSubscribe({ data }: Props) {
 
         {/* RIGHT: Category */}
         <div className="w-full" ref={leftRef} >
-          <CategorySectionHeader title="Finance" />
+          <CategorySectionHeader title="Financial Highlights" />
           <div className="mt-8">
             <EditorialGrid2x2
               data={[data[0], data[1], data[2], data[3]]}

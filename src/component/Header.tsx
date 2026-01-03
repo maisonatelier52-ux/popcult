@@ -21,11 +21,9 @@ import CategoriesNav from './CategoriesNav';
 import MobileHeader from './MobileHeader';
 
 const categories = [
-  'Entertainment',
-  'Culture',
-  'Celebrity Buzz',
-  'Movies & TV',
-  'Lifestyle',
+  'About',
+  'Contact',
+  'Terms of Use'
 ];
 
 export default function Header() {
@@ -37,10 +35,10 @@ export default function Header() {
       {/* ================= MOBILE HEADER ================= */}
       <div className="lg:hidden border-b border-black">
 
-       <MobileHeader />
+        <MobileHeader />
       </div>
 
-     
+
 
       {/* ================= DESKTOP HEADER (UNCHANGED) ================= */}
       <div className="hidden lg:block">
@@ -50,8 +48,14 @@ export default function Header() {
           <div className="flex items-center justify-between px-6 py-2 text-sm text-gray-600">
             <div className="flex items-center gap-4">
               <span className="text-[14.4px] font-outfit font-bold text-black">
-                Wednesday, Dec 24, 2025
+                {new Date().toLocaleDateString("en-US", {
+                  weekday: "long",
+                  month: "short",
+                  day: "2-digit",
+                  year: "numeric",
+                })}
               </span>
+
 
               <span className="h-6 w-px bg-gray-300" />
 
@@ -73,49 +77,39 @@ export default function Header() {
               <FaMediumM className="text-lg hover:opacity-70" />
               <SiSubstack className="text-lg hover:opacity-70" />
               <FaFacebookF className="text-lg hover:opacity-70" />
-              <FaRss className="text-lg hover:opacity-70" />
             </div>
           </div>
 
           {/* Logo row */}
-          <div className="flex items-center justify-between px-6 py-4">
-            <Link href="/" className="flex items-center">
-              <Image
-                src="/images/popcult-logo.png"
-                alt="Popcult logo"
-                width={160}
-                height={40}
-                priority
-              />
-            </Link>
+          <div className="grid grid-cols-3 items-center px-6 py-4">
 
-            <div className="flex items-center gap-4 text-[15px] font-semibold text-black">
-              <Link href="#">Advertise</Link>
-              <span className="text-gray-400">|</span>
+            {/* Left empty space for perfect centering */}
+            <div />
 
-              <Link href="#" className="flex items-center gap-1">
-                <FaTag className="text-sm" />
-                Deal
+            {/* Center Logo */}
+            <div className="flex justify-center">
+              <Link href="/" className="select-none">
+                <span className="font-serif font-bold text-[32px] tracking-tight text-black uppercase">
+                  PR<span className="font-normal">PROMOTIONHUB</span>
+                </span>
               </Link>
+            </div>
 
-              <span className="text-gray-400">|</span>
-
-              <Link href="#" className="flex items-center gap-1">
+            {/* Right actions */}
+            <div className="flex items-center justify-end gap-4 text-[15px] font-semibold text-black">
+              <Link
+                href="#"
+                className="flex items-center gap-2 rounded-md border border-black px-4 py-1 transition"
+              >
                 <FaEnvelope className="text-sm" />
-                Contact
-              </Link>
-
-              {/* <button className="ml-2 rounded-sm border border-black px-5 py-1.5 text-base font-semibold">
                 Newsletter
-              </button> */}
-
-              <FaSearch className="text-[20px]" />
+              </Link>
             </div>
           </div>
         </div>
-
         <CategoriesNav />
       </div>
+
     </header>
   );
 }

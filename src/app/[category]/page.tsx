@@ -3,7 +3,7 @@ import prnewsData from '../../../public/data/prnews.json';
 import worldData from '../../../public/data/world.json';
 import usData from '../../../public/data/us.json';
 import marketingData from '../../../public/data/marketing.json';
-import financeData from '../../../public/data/entertainment.json';
+import financeData from '../../../public/data/finance.json';
 import techData from '../../../public/data/tech.json';
 import entertainmentData from '../../../public/data/entertainment.json';
 import LatestNewsWithStickyPromo from '../../component/LatestNewsWithStickyPromo'
@@ -44,6 +44,7 @@ export default async function CategoryPage({
   params: Promise<{ category: string }>;
 }) {
   const { category } = await params;
+  console.log(category,'cag')
   const data = allData[category];
 
   if (!data) {
@@ -62,7 +63,7 @@ export default async function CategoryPage({
   return (
     <>
     <WhatsHotBar data={data[0]}/>
-        <CategoryHeader />
+        <CategoryHeader category={data[0].category}/>
        <div className=" mx-auto px-4 sm:px-6 lg:px-8">
       <CategoryContent data={data}/>
       </div>

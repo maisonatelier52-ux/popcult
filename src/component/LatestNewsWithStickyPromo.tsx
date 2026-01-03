@@ -35,7 +35,7 @@ export default function LatestNewsWithStickyPromo({ data }: Props) {
 
         {/* LEFT SECTION */}
         <div className="relative w-full">
-          <CategorySectionHeader title="More News" />
+          <CategorySectionHeader title="Top News" />
 
           <div className="mt-4">
             {data.slice(0, visibleCount).map((item, index) => (

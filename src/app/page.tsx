@@ -13,19 +13,30 @@ import usData from '../../public/data/us.json';
 import financeData from '../../public/data/finance.json';
 import techData from '../../public/data/tech.json';
 import entertainmentData from '../../public/data/entertainment.json';
+import CategorySectionHeader from "@/component/CategorySectionHeader";
 
 export default function Home() {
   return (
     <div>
-      <WhatsHotBar data={prnewsData[0]} />
+      <WhatsHotBar data={prnewsData[1]} />
       <div className=" mx-auto px-4 sm:px-6 lg:px-8">
-        <FeaturedEditorialGrid data={[prnewsData[2], marketingData[0], financeData[3], usData[1]]} />
-        <HeroSection data={[prnewsData[1], marketingData[1], financeData[1], worldData[1], techData[0], entertainmentData[0], usData[1], prnewsData[2]]} />
-        <EditorialGrid data={[marketingData[3], marketingData[4], marketingData[5], marketingData[6]]} />
-        <SecondSection data={[prnewsData[3], prnewsData[3], prnewsData[4]]} />
-        <TravelSectionWithSubscribe data={[financeData[3], financeData[4], financeData[5], financeData[6]]} />
-        <SecondSection data={[worldData[3], usData[4], financeData[7]]} />
-        <LatestNewsWithStickyPromo data={[usData[4], usData[5], worldData[4], worldData[5], worldData[6], worldData[7], usData[6], worldData[8], usData[7]]} />
+        <FeaturedEditorialGrid data={[financeData[8], marketingData[2], financeData[0], usData[1]]} />
+
+        {/* first data must be pr news */}
+        <HeroSection data={[prnewsData[0], marketingData[1], financeData[1], worldData[1], techData[0], entertainmentData[0], usData[1], prnewsData[3], usData[2], techData[1], techData[2], prnewsData[4]]} />
+
+        <EditorialGrid data={[marketingData[0], marketingData[3], marketingData[4], marketingData[5]]} />
+        <div className="mx-auto mt-8">
+          <CategorySectionHeader title="Trending Topics" />
+          <SecondSection data={[worldData[0], usData[0], prnewsData[2]]} />
+        </div>
+        <TravelSectionWithSubscribe data={[financeData[2], financeData[3], financeData[4], financeData[5]]} />
+
+        <div className="mx-auto mt-8">
+          <CategorySectionHeader title="Breaking News" />
+          <SecondSection data={[worldData[9], usData[8], entertainmentData[8]]} />
+        </div>
+        <LatestNewsWithStickyPromo data={[financeData[7], marketingData[6], techData[7], worldData[6], worldData[7], usData[6], worldData[8], entertainmentData[6]]} />
       </div>
     </div>
   );
