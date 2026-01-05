@@ -18,7 +18,7 @@ export default function ArticleHeader({article}: Props) {
   return (
     <header className=" mx-auto mt-5">
       {/* Category */}
-      <span className="inline-block bg-[#000080] text-white text-xs font-semibold px-3 py-1 mb-4">
+      <span className="inline-block bg-[#000080] capitalize text-white text-xs font-semibold px-3 py-1 mb-4">
         {article.category}
       </span>
 

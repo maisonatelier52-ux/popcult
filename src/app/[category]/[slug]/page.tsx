@@ -9,23 +9,8 @@ import techData from '../../../../public/data/tech.json';
 import entertainmentData from '../../../../public/data/entertainment.json';
 import Script from "next/script";
 import { Metadata } from 'next';
-import ArticleHeader from '../../../component/ArticleHeader';
 import WhatsHotBar from '@/component/WhatsHotBar';
-import SocialShare from '@/component/SocialShare';
-import ArticleConten from '@/component/ArticleContent';
-import ArticleContent from '@/component/ArticleContent';
-import ArticleImage from '@/component/ArticleImage';
-import ArticleWithDescr from '@/component/ArticleWithDescr';
-import ArticleQuote from '@/component/ArticleQuote';
-import ArticleParagraph from '@/component/ArticleParagraph';
-import ShareComponent from '@/component/ShareComponent';
-import SocialFollowList from '@/component/SocialFollowList';
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import CommentForm from '@/component/CommentForm';
-import ArticleCard from '@/component/ArticleCard';
-import SocialShareList from '@/component/SocialShareList';
 import Article from '@/component/Article';
-import RelatedNews from '@/component/RelatedNews';
 import RelatedNewsSection from '@/component/RelatedNewsSection';
 
 export async function generateStaticParams() {
@@ -49,7 +34,6 @@ export async function generateStaticParams() {
 
   return params;
 }
-
 
 interface NewsItem {
   category: string;
