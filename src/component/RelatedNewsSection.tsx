@@ -1,11 +1,25 @@
 import RelatedNews from "./RelatedNews";
 
+interface Author {
+  name: string;
+  role: string;
+  bio: string;
+  image: string;
+  email: string;
+  twitter: string;
+  facebook: string;
+  instagram: string;
+  substack?: string;
+  medium?: string;
+}
+
 interface NewsData {
   title: string;
   image: string;
   date: string;
   category: string;
   slug: string;
+  author:Author;
 }
 
 interface Props {

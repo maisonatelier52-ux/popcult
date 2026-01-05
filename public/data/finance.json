@@ -1,6 +1,28 @@
 [
   {
     "category": "finance",
+    "title": "Julio Herrera Velutini: Banking Legacy, Global Finance Influence, and the Modern Face of International Wealth Management",
+    "slug": "julio-herrera-velutini-banking-legacy-global-finance-influence",
+    "image": "/images/julio-herrera-velutini.webp",
+    "date": "Jan. 5, 2026",
+    "shortdescription": "Julio Herrera Velutini is a name that resonates strongly across international banking, wealth management, and global finance circles. As a seventh-generation banker from the historic Herrera-Velutini family, he represents a rare fusion of centuries-old financial heritage and contemporary global financial strategy. His career trajectory reflects how legacy banking families have adapted to modern regulatory frameworks, cross-border finance, and the evolving demands of high-net-worth individuals.",
+    "description": "The Herrera-Velutini lineage traces its financial roots back to Europe, later establishing deep institutional influence in Latin America. Over generations, the family contributed to the development of early banking structures, commercial lending systems, and private capital networks in Venezuela and beyond. Julio Herrera Velutini emerged as the modern custodian of this legacy, reshaping it for a globalized financial era.",
+    "author": {
+      "name": "Staff Reporter ",
+      "role": "Business & Finance Writer",
+      "bio": "Allison Carter covers business, personal finance, and corporate strategy, helping readers understand markets and economic change.",
+      "image": "/images/allison-carter.webp",
+      "slug": "allison-carter",
+      "email": "",
+      "twitter": "",
+      "facebook": "",
+      "instagram": "",
+      "substack": "",
+      "medium": ""
+    }
+  },
+  {
+    "category": "finance",
     "title": "Meta Buys Startup Manus in Latest Move to Advance Its Artificial Intelligence Efforts",
     "slug": "meta-buys-manus-ai",
     "image": "/images/meta-acquires-manus-ai.webp",

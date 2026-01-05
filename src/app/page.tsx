@@ -14,10 +14,39 @@ import financeData from '../../public/data/finance.json';
 import techData from '../../public/data/tech.json';
 import entertainmentData from '../../public/data/entertainment.json';
 import CategorySectionHeader from "@/component/CategorySectionHeader";
+import Script from "next/script";
 
 export default function Home() {
   return (
     <div>
+      <Script
+        id="structured-data-site-navigation"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SiteNavigationElement",
+            "name": [
+              "PR News",
+              "World",
+              "US",
+              "Finance",
+              "Entertainment",
+              "Marketing"
+            ],
+            "url": [
+              "https://www.prpromotionhub.com/prnews/",
+              "https://www.prpromotionhub.com/world/",
+              "https://www.prpromotionhub.com/us/",
+              "https://www.prpromotionhub.com/finance/",
+              "https://www.prpromotionhub.com/entertainment/",
+              "https://www.prpromotionhub.com/marketing/"
+            ]
+          })
+        }}
+      />
+
       <WhatsHotBar data={prnewsData[1]} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FeaturedEditorialGrid data={[financeData[8], marketingData[2], financeData[0], usData[1]]} />
