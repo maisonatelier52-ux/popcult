@@ -31,7 +31,7 @@ export default function CategoriesNav() {
     <div className="w-full">
       <div className="">
         {/* Desktop */}
-        <div className="hidden lg:flex items-center gap-6 py-4">
+        <div className="hidden lg:flex items-center gap-6 py-3">
           {/* Grid Icon */}
           <button className="flex items-center w-8 h-8 ">
             <span className="grid grid-cols-2 gap-1">
@@ -54,7 +54,7 @@ export default function CategoriesNav() {
                       : 'hover:text-gray-700'
                     }`}
                 >
-                  <span className='text-[15px] font-bold'>{item.label}</span>
+                  <span className='text-[17px] font-bold'>{item.label}</span>
                   {item.hasDropdown && (
                     <ChevronDown className="w-4 h-4" />
                   )}
