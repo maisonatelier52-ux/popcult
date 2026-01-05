@@ -1,17 +1,4 @@
 @import "tailwindcss";
 
 /* Optional: custom font */
-:root {
-  --font-system-helvetica:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Helvetica Neue",
-    Helvetica,
-    Arial,
-    sans-serif;
-}
-
-body {
-  font-family: var(--font-system-helvetica);
-}
 
