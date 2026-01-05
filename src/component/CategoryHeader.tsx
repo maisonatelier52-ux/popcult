@@ -12,7 +12,7 @@ export default function CategoryHeader({category}:CategoryHeaderProps) {
         {[...Array(100)].map((_, i) => (
           <div
             key={i}
-            className='flex-1 border-r border-gray-200'
+            className='flex-1 border-r border-gray-100'
             style={{ minWidth: '1px' }}
           />
         ))}
