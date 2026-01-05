@@ -111,8 +111,8 @@ export default async function DetailPage({ params }: DetailPageProps) {
   return (
     <main>
       <WhatsHotBar data={prnewsData[0]} />
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-5 mb-10'>
       <Article article={article} />
-      <div className='border-t border-gray-200 mx-auto px-4 sm:px-6 lg:px-8 mt-5 mb-10'>
 
       <RelatedNewsSection data={[prnewsData[0],prnewsData[1]]}/>
       </div>

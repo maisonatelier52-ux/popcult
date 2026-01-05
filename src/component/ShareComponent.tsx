@@ -19,7 +19,7 @@ export default function ShareComponent({ url = "https://default-url.com", title 
   };
 
   return (
-    <div className="flex items-center justify-between border-t-2 border-b-2 border-dotted border-gray-100 mt-10 py-4 my-4">
+    <div className="flex items-center justify-between border-t-2 border-b-2 border-dotted border-gray-200 mt-10 py-4 my-4">
       {/* Share Text */}
       <button className="flex items-center gap-1 text-sm text-black">
         <FiShare className="text-base" />

@@ -28,12 +28,12 @@ export default function CategoriesNav() {
 
 
   return (
-    <div className="w-full border-gray-200 bg-white">
-      <div className="mx-auto px-4">
+    <div className="w-full">
+      <div className="">
         {/* Desktop */}
         <div className="hidden lg:flex items-center gap-6 py-4">
           {/* Grid Icon */}
-          <button className="flex items-center justify-center w-8 h-8 ">
+          <button className="flex items-center w-8 h-8 ">
             <span className="grid grid-cols-2 gap-1">
               <span className="w-2 h-2 border-3 border-black" />
               <span className="w-2 h-2 border-3 border-black" />

@@ -2,11 +2,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const categories = [
-  { name: 'Politics', link: '/politics' },
-  { name: 'Business', link: '/business' },
+  { name: 'PR News', link: '/prnews' },
+  { name: 'Finance', link: '/finance' },
   { name: 'World', link: '/world' },
   { name: 'US', link: '/us' },
-  { name: 'Entertainment', link: '/entertainment' },
+  { name: 'Marketing', link: '/marketing' },
+  { name: 'Technology', link: '/tech' },
+
 ];
 
 export default function MobileHeader() {

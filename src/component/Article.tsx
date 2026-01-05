@@ -44,7 +44,7 @@ export default function Article({ article }: Props) {
     }, []);
 
     return (
-        <div className="mx-auto px-4 sm:px-6 lg:px-8">
+        <div>
             <ArticleHeader article={article} />
             <SocialShare />
             <div className="flex flex-col lg:flex-row mt-2 md:gap-8 lg:gap-8">
@@ -72,7 +72,7 @@ export default function Article({ article }: Props) {
     lg:pl-8
     lg:border-l-2
     lg:border-dotted
-    lg:border-gray-100
+    lg:border-gray-200
   ">
                     <ArticleCard
                         data={[

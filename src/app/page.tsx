@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div>
       <WhatsHotBar data={prnewsData[1]} />
-      <div className=" mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FeaturedEditorialGrid data={[financeData[8], marketingData[2], financeData[0], usData[1]]} />
 
         {/* first data must be pr news */}
