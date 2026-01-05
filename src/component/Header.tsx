@@ -63,7 +63,7 @@ export default function Header() {
                   {categories.map((item, index) => (
                     <Link key={item} href="#" className="flex items-center gap-3">
                       {index !== 0 && (
-                        <span className="w-2 h-2 bg-[#000080] inline-block" />
+                        <span className="w-2 h-2 bg-[#041f4a] inline-block" />
                       )}
                       <span className="text-[14px] text-black">{item}</span>
                     </Link>

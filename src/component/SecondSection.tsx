@@ -2,6 +2,19 @@ import CategorySectionHeader from "./CategorySectionHeader";
 import SecondArticle from "./SecondArticle";
 import SecondEditorial from "./SecondEditorial";
 
+interface Author {
+  name: string;
+  role: string;
+  bio: string;
+  image: string;
+  email: string;
+  twitter: string;
+  facebook: string;
+  instagram: string;
+  substack?: string;
+  medium?: string;
+}
+
 interface NewsData {
   slug: string;
   category: string;
@@ -10,6 +23,7 @@ interface NewsData {
   description: string;
   date: string;
   image: string;
+  author:Author;
 }
 
 interface Props {
@@ -27,7 +41,7 @@ export default function SecondSection({ data }: Props) {
             image={data[0].image}
             category={data[0].category}
             title={data[0].title}
-            author="Clara Quick"
+            author={data[0].author}
             date={data[0].date}
             shortdescription={data[0].shortdescription}
             slug={data[0].slug}
@@ -45,7 +59,7 @@ export default function SecondSection({ data }: Props) {
                 title={item.title}
                 image={item.image}
                 date={item.date}
-                author="David"
+                author={item.author.name}
                 category={item.category}
                 slug={item.slug}
               />

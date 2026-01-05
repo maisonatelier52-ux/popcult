@@ -35,6 +35,20 @@ export async function generateStaticParams() {
   return params;
 }
 
+interface Author {
+  name: string;
+  role: string;
+  bio: string;
+  image: string;
+  email: string;
+  twitter: string;
+  facebook: string;
+  instagram: string;
+  substack?: string;
+  medium?: string;
+}
+
+
 interface NewsItem {
   category: string;
   title: string;
@@ -42,6 +56,7 @@ interface NewsItem {
   description: string;
   image: string;
   slug: string;
+author: Author;
   date: string;
 }
 

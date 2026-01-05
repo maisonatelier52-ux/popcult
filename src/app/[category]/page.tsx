@@ -11,6 +11,19 @@ import CategoryHeader from '@/component/CategoryHeader';
 import WhatsHotBar from '@/component/WhatsHotBar';
 import CategoryContent from '@/component/CategoryContent';
 
+interface Author {
+  name: string;
+  role: string;
+  bio: string;
+  image: string;
+  email: string;
+  twitter: string;
+  facebook: string;
+  instagram: string;
+  substack?: string;
+  medium?: string;
+}
+
 interface NewsItem {
   category: string;
   title: string;
@@ -19,6 +32,7 @@ interface NewsItem {
   image: string;
   slug: string;
   date: string;
+  author: Author;
 }
 
 const allData: Record<string, NewsItem[]> = {
@@ -44,7 +58,7 @@ export default async function CategoryPage({
   params: Promise<{ category: string }>;
 }) {
   const { category } = await params;
-  console.log(category,'cag')
+  console.log(category, 'cag')
   const data = allData[category];
 
   if (!data) {
@@ -62,13 +76,11 @@ export default async function CategoryPage({
 
   return (
     <>
-    <WhatsHotBar data={data[0]}/>
-
-        <CategoryHeader category={data[0].category}/>
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     
-      <CategoryContent data={data}/>
-    </div>
+      <WhatsHotBar data={data[0]} />
+      <CategoryHeader category={data[0].category} />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <CategoryContent data={data} />
+      </div>
     </>
   );
 }

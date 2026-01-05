@@ -21,7 +21,7 @@ export default function Pagination({
             className={`w-10 h-10 flex items-center justify-center cursor-pointer text-sm font-medium
               ${
                 page === currentPage
-                  ? "bg-[#000080] text-white"
+                  ? "bg-[#041f4a] text-white"
                   : "text-gray-500 hover:text-black"
               }
             `}

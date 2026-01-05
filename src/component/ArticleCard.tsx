@@ -44,7 +44,7 @@ export default function ArticleCard({ data }: Props) {
               </div>
               <div className="relative flex flex-col gap-2 overflow-hidden">
            
-                <span className="bg-[#000080] text-white text-xs font-bold px-2 py-1 w-fit hidden md:inline-block">
+                <span className="bg-[#041f4a] text-white text-xs font-bold px-2 py-1 w-fit hidden md:inline-block">
                   {item.category}
                 </span>
 

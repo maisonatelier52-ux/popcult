@@ -50,7 +50,7 @@ export default function CategoriesNav() {
                 <Link
                   href={item.href}
                   className={`flex items-center gap-1 relative pb-1 ${pathname === item.href
-                      ? 'after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-[#000080]'
+                      ? 'after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-[#041f4a]'
                       : 'hover:text-gray-700'
                     }`}
                 >
@@ -62,7 +62,7 @@ export default function CategoriesNav() {
 
                 {/* Red Square Separator */}
                 {index !== categories.length - 1 && (
-                  <span className="w-2 h-2 bg-[#000080]" />
+                  <span className="w-2 h-2 bg-[#041f4a]" />
                 )}
               </div>
             ))}

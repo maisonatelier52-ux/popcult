@@ -11,6 +11,19 @@ import CommentForm from './CommentForm';
 import ArticleCard from './ArticleCard';
 import prnewsData from '../../public/data/prnews.json';
 
+interface Author {
+  name: string;
+  role: string;
+  bio: string;
+  image: string;
+  email: string;
+  twitter: string;
+  facebook: string;
+  instagram: string;
+  substack?: string;
+  medium?: string;
+}
+
 interface NewsItem {
     category: string;
     title: string;
@@ -19,6 +32,7 @@ interface NewsItem {
     image: string;
     slug: string;
     date: string;
+    author:Author;
 }
 
 interface Props {

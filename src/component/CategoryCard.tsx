@@ -1,6 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 
+interface Author {
+  name: string;
+  role: string;
+  bio: string;
+  image: string;
+  email: string;
+  twitter: string;
+  facebook: string;
+  instagram: string;
+  substack?: string;
+  medium?: string;
+}
+
 interface NewsData {
     slug: string;
     category: string;
@@ -9,6 +22,7 @@ interface NewsData {
     description: string;
     date: string;
     image: string;
+    author:Author;
 }
 
 interface Props {
@@ -35,8 +49,8 @@ export default function CategoryCard({ data }: Props) {
                             <div>{data.date}</div>
                             <div className="mt-">
                                 By{" "}
-                                <span className="text-[#000080] font-medium hover:underline cursor-pointer">
-                                    David
+                                <span className="text-[#041f4a] font-medium hover:underline cursor-pointer">
+                                    {data.author.name}
                                 </span>
                             </div>
                         </div>
@@ -81,8 +95,8 @@ export default function CategoryCard({ data }: Props) {
                             <div>{data.date}</div>
                             <div className="">
                                 By{" "}
-                                <span className="text-[#000080] font-medium hover:underline cursor-pointer">
-                                    David
+                                <span className="text-[#041f4a] font-medium hover:underline cursor-pointer">
+                                    {data.author.name}
                                 </span>
                             </div>
                         </div>

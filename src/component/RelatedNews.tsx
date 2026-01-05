@@ -1,12 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
 
+interface Author {
+  name: string;
+  role: string;
+  bio: string;
+  image: string;
+  email: string;
+  twitter: string;
+  facebook: string;
+  instagram: string;
+  substack?: string;
+  medium?: string;
+}
+
 interface NewsData {
     title: string;
     image: string;
     date: string;
     category: string;
     slug: string;
+    author:Author;
 }
 
 interface Props {
@@ -33,8 +47,8 @@ export default function RelatedNews({ data }: Props) {
                             <div>{data.date}</div>
                             <div className="mt-1">
                                 By{" "}
-                                <span className="text-[#000080] font-medium hover:underline cursor-pointer">
-                                    David
+                                <span className="text-[#041f4a] font-medium hover:underline cursor-pointer">
+                                    {data.author.name}
                                 </span>
                             </div>
                         </div>
@@ -78,7 +92,7 @@ export default function RelatedNews({ data }: Props) {
                         <div className="mt-2 text-[10px] lg:text-[12px] text-gray-600 flex items-center gap-2">
                             <span>
                                 By{" "}
-                                <span className="text-[#000080] font-medium hover:underline">
+                                <span className="text-[#041f4a] font-medium hover:underline">
                                     Clara Quick
                                 </span>
                             </span>

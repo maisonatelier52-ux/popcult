@@ -1,11 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
 
-type HeroArticleProps = {
+interface Author {
+  name: string;
+  role: string;
+  bio: string;
+  image: string;
+  email: string;
+  twitter: string;
+  facebook: string;
+  instagram: string;
+  substack?: string;
+  medium?: string;
+}
+
+interface HeroArticleProps {
   image: string;
   category: string;
   title: string;
-  author: string;
+  author: Author;
   date: string;
   shortdescription: string
   slug:string
@@ -18,7 +31,7 @@ export default function SecondArticle({
   author,
   slug,
   date,
-  shortdescription
+  shortdescription,
 }: HeroArticleProps) {
   return (
     <article className="w-full">
@@ -37,7 +50,7 @@ export default function SecondArticle({
               className="object-cover"
             />
             {/* Red small box with part inside the image */}
-            <div className="absolute bottom-0  left-1/2 transform -translate-x-1/2 bg-[#000080] text-white text-[9px] sm:text-[10px] md:text-[11px] lg:text-[12px] font-bold px-4 py-2 capitalize tracking-wide text-center" style={{ marginBottom: '-10px' }}>
+            <div className="absolute bottom-0  left-1/2 transform -translate-x-1/2 bg-[#041f4a] text-white text-[9px] sm:text-[10px] md:text-[11px] lg:text-[12px] font-bold px-4 py-2 capitalize tracking-wide text-center" style={{ marginBottom: '-10px' }}>
               {category}
             </div>
           </div>
@@ -56,8 +69,8 @@ export default function SecondArticle({
           <span className="mx-2">•</span>
           <span>
             By{" "}
-            <span className="font-semibold text-[#000080] cursor-pointer hover:underline">
-              David
+            <span className="font-semibold text-[#041f4a] cursor-pointer hover:underline">
+              {author.name}
             </span>
           </span>
         </div>

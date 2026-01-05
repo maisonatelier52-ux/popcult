@@ -2,6 +2,19 @@ import Image from "next/image";
 import BelowHeroArticle from "./BelowHeroArticle";
 import Link from "next/link";
 
+interface Author {
+  name: string;
+  role: string;
+  bio: string;
+  image: string;
+  email: string;
+  twitter: string;
+  facebook: string;
+  instagram: string;
+  substack?: string;
+  medium?: string;
+}
+
 interface NewsData {
   slug: string;
   category: string;
@@ -10,6 +23,7 @@ interface NewsData {
   description: string;
   date: string;
   image: string;
+  author:Author;
 }
 
 interface Props {
@@ -35,7 +49,7 @@ export default function HeroArticle({
             className="object-cover"
           />
           {/* Red small box with part inside the image */}
-          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-[#000080] text-white text-[9px] sm:text-[10px] md:text-[11px] lg:text-[12px] font-bold px-4 py-2 capitalize tracking-wide text-center" style={{ marginBottom: '-10px' }}>
+          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-[#041f4a] text-white text-[9px] sm:text-[10px] md:text-[11px] lg:text-[12px] font-bold px-4 py-2 capitalize tracking-wide text-center" style={{ marginBottom: '-10px' }}>
        {data[0].category}
           </div>
         </div>
@@ -51,8 +65,8 @@ export default function HeroArticle({
             <span className="mx-2">•</span>
             <span>
               By{" "}
-              <span className="font-semibold text-[#000080] cursor-pointer hover:underline">
-                David
+              <span className="font-semibold text-[#041f4a] cursor-pointer hover:underline">
+                {data[0].author.name}
               </span>
             </span>
           </div>

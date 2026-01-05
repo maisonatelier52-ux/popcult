@@ -8,7 +8,11 @@ module.exports = {
     "./component/**/*.{js,ts,jsx,tsx}", // you use this folder
   ],
   theme: {
-    extend: {},
+    extend: {
+       colors: {
+        "indigo-surfoma": "#2E3A8C",
+      },
+    },
   },
   plugins: [],
 };

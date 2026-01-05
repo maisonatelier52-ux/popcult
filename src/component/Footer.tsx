@@ -74,34 +74,34 @@ export default function Footer() {
           </div>
           <div className="flex flex-row  gap-7 md:gap-20 mr-40 w-full md:w-auto">
             <div className="space-y-2 flex-1">
-              <a href="#" className="block hover:text-gray-300">
+              <Link href="/about" className="block hover:text-gray-300">
                 About Us
-              </a>
-              <a href="#" className="block hover:text-gray-300">
+              </Link>
+              <Link href="/contact" className="block hover:text-gray-300">
                 Contact
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="terms-and-conditions"
                 className="block font-semibold hover:text-gray-300 whitespace-nowrap"
               >
                 Terms and Conditions
-              </a>
+              </Link>
             </div>
 
             <div className="space-y-2 flex-1">
-              <a
-                href="#"
+              <Link
+                href="/editorial"
                 className="block font-semibold hover:text-gray-300 whitespace-nowrap"
               >
                 Editorial Policy
-              </a>
+              </Link>
 
-              <a href="#" className="block font-semibold hover:text-gray-300">
+              <Link href="/privacy-policy" className="block font-semibold hover:text-gray-300">
                 Privacy Policy
-              </a>
-              <a href="#" className="block font-semibold hover:text-gray-300">
+              </Link>
+              <Link href="/faq" className="block font-semibold hover:text-gray-300">
                 Faq
-              </a>
+              </Link>
             </div>
           </div>
         </div>

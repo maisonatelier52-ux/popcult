@@ -27,7 +27,7 @@ export default function CommentForm() {
       </h2>
 
       <p className="text-sm italic text-black">
-        Your email address will not be published. Required fields are marked <span className="text-[#000080]">*</span>
+        Your email address will not be published. Required fields are marked <span className="text-[#041f4a]">*</span>
       </p>
 
       {/* Comment Textarea */}
@@ -81,7 +81,7 @@ export default function CommentForm() {
       {/* Submit Button */}
       <button
         type="submit"
-        className="bg-[#000080] text-white text-[11px] px-8 py-2 hover:bg-gray-700 transition"
+        className="bg-[#041f4a] text-white text-[11px] px-8 py-2 hover:bg-gray-700 transition"
       >
         Post Comment
       </button>

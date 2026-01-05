@@ -25,7 +25,7 @@ export default function EditorialListItem({
       {/* Content */}
       <div className="flex-1">
         {/* Category */}
-        <span className="inline-block bg-[#000080] text-white text-xs font-semibold px-2 py-1 mb-2">
+        <span className="inline-block bg-[#041f4a] text-white text-xs font-semibold px-2 py-1 mb-2">
           {category}
         </span>
 

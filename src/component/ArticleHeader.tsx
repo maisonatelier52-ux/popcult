@@ -1,5 +1,18 @@
 import SocialShare from "./SocialShare";
 
+interface Author {
+  name: string;
+  role: string;
+  bio: string;
+  image: string;
+  email: string;
+  twitter: string;
+  facebook: string;
+  instagram: string;
+  substack?: string;
+  medium?: string;
+}
+
 interface NewsData {
   slug: string;
   category: string;
@@ -8,6 +21,7 @@ interface NewsData {
   description: string;
   date: string;
   image: string;
+  author:Author;
 }
 
 interface Props {
@@ -18,7 +32,7 @@ export default function ArticleHeader({article}: Props) {
   return (
     <header className=" mx-auto mt-5">
       {/* Category */}
-      <span className="inline-block bg-[#000080] capitalize text-white text-xs font-semibold px-3 py-1 mb-4">
+      <span className="inline-block bg-[#041f4a] capitalize text-white text-xs font-semibold px-3 py-1 mb-4">
         {article.category}
       </span>
 
@@ -43,8 +57,8 @@ export default function ArticleHeader({article}: Props) {
           /> */}
 
           <div className="text-[12px] md:text-[14px]">
-            <span className="font-semibold text-[#000080]">
-              David
+            <span className="font-semibold text-[#041f4a]">
+              {article.author.name}
             </span>
             <span className="text-gray-600">
               {" "}

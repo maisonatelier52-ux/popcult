@@ -10,7 +10,7 @@ export default function CategorySectionHeader({
       {/* Label box */}
       <div className="border border-black">
         <div className="border-t-4 border-black px-8 py-1">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#000080]">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#041f4a]">
             {title}
           </h2>
         </div>

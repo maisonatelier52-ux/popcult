@@ -40,7 +40,7 @@ export default function LatestNewsList({data}:Props) {
             <div className="mt-2 text-[12px] text-gray-600">
               <span>{item.date}</span>
               <span className="mx-2">|</span>
-              <span className="text-[#000080] font-medium">
+              <span className="text-[#041f4a] font-medium">
                 {item.category}
               </span>
             </div>

@@ -1,6 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 
+interface Author {
+  name: string;
+  role: string;
+  bio: string;
+  image: string;
+  email: string;
+  twitter: string;
+  facebook: string;
+  instagram: string;
+  substack?: string;
+  medium?: string;
+}
+
 interface NewsData {
   slug: string;
   category: string;
@@ -9,6 +22,7 @@ interface NewsData {
   description: string;
   date: string;
   image: string;
+  author:Author;
 }
 
 interface Props {
@@ -36,8 +50,8 @@ export default function HorizontalFeaturedArticle({ data }: Props) {
               <div>{data.date}</div>
               <div className="">
                 By{" "}
-                <span className="text-[#000080] font-medium hover:underline cursor-pointer">
-                  David
+                <span className="text-[#041f4a] font-medium hover:underline cursor-pointer">
+                  {data.author.name}
                 </span>
               </div>
             </div>
@@ -73,7 +87,7 @@ export default function HorizontalFeaturedArticle({ data }: Props) {
 
           {/* Content */}
           <div>
-                <span className="bg-[#000080] capitalize text-white text-xs font-bold px-8 py-1 mb-2 w-fit hidden md:inline-block">
+                <span className="bg-[#041f4a] capitalize text-white text-xs font-bold px-8 py-1 mb-2 w-fit hidden md:inline-block">
                     {data.category}
                   </span>
             <h2 className="text-[24px] font-semibold tracking-tight leading-[1.1]">
@@ -84,8 +98,8 @@ export default function HorizontalFeaturedArticle({ data }: Props) {
               <div>{data.date}</div>
               <div className="mt-1">
                 By{" "}
-                <span className="text-[#000080] font-medium hover:underline cursor-pointer">
-                  David
+                <span className="text-[#041f4a] font-medium hover:underline cursor-pointer">
+                  {data.author.name}
                 </span>
               </div>
             </div>

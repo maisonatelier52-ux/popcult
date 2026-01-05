@@ -38,7 +38,7 @@ export default function SecondEditorial({
             <div>{date}</div>
             <div className="mt-1">
               By{" "}
-              <span className="text-[#000080] font-medium hover:underline cursor-pointer">
+              <span className="text-[#041f4a] font-medium hover:underline cursor-pointer">
                 {author}
               </span>
             </div>
@@ -83,7 +83,7 @@ export default function SecondEditorial({
           <div>{date}</div>
           <div className="">
             By{" "}
-            <span className="text-[#000080] font-medium hover:underline cursor-pointer">
+            <span className="text-[#041f4a] font-medium hover:underline cursor-pointer">
               {author}
             </span>
           </div>

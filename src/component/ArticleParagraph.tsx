@@ -12,7 +12,7 @@ export default function ArticleParagraph({ text }: ArticleParagraphProps) {
       </p>
 
       {/* Bottom divider */}
-      <div className="w-full h-px bg-[#000080]" />
+      <div className="w-full h-px bg-[#041f4a]" />
     </div>
   );
 }

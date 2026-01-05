@@ -54,7 +54,7 @@ export default function LatestNewsWithStickyPromo({ data }: Props) {
     <button
       onClick={showMore}
       className="flex items-center gap-2 text-gray-500 text-sm font-medium
-                 hover:text-[#000080] transition-colors"
+                 hover:text-[#041f4a] transition-colors"
     >
       Show More <span>→</span>
     </button>

@@ -1,6 +1,19 @@
 import Link from "next/link";
 import Image from "next/image";
 
+interface Author {
+  name: string;
+  role: string;
+  bio: string;
+  image: string;
+  email: string;
+  twitter: string;
+  facebook: string;
+  instagram: string;
+  substack?: string;
+  medium?: string;
+}
+
 interface NewsData {
   slug: string;
   category: string;
@@ -9,6 +22,7 @@ interface NewsData {
   description: string;
   date: string;
   image: string;
+  author:Author;
 }
 
 interface Props {
@@ -43,8 +57,8 @@ export default function BelowHeroArticle({ data }: Props) {
           <div>{item.date}</div>
           <div className="mt-1">
             By{" "}
-            <span className="text-[#000080] font-medium hover:underline cursor-pointer">
-              David
+            <span className="text-[#041f4a] font-medium hover:underline cursor-pointer">
+              {item.author.name}
             </span>
           </div>
         </div>
@@ -94,8 +108,8 @@ export default function BelowHeroArticle({ data }: Props) {
               <div>{item.date}</div>
               <div className="mt-1">
                 By{" "}
-                <span className="text-[#000080] font-medium hover:underline cursor-pointer">
-                  David
+                <span className="text-[#041f4a] font-medium hover:underline cursor-pointer">
+                  {item.author.name}
                 </span>
               </div>
             </div>

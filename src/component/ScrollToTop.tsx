@@ -30,7 +30,7 @@ export default function ScrollToTop() {
     fixed bottom-8 right-6 z-50
     w-10 h-10
     bg-black
-    hover:bg-[#000080] text-white
+    hover:bg-[#041f4a] text-white
     flex items-center justify-center
 
     transition-all duration-200 ease-out
