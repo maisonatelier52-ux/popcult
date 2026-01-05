@@ -6,7 +6,7 @@ export default function CategoryHeader({category}:CategoryHeaderProps) {
 
 
   return (
-    <header className={` py-5 relative overflow-hidden`}>
+    <header className={`py-5 relative overflow-hidden`}>
       {/* Vertical lines background */}
       <div className="absolute inset-0 flex">
         {[...Array(150)].map((_, i) => (

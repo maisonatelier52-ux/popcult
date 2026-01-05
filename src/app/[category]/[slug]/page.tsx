@@ -4,7 +4,7 @@ import prnewsData from '../../../../public/data/prnews.json';
 import worldData from '../../../../public/data/world.json';
 import usData from '../../../../public/data/us.json';
 import marketingData from '../../../../public/data/marketing.json';
-import financeData from '../../../../public/data/entertainment.json';
+import financeData from '../../../../public/data/finance.json';
 import techData from '../../../../public/data/tech.json';
 import entertainmentData from '../../../../public/data/entertainment.json';
 import Script from "next/script";

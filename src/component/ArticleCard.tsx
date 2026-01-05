@@ -48,7 +48,7 @@ export default function ArticleCard({ data }: Props) {
                   {item.category}
                 </span>
 
-                <h3 className="relative z-10 text-[14px] font-semibold leading-snug line-clamp-3">
+                <h3 className="relative z-10 text-[15px] font-semibold leading-snug line-clamp-3">
                   {item.title}
                 </h3>
               </div>
