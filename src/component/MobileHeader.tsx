@@ -1,8 +1,5 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaMoon } from 'react-icons/fa';
-import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
 
 const categories = [
   { name: 'Politics', link: '/politics' },

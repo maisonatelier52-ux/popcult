@@ -5,7 +5,6 @@ import Header from "../component/Header";
 import Footer from "../component/Footer";
 import { Outfit } from 'next/font/google';
 import ScrollToTop from "@/component/ScrollToTop";
-import { ThemeProvider } from 'next-themes';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,17 +38,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${outfit.className} antialiased`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+      
           <Header/>
           {children}
           <Footer />
           <ScrollToTop />
-        </ThemeProvider>
       </body>
     </html>
   );
