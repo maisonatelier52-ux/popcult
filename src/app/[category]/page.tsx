@@ -63,9 +63,9 @@ export default async function CategoryPage({
   return (
     <>
     <WhatsHotBar data={data[0]}/>
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <CategoryHeader category={data[0].category}/>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
      
       <CategoryContent data={data}/>
     </div>
