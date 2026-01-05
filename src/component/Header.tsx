@@ -81,7 +81,7 @@ export default function Header() {
             </div>
 
           {/* Logo row */}
-        <div className="grid grid-cols-3 items-center py-4">
+        <div className="grid grid-cols-3 items-center py-2">
 
   <div />
 
