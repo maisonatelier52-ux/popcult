@@ -95,7 +95,7 @@ export default function RelatedNews({ data }: Props) {
                             <span>
                                 By{" "}
                                 <span className="text-[#041f4a] font-medium hover:underline">
-                                    Clara Quick
+                                    {data.author.name}
                                 </span>
                             </span>
                             <span className="text-gray-400">|</span>

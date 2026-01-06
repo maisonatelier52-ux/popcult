@@ -412,7 +412,7 @@ export default async function DetailPage({ params }: DetailPageProps) {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-5 mb-10'>
         <Article article={article} />
 
-        <RelatedNewsSection data={[prnewsData[0], prnewsData[1]]} />
+        <RelatedNewsSection data={[prnewsData[0]]} article={article} />
       </div>
     </main>
   );

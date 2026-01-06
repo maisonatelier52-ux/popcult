@@ -234,7 +234,7 @@ export default function JulioPage() {
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-5 mb-10'>
                 <JulioArticles article={julioHerreraArticle} />
 
-                <RelatedNewsSection data={[prnewsData[0], prnewsData[1]]} />
+                <RelatedNewsSection data={[prnewsData[0], prnewsData[1]]} article={julioHerreraArticle}/>
             </div>
         </main>
     );
