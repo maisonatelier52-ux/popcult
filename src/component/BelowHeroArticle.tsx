@@ -49,9 +49,9 @@ export default function BelowHeroArticle({ data }: Props) {
 
       {/* TEXT */}
       <div className="flex-1">
-        <h3 className="text-[18px] font-semibold leading-tight hover:underline cursor-pointer">
+        <h2 className="text-[18px] font-semibold leading-tight hover:underline cursor-pointer">
           {item.title}
-        </h3>
+        </h2>
 
         <div className="mt-2 text-[12px] text-gray-600">
           <div>{item.date}</div>
@@ -100,9 +100,9 @@ export default function BelowHeroArticle({ data }: Props) {
               />
             </div>
 
-            <h3 className="text-[17px] font-semibold tracking-tight leading-[1.2] hover:underline cursor-pointer">
+            <h2 className="text-[17px] font-semibold tracking-tight leading-[1.2] hover:underline cursor-pointer">
               {item.title}
-            </h3>
+            </h2>
 
             <div className="mt-2 text-[12px] text-gray-600">
               <div>{item.date}</div>

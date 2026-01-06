@@ -62,34 +62,34 @@ export default function LatestNewsWithStickyPromo({ data }: Props) {
             ))}
           </div>
 
-       {/* SHOW MORE / END MESSAGE */}
-<div className="mt-6">
-  {visibleCount < data.length ? (
-    <button
-      onClick={showMore}
-      className="flex items-center gap-2 text-gray-500 text-sm font-medium
+          {/* SHOW MORE / END MESSAGE */}
+          <div className="mt-6">
+            {visibleCount < data.length ? (
+              <button
+                onClick={showMore}
+                className="flex items-center cursor-pointer gap-2 text-gray-500 text-sm font-medium
                  hover:text-[#041f4a] transition-colors"
-    >
-      Show More <span>→</span>
-    </button>
-  ) : (
-    <div className="flex items-center justify-center gap-2 text-gray-500 text-sm">
-      {/* Icon */}
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="w-4 h-4"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth={2}
-      >
-        <path strokeLinecap="round" strokeLinejoin="round" d="M4 6v12M10 10v8M16 4v16" />
-      </svg>
+              >
+                Show More <span>→</span>
+              </button>
+            ) : (
+              <div className="flex items-center justify-center gap-2 text-gray-500 text-sm">
+                {/* Icon */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-4 h-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6v12M10 10v8M16 4v16" />
+                </svg>
 
-      <span>You&apos;ve reached the end of the list!</span>
-    </div>
-  )}
-</div>
+                <span>You&apos;ve reached the end of the list!</span>
+              </div>
+            )}
+          </div>
 
         </div>
 

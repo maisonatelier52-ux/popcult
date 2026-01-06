@@ -84,7 +84,7 @@ export default function Footer() {
                 title="terms and conditions"
                 className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap"
               >
-                Terms and Conditions
+                Terms And Conditions
               </Link>
             </div>
 

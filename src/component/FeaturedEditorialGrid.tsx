@@ -91,9 +91,9 @@ export default function FeaturedEditorialGrid({ data }: Props) {
                   {item.category}
                 </span>
 
-                <h3 className="relative z-10 text-[14px] font-semibold leading-snug line-clamp-">
+                <p className="relative z-10 text-[14px] font-semibold leading-snug line-clamp-">
                   {item.title}
-                </h3>
+                </p>
               </div>
             </div>
           </article>

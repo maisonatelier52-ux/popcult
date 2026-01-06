@@ -58,9 +58,9 @@ export default function SecondArticle({
 
 
       <div className=" mx-auto text-center">
-    <h2 className="mt-6 text-[25px] sm:text-[30px] md:text-[40px] lg:text-[42px] font-semibold tracking-tight leading-[1.1]">
+    <h3 className="mt-6 text-[25px] sm:text-[30px] md:text-[40px] lg:text-[42px] font-semibold tracking-tight leading-[1.1]">
           {title}
-        </h2>
+        </h3>
     <p className="hidden lg:block mt-1 text-[15px] md:text-[18px] text-[#666666] tracking-tight leading-[1.1]">
   {shortdescription}
 </p>

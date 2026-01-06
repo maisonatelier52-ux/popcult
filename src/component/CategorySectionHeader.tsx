@@ -9,8 +9,8 @@ export default function CategorySectionHeader({
     <div className="w-full flex items-center">
       {/* Label box */}
       <div className="border border-black">
-        <div className="border-t-4 border-black px-8 py-1">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#041f4a]">
+        <div className="border-t-4 border-black px-6 md:px-8 py-0 md:py-1">
+          <h2 className="text-[18px] sm:text-3xl font-bold text-[#041f4a]">
             {title}
           </h2>
         </div>

@@ -22,7 +22,7 @@ interface NewsData {
   description: string;
   date: string;
   image: string;
-  author:Author;
+  author: Author;
 }
 
 interface Props {
@@ -42,9 +42,9 @@ export default function HorizontalFeaturedArticle({ data }: Props) {
         <div className="flex gap-4 lg:hidden">
           {/* Text */}
           <div className="flex-1">
-            <h2 className="text-[18px] md:text-[22px] font-semibold tracking-tight leading-[1.1] hover:underline cursor-pointer">
+            <h3 className="text-[18px] md:text-[22px] font-semibold tracking-tight leading-[1.1] hover:underline cursor-pointer">
               {data.title}
-            </h2>
+            </h3>
 
             <div className="mt-2 text-[12px] text-gray-600">
               <div>{data.date}</div>
@@ -62,7 +62,7 @@ export default function HorizontalFeaturedArticle({ data }: Props) {
             <Image
               src={data.image}
               alt={data.title}
-                   title={data.title}
+              title={data.title}
               fill
               className="object-cover"
             />
@@ -81,7 +81,7 @@ export default function HorizontalFeaturedArticle({ data }: Props) {
             <Image
               src={data.image}
               alt={data.title}
-                   title={data.title}
+              title={data.title}
               fill
               className="object-cover"
             />
@@ -89,13 +89,13 @@ export default function HorizontalFeaturedArticle({ data }: Props) {
 
           {/* Content */}
           <div>
-                <span className="bg-[#041f4a] capitalize text-white text-xs font-bold px-8 py-1 mb-2 w-fit hidden md:inline-block">
-                    {data.category}
-                  </span>
-            <h2 className="text-[24px] font-semibold tracking-tight leading-[1.1]">
+            <span className="bg-[#041f4a] capitalize text-white text-xs font-bold px-8 py-1 mb-2 w-fit hidden md:inline-block">
+              {data.category}
+            </span>
+            <h3 className="text-[24px] font-semibold tracking-tight leading-[1.1]">
               {data.title}
-            </h2>
-<p className=" line-clamp-2">{data.shortdescription}</p>
+            </h3>
+            <p className=" line-clamp-2">{data.shortdescription}</p>
             <div className="mt-2 text-[12px] text-gray-600">
               <div>{data.date}</div>
               <div className="mt-1">

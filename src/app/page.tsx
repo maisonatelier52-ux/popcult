@@ -16,9 +16,39 @@ import entertainmentData from '../../public/data/entertainment.json';
 import CategorySectionHeader from "@/component/CategorySectionHeader";
 import Script from "next/script";
 
+const todayDate = new Intl.DateTimeFormat("en-CA", {
+  timeZone: "America/New_York",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+}).format(new Date());
+
+
 export default function Home() {
   return (
     <div>
+      <Script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "PR Promotion Hub",
+            url: "https://www.prpromotionhub.com",
+            datePublished: todayDate,
+            dateModified: todayDate,
+            publisher: {
+              "@type": "Organization",
+              name: "PR Promotion Hub",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://www.prpromotionhub.com/images/pr-logo.webp",
+              },
+            },
+          }),
+        }}
+      />
+
       <Script
         id="structured-data-site-navigation"
         type="application/ld+json"

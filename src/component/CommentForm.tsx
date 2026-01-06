@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import { FaRegCommentAlt } from "react-icons/fa"; 
+import { FaRegCommentAlt } from "react-icons/fa";
 import { BiMessageRounded } from "react-icons/bi";
-
+import { FaCheckCircle } from "react-icons/fa"; // For checkmark
 
 export default function CommentForm() {
   const [comment, setComment] = useState("");
@@ -10,21 +10,28 @@ export default function CommentForm() {
   const [email, setEmail] = useState("");
   const [website, setWebsite] = useState("");
   const [saveInfo, setSaveInfo] = useState(false);
-
+  const [commentSubmitted, setCommentSubmitted] = useState(false);
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission (e.g., API call)
     console.log({ comment, name, email, website, saveInfo });
-    alert("Comment submitted!");
+    setCommentSubmitted(true);
+
+    setComment("");
+    setName("");
+    setEmail("");
+    setWebsite("");
+    setSaveInfo(false);
+
+    setTimeout(() => setCommentSubmitted(false), 5000);
   };
 
   return (
     <form className="w-full mx-auto space-y-4 py-3" onSubmit={handleSubmit}>
       {/* Title */}
-      <h2 className="text-xl sm:text-2xl font-semibold flex items-center gap-2">
-        <BiMessageRounded className="w-5 h-5 text-black" /> {/* Speech bubble icon */}
+      <p className="text-xl sm:text-2xl font-semibold flex items-center gap-2">
+        <BiMessageRounded className="w-5 h-5 text-black" />
         Leave a Comment
-      </h2>
+      </p>
 
       <p className="text-sm italic text-black">
         Your email address will not be published. Required fields are marked <span className="text-[#041f4a]">*</span>
@@ -47,7 +54,7 @@ export default function CommentForm() {
           placeholder="Your name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full p-3 border border-gray-300  focus:outline-none "
+          className="w-full p-3 border border-gray-300 focus:outline-none"
           required
         />
         <input
@@ -68,23 +75,21 @@ export default function CommentForm() {
       </div>
 
       {/* Save Info Checkbox */}
-      <label className="flex items-center gap-2 text-sm text-black">
-        <input
-          type="checkbox"
-          checked={saveInfo}
-          onChange={(e) => setSaveInfo(e.target.checked)}
-          className="w-4 h-4 rounded border-gray-300 focus:ring-1  focus:ring-gray-600"
-        />
-        Save my name, email, and website in this browser for the next time I comment.
-      </label>
+      {commentSubmitted && (
+        <p className="text-green-600 text-sm mt-2 flex items-center gap-2">
+          <FaCheckCircle className="w-4 h-4" />
+          We’ve received your comment! Thank you for your feedback.
+        </p>
+      )}
 
       {/* Submit Button */}
       <button
         type="submit"
-        className="bg-[#041f4a] text-white text-[11px] px-8 py-2 hover:bg-gray-700 transition"
+        className="bg-[#041f4a] cursor-pointer text-white text-[11px] px-8 py-2 hover:bg-gray-700 transition"
       >
         Post Comment
       </button>
+
     </form>
   );
 }

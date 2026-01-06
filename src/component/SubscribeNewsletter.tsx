@@ -25,9 +25,9 @@ export default function SubscribeNewsletter() {
       )}
 
       {/* Title */}
-      <h2 className="text-[42px] font-bold leading-[1.05] tracking-[-0.02em] mb-3">
+      <span className="text-[42px] font-bold leading-[1.05] tracking-[-0.02em] mb-3">
         Subscribe Newsletter
-      </h2>
+      </span>
 
       {/* Description */}
       <p className="text-[15px] mb-5">

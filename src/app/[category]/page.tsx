@@ -87,10 +87,16 @@ export async function generateMetadata({
         "Explore entertainment news, celebrity updates, movies, music, streaming trends, and media industry highlights.",
     },
     marketing: {
-      title: "Marketing News, Digital Strategy & Branding – PR Promotion Hub",
+      title: "Marketing & Branding Insights | PR Promotion Hub",
       description:
         "Discover marketing news, digital marketing strategies, branding insights, SEO trends, and growth tactics for modern businesses.",
     },
+    tech: {
+      title: "Technology News, AI & Innovation | PR Promotion Hub",
+      description:
+        "Discover the latest technology news, AI developments, startups, gadgets, software updates, and innovations shaping the digital world.",
+    },
+
   };
 
   const siteUrl = "https://www.prpromotionhub.com";
@@ -115,40 +121,51 @@ export async function generateMetadata({
       robots: { index: false, follow: false },
     };
   }
+const todayDate = new Intl.DateTimeFormat("en-CA", {
+  timeZone: "America/New_York",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+}).format(new Date());
 
-  return {
+
+return {
+  title: meta.title,
+  description: meta.description,
+
+  alternates: {
+    canonical: categoryUrl,
+  },
+
+  openGraph: {
+    type: "article", 
     title: meta.title,
     description: meta.description,
+    url: categoryUrl,
+    siteName: "PR Promotion Hub",
+    locale: "en_US",
+    publishedTime: todayDate, 
+    modifiedTime: todayDate, 
 
-    alternates: {
-      canonical: categoryUrl,
-    },
+    images: [
+      {
+        url: firstArticleImage,
+        width: 1200,
+        height: 630,
+        alt: `${category} news – PR Promotion Hub`,
+      },
+    ],
+  },
 
-    openGraph: {
-      title: meta.title,
-      description: meta.description,
-      url: categoryUrl,
-      siteName: "PR Promotion Hub",
-      locale: "en_US",
-      type: "website",
-      images: [
-        {
-          url: firstArticleImage,
-          width: 1200,
-          height: 630,
-          alt: `${category} news – PR Promotion Hub`,
-        },
-      ],
-    },
+  twitter: {
+    card: "summary_large_image",
+    title: meta.title,
+    description: meta.description,
+    images: [firstArticleImage],
+    site: "@prpromotionhub",
+  },
+};
 
-    twitter: {
-      card: "summary_large_image",
-      title: meta.title,
-      description: meta.description,
-      images: [firstArticleImage],
-      site: "@prpromotionhub",
-    },
-  };
 }
 
 export default async function CategoryPage({
