@@ -110,12 +110,14 @@ export default function FAQ() {
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                                 <Link
                                     href="/contact"
+                                    title="contact"
                                     className=" px-8 py-3 bg-[#041f4a] text-white rounded-full font-bold hover:bg-blue-800 transition-all shadow-md flex items-center justify-center gap-2"
                                 >
                                     <Mail size={18} /> Contact
                                 </Link>
                                 <Link
                                     href="/about"
+                                    title="about"
                                     className=" px-8 py-3 bg-white text-gray-700 border border-gray-200 rounded-full font-bold hover:bg-gray-50 transition-all flex items-center justify-center gap-2"
                                 >
                                     Learn More About Us <ChevronRight size={18} />

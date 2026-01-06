@@ -62,6 +62,7 @@ export default function HorizontalFeaturedArticle({ data }: Props) {
             <Image
               src={data.image}
               alt={data.title}
+                   title={data.title}
               fill
               className="object-cover"
             />
@@ -80,6 +81,7 @@ export default function HorizontalFeaturedArticle({ data }: Props) {
             <Image
               src={data.image}
               alt={data.title}
+                   title={data.title}
               fill
               className="object-cover"
             />

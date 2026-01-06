@@ -44,6 +44,7 @@ export default function HeroArticle({
           <Image
             src={data[0].image}
             alt={data[0].title}
+                 title={data[0].title}
             fill
             priority
             className="object-cover"

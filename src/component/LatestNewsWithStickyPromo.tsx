@@ -5,6 +5,19 @@ import HorizontalFeaturedArticle from "./HorizontalFeaturedArticle";
 import UpgradePromoCard from "./UpgradePromoCard";
 import CategorySectionHeader from "./CategorySectionHeader";
 
+interface Author {
+  name: string;
+  role: string;
+  bio: string;
+  image: string;
+  email: string;
+  twitter: string;
+  facebook: string;
+  instagram: string;
+  substack?: string;
+  medium?: string;
+}
+
 interface NewsData {
   slug: string;
   category: string;
@@ -13,6 +26,7 @@ interface NewsData {
   description: string;
   date: string;
   image: string;
+  author: Author;
 }
 
 interface Props {

@@ -19,14 +19,10 @@ export default function MobileHeader() {
       {/* Top bar */}
       <div className="flex items-center justify-between px-4 py-3">
         {/* Logo */}
-        <Link href="/">
-          <Image
-            src='/images/popcult-white-logo.png'
-            alt="POPCULT Logo"
-            width={170}
-            height={50}
-            className="object-contain"
-          />
+        <Link href="/" title='home'>
+         <span className="font-serif font-bold text-[22px] tracking-tight text-white uppercase">
+                  PR<span className="font-normal">PROMOTIONHUB</span>
+                </span>
         </Link>
 
         {/* Right icons */}
@@ -46,7 +42,7 @@ export default function MobileHeader() {
       {/* Category bar */}
       <div className="flex gap-6 px-4 py-2 text-[15px] font-bold overflow-x-auto whitespace-nowrap">
         {categories.map((item) => (
-          <Link key={item.link} href={item.link} className="flex-shrink-0">
+          <Link key={item.link} href={item.link} title={item.name} className="flex-shrink-0">
             {item.name.toUpperCase()}
           </Link>
         ))}

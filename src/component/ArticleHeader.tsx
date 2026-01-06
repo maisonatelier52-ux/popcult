@@ -56,19 +56,22 @@ export default function ArticleHeader({article}: Props) {
             className="w-10 h-10 rounded-full object-cover"
           /> */}
 
-          <div className="text-[12px] md:text-[14px]">
-            <span className="font-semibold text-[#041f4a]">
-              {article.author.name}
-            </span>
-            <span className="text-gray-600">
-              {" "}
-              – manager · 
-            </span>
+       <div className="text-[12px] md:text-[14px]">
+  <span className="font-semibold text-[#041f4a]">
+    {article.author.name}
+  </span>
 
-            <div className="text-gray-500">
-              Last updated: {article.date}
-            </div>
-          </div>
+  <span className="mx-2 text-gray-400">|</span>
+
+  <span className="text-gray-600">
+    {article.author.role}
+  </span>
+
+  <div className="text-gray-500">
+    {article.date}
+  </div>
+</div>
+
         </div>
 
 

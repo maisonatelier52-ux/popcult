@@ -10,6 +10,7 @@ export default function UpgradePromoCard() {
       {/* Clickable Image */}
       <Link
         href="https://newsflashpro.com"
+        title='NewsFlashPro Ad'
         target="_blank"
         rel="noopener noreferrer"
         className="block w-full cursor-pointer"
@@ -18,6 +19,7 @@ export default function UpgradePromoCard() {
           <Image
             src="/images/newsflashpro.jpeg"
             alt="NewsFlashPro Ad"
+            title="NewsFlashPro Ad"
             width={1200}
             height={500}
             className="

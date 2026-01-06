@@ -1,6 +1,20 @@
 import HeroArticle from "./HeroArticle";
 import LatestNewsList from "./LatestNewsList";
 
+interface Author {
+  name: string;
+  role: string;
+  bio: string;
+  image: string;
+  email: string;
+  twitter: string;
+  facebook: string;
+  instagram: string;
+  substack?: string;
+  medium?: string;
+  slug?:string;
+}
+
 interface NewsData {
   slug: string;
   category: string;
@@ -9,18 +23,42 @@ interface NewsData {
   description: string;
   date: string;
   image: string;
+  author: Author;
 }
 
 interface Props {
   data: NewsData[];
 }
 
+ const manualItem: NewsData = {
+    title: "Julio Herrera Velutini and the Evolution of International Private Banking",
+    image: "/images/julio-herrera-velutini.webp",
+    slug: "julio-herrera-velutini-banking-legacy-global-finance-influence",
+    category: "finance",
+    shortdescription: "",
+    description: "",
+    date: "Jan. 6, 2026",
+       author: {
+      name: "Staff Reporter",
+      role: "Business & Economy Desk",
+      bio: "",
+      image: "",
+      slug: "",
+      email: "",
+      twitter: "",
+      facebook: "",
+      instagram: "",
+      substack: "",
+      medium: ""
+    }
+  };
+
 export default function HeroSection({ data }: Props) {
   return (
     <section className="mx-auto  mt-8">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-7 md:gap-15">
         <div className="lg:col-span-2">
-          <HeroArticle data={[data[0], data[1], data[2], data[3]]} />
+          <HeroArticle data={[data[0], data[1], data[2],manualItem]} />
         </div>
 
         <div className="lg:col-span-1">

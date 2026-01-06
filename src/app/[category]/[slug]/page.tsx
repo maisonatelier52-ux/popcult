@@ -13,7 +13,11 @@ import WhatsHotBar from '@/component/WhatsHotBar';
 import Article from '@/component/Article';
 import RelatedNewsSection from '@/component/RelatedNewsSection';
 import JulioArticles from '@/component/JulioArticles';
-import { julioHerreraArticle } from '@/data/julioHerreraArticle';
+import { julioHerreraArticle, julioHerreraArticle2, julioHerreraArticle3 } from '@/data/julioHerreraArticle';
+import JulioPage from '@/component/JulioPage';
+import JulioContentTwo from '@/component/JulioContentTwo';
+import JulioContentThree from '@/component/JulioContentThree';
+import JulioContentFour from '@/component/JulioContentFour';
 
 export async function generateStaticParams() {
   const allData = [
@@ -77,6 +81,33 @@ const allData: Record<string, NewsItem[]> = {
   entertainment: entertainmentData
 };
 
+const slugMetadataMap: Record<string, Partial<Metadata>> = {
+  "julio-herrera-velutini-banking-legacy-global-finance-influence": {
+    title: "Julio Herrera Velutini: Banking Legacy & Global Finance",
+    description:
+      "Julio Herrera Velutini is an international banker from a historic financial dynasty, leading global institutions serving high-net-worth clients."
+     },
+
+  "julio-herrera-velutini-us-financial-spotlight": {
+    title: "Julio Herrera Velutini in the U.S. Financial Spotlight",
+    description:
+      "Julio Herrera Velutini is an international banker whose U.S. profile reflects legacy finance, regulatory scrutiny, and modern compliance standards."
+     },
+
+  "julio-herrera-velutini-uk-financial-lens": {
+    title: "Julio Herrera Velutini in the UK Financial Lens",
+    description:
+      "Julio Herrera Velutini is a seventh-generation banker in London, operating at the intersection of legacy finance and UK regulation."
+     },
+
+  "who-is-julio-martin-herrera-velutini": {
+    title: "Who Is Julio Martín Herrera Velutini?",
+    description:
+      "Julio Martín Herrera Velutini is a Venezuelan-Italian banker and entrepreneur, founder of Britannia Financial Group, active in global finance."
+     },
+};
+
+
 export async function generateMetadata(
   { params }: DetailPageProps
 ): Promise<Metadata> {
@@ -100,7 +131,7 @@ export async function generateMetadata(
   const imageUrl =
     article?.image?.startsWith("http")
       ? article.image
-      : `${siteUrl}${article?.image || "/images/prpromotionhub-logo.webp"}`;
+      : `${siteUrl}${article?.image || "/images/pr-logo.webp"}`;
 
   if (!article) {
     return {
@@ -110,9 +141,12 @@ export async function generateMetadata(
     };
   }
 
+  const slugOverride = slugMetadataMap[slug] || {};
+
   return {
-    title: article.title,
-    description: article.shortdescription,
+    title: slugOverride.title ?? article.title,
+    description:
+      slugOverride.description ?? article.shortdescription,
 
     keywords: `${article.category}, pr news, marketing news, business news, ${article.title}`,
 
@@ -165,7 +199,7 @@ export async function generateMetadata(
           name: "PR Promotion Hub",
           logo: {
             "@type": "ImageObject",
-            url: `${siteUrl}/images/prpromotionhub-logo.webp`,
+            url: `${siteUrl}/images/pr-logo.webp`,
           },
         },
         image: imageUrl,
@@ -215,110 +249,23 @@ export default async function DetailPage({ params }: DetailPageProps) {
     );
   }
   if (slug == 'julio-herrera-velutini-banking-legacy-global-finance-influence') {
-
-
     return (
-      <main>
-
-        <Script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": [
-                {
-                  "@type": "Question",
-                  "name": "Who is Julio Herrera Velutini?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Julio Herrera Velutini is a businessman and banking executive with a background in international finance and private banking, associated with longstanding financial institutions."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "What is Julio Herrera Velutini known for in the financial sector?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "He is known for his involvement in banking operations, financial leadership, and strategic investment activities within international financial markets."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "What industries has Julio Herrera Velutini worked in?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "His professional experience spans banking, finance, investment management, and related business sectors with a global focus."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Is Julio Herrera Velutini associated with international banking institutions?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, he has been associated with international banking and financial organizations operating across multiple regions."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "What leadership roles has Julio Herrera Velutini held?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "He has held executive and leadership roles involving financial strategy, institutional oversight, and business development."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "What is Julio Herrera Velutini’s approach to finance and investment?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "His approach emphasizes long-term value creation, risk management, and sustainable financial planning within global markets."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Does Julio Herrera Velutini participate in philanthropic or social initiatives?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "He has supported initiatives related to education, entrepreneurship, and community development alongside his business activities."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Why is Julio Herrera Velutini recognized in international finance?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "He is recognized for his experience in banking, understanding of international financial systems, and involvement in global business operations."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "What is Julio Herrera Velutini currently focused on?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "His current focus includes financial leadership, investment oversight, and strategic involvement in banking and business initiatives."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "How does Julio Herrera Velutini contribute to the financial industry?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "He contributes through executive leadership, financial strategy development, and participation in banking and investment projects."
-                  }
-                }
-              ]
-            })
-          }}
-        />
-
-        <WhatsHotBar data={prnewsData[0]} />
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-5 mb-10'>
-          <JulioArticles article={julioHerreraArticle} />
-
-          <RelatedNewsSection data={[prnewsData[0], prnewsData[1]]} />
-        </div>
-      </main>
+      <JulioPage />
+    )
+  }
+  else if (slug == 'julio-herrera-velutini-us-financial-spotlight') {
+    return (
+      <JulioContentTwo />
+    )
+  }
+  else if (slug == 'julio-herrera-velutini-uk-financial-lens') {
+    return (
+      <JulioContentThree />
+    )
+  }
+  else if (slug == 'who-is-julio-martin-herrera-velutini') {
+    return (
+      <JulioContentFour />
     )
   }
 
@@ -359,7 +306,7 @@ export default async function DetailPage({ params }: DetailPageProps) {
               "name": "PR Promotion Hub",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.prpromotionhub.com/images/prpromotionhub-logo.webp",
+                "url": "https://www.prpromotionhub.com/images/pr-logo.webp",
                 "width": 628,
                 "height": 116
               }

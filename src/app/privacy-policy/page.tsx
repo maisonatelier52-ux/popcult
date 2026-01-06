@@ -154,6 +154,7 @@ export default function PrivacyPolicy() {
 
                         <Link
                             href="/contact"
+                            title="contact"
                             className="inline-flex items-center gap-2 px-6 py-3 bg-white border border-gray-300 rounded-full font-semibold text-[#041f4a] hover:bg-gray-50 transition-colors shadow-sm"
                         >
                             <Mail size={18} /> Contact Us

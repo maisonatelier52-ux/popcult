@@ -15,7 +15,7 @@ interface Props {
   data: NewsData;
 }
 
-export default function ArticleWithDescr({ data }: Props) {
+export default function   ArticleWithDescr({ data }: Props) {
   // Split description into sentences
   const sentences = data.description.split('. ');
   const mid = Math.ceil(sentences.length / 2);

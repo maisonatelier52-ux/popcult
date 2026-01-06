@@ -17,7 +17,7 @@ export default function ArticleImage({
         alt={alt}
         width={900}
         height={0}
-        className="w-full h-150 object-cover"
+        className="w-full h-100 md:h-150 object-cover"
         priority
       />
     </div>

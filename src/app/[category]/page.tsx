@@ -106,7 +106,7 @@ export async function generateMetadata({
   const firstArticleImage =
     firstArticle?.image?.startsWith("http")
       ? firstArticle.image
-      : `${siteUrl}${firstArticle?.image || "/images/prpromotionhub-logo.webp"}`;
+      : `${siteUrl}${firstArticle?.image || "/images/pr-logo.webp"}`;
 
   if (!firstArticle) {
     return {

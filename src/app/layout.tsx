@@ -26,10 +26,10 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.prpromotionhub.com"),
 
-  title: "PR Promotion Hub – PR News, Marketing Insights & Global Business Coverage",
+  title: "PR Promotion Hub – PR News & Global Business",
   description:
-    "PR Promotion Hub delivers the latest PR news, marketing strategies, finance updates, global business coverage, and entertainment insights. Stay ahead with trusted industry reporting.",
-  keywords:
+    "PR Promotion Hub delivers trusted PR news, marketing strategies, finance updates, global business coverage, and entertainment insights from around the world.",
+     keywords:
     "pr news, press release news, marketing news, digital marketing, finance news, business news, world news, us news, entertainment news, brand promotion, pr promotion hub",
 
   openGraph: {
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "https://www.prpromotionhub.com/images/prpromotionhub-logo.webp",
+        url: "https://www.prpromotionhub.com/images/pr-logo.webp",
         width: 1200,
         height: 630,
         alt: "PR Promotion Hub logo",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: "PR Promotion Hub – PR News & Marketing Intelligence",
     description:
       "PR Promotion Hub brings you PR news, marketing intelligence, finance updates, and global business stories to help brands grow and succeed.",
-    images: ["https://www.prpromotionhub.com/images/prpromotionhub-logo.webp"],
+    images: ["https://www.prpromotionhub.com/images/pr-logo.webp"],
     site: "@prpromotionhub",
     creator: "@prpromotionhub",
   },

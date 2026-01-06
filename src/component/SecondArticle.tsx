@@ -45,6 +45,7 @@ export default function SecondArticle({
             <Image
               src={image}
               alt={title}
+                   title={title}
               fill
               priority
               className="object-cover"

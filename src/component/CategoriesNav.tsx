@@ -49,6 +49,7 @@ export default function CategoriesNav() {
               <div key={item.label} className="flex items-center gap-5">
                 <Link
                   href={item.href}
+                  title={item.label}
                   className={`flex items-center gap-1 relative pb-1 ${pathname === item.href
                       ? 'after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-[#041f4a]'
                       : 'hover:text-gray-700'
@@ -85,6 +86,7 @@ export default function CategoriesNav() {
                 <Link
                   key={item.label}
                   href={item.href}
+                  title={item.label}
                   className="flex items-center justify-between border-b pb-2"
                   onClick={() => setOpen(false)}
                 >

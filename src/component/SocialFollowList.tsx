@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
-// Define the types for the items and the props
 interface SocialItem {
   id: string;
   label: string;
@@ -14,7 +13,6 @@ interface SocialFollowListProps {
   items: SocialItem[];
 }
 
-// Dummy data to pass into the component
 const dummyData: SocialItem[] = [
   {
     id: '1',

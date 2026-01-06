@@ -59,6 +59,7 @@ export default function RelatedNews({ data }: Props) {
                         <Image
                             src={data.image}
                             alt={data.title}
+                                 title={data.title}
                             fill
                             className="object-cover"
                         />
@@ -79,6 +80,7 @@ export default function RelatedNews({ data }: Props) {
                             <Image
                                 src={data.image}
                                 alt={data.title}
+                                     title={data.title}
                                 fill
                                 className="object-cover"
                                 sizes="(max-width: 768px) 100vw, 270px"

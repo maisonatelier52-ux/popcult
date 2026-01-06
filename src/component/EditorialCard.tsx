@@ -50,6 +50,7 @@ export default function EditorialCard({
           <Image
             src={image}
             alt={title}
+                 title={title}
             fill
             className="object-cover"
           />
@@ -68,6 +69,7 @@ export default function EditorialCard({
           <Image
             src={image}
             alt={title}
+                 title={title}
             fill
             className="object-cover"
           />

@@ -141,6 +141,7 @@ export default function TermsAndConditions() {
           </p>
           <Link 
             href="/contact" 
+            title="contact"
             className="px-10 py-4 bg-[#041f4a] text-white rounded-full font-bold hover:shadow-lg hover:bg-blue-900 transition-all inline-block"
           >
             Contact Us

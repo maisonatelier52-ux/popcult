@@ -2,16 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface Author {
-  name: string;
-  role: string;
-  bio: string;
-  image: string;
-  email: string;
-  twitter: string;
-  facebook: string;
-  instagram: string;
-  substack?: string;
-  medium?: string;
+    name: string;
+    role: string;
+    bio: string;
+    image: string;
+    email: string;
+    twitter: string;
+    facebook: string;
+    instagram: string;
+    substack?: string;
+    medium?: string;
 }
 
 interface NewsData {
@@ -22,7 +22,7 @@ interface NewsData {
     description: string;
     date: string;
     image: string;
-    author:Author;
+    author: Author;
 }
 
 interface Props {
@@ -61,6 +61,7 @@ export default function CategoryCard({ data }: Props) {
                         <Image
                             src={data.image}
                             alt={data.title}
+                            title={data.title}
                             fill
                             className="object-cover"
                         />
@@ -79,6 +80,7 @@ export default function CategoryCard({ data }: Props) {
                         <Image
                             src={data.image}
                             alt={data.title}
+                            title={data.title}
                             fill
                             className="object-cover"
                         />

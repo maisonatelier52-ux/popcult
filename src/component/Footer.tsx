@@ -11,13 +11,13 @@ import { SiSubstack } from "react-icons/si";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white">
-      <div className="mx-auto px-8 py-12">
+    <footer className="bg-black text-white ">
+      <div className="mx-auto px-8 py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-start">
           {/* Left Section */}
           <div className="mb-8 md:mb-0">
             <div className="flex">
-              <Link href="/" className="select-none">
+              <Link href="/" title="home" className="select-none">
                 <span className="font-serif font-bold text-[25px] tracking-tight text-white uppercase">
                   PR<span className="font-normal">PROMOTIONHUB</span>
                 </span>
@@ -66,23 +66,23 @@ export default function Footer() {
   </a>
 </div>
 
-            <p className="mt-4 text-sm text-gray-400 leading-relaxed">
-              Published by PRPromotionHub.
-              <br />
-              Covering PR, world, finance, and marketing news.
+            <p className="mt-4 text-sm text-[#555555] leading-relaxed">
+        Copyright 2026 PRPROMOTIONHUB. All Rights Reserved.
+
             </p>
           </div>
           <div className="flex flex-row  gap-7 md:gap-20 mr-40 w-full md:w-auto">
             <div className="space-y-2 flex-1">
-              <Link href="/about" className="block hover:text-gray-300">
+              <Link href="/about" title="about" className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap">
                 About Us
               </Link>
-              <Link href="/contact" className="block hover:text-gray-300">
+              <Link href="/contact" title="contact" className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap">
                 Contact
               </Link>
               <Link
-                href="terms-and-conditions"
-                className="block font-semibold hover:text-gray-300 whitespace-nowrap"
+                href="/terms-and-conditions"
+                title="terms and conditions"
+                className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap"
               >
                 Terms and Conditions
               </Link>
@@ -91,15 +91,16 @@ export default function Footer() {
             <div className="space-y-2 flex-1">
               <Link
                 href="/editorial"
-                className="block font-semibold hover:text-gray-300 whitespace-nowrap"
+                title="editorial"
+                className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap"
               >
                 Editorial Policy
               </Link>
 
-              <Link href="/privacy-policy" className="block font-semibold hover:text-gray-300">
+              <Link href="/privacy-policy" title="privacy-policy" className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap">
                 Privacy Policy
               </Link>
-              <Link href="/faq" className="block font-semibold hover:text-gray-300">
+              <Link href="/faq" title="faq" className="block font-semibold hover:text-[#1c4a93] whitespace-nowrap">
                 Faq
               </Link>
             </div>
