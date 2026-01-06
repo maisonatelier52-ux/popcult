@@ -1,5 +1,3 @@
-'use client';
-
 interface ArticleParagraphProps {
   text: string;
 }

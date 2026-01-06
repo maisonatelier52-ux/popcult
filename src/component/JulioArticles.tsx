@@ -1,11 +1,9 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
-import ArticleHeader from './ArticleHeader';
 import SocialShare from './SocialShare';
 import ArticleImage from './ArticleImage';
 import SocialShareList from './SocialShareList';
-import ArticleWithDescr from './ArticleWithDescr';
 import ShareComponent from './ShareComponent';
 import CommentForm from './CommentForm';
 import ArticleCard from './ArticleCard';

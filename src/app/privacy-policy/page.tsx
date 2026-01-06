@@ -1,4 +1,3 @@
-"use client";
 import Head from "next/head";
 import Link from "next/link";
 import { Shield, Lock, Eye, Cookie, Globe, RefreshCw, Mail } from "lucide-react";

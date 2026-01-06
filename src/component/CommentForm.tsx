@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { FaRegCommentAlt } from "react-icons/fa";
 import { BiMessageRounded } from "react-icons/bi";
-import { FaCheckCircle } from "react-icons/fa"; // For checkmark
+import { FaCheckCircle } from "react-icons/fa";
 
 export default function CommentForm() {
   const [comment, setComment] = useState("");

@@ -1,4 +1,3 @@
-"use client";
 import Head from "next/head";
 import Link from "next/link";
 import { Scale, ShieldAlert, Copyright, ExternalLink, Info, Mail } from "lucide-react";

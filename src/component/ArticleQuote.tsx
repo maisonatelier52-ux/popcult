@@ -1,5 +1,3 @@
-'use client';
-
 import { FaQuoteLeft } from 'react-icons/fa';
 
 interface ArticleQuoteProps {

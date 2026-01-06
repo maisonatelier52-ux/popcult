@@ -1,22 +1,13 @@
-'use client';
-
-import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 import {
   FaTwitter,
   FaInstagram,
   FaFacebookF,
-  FaRss,
   FaMediumM,
-  FaTag,
   FaEnvelope,
-  FaSearch,
 } from 'react-icons/fa';
 import { SiSubstack } from 'react-icons/si';
-import { Menu, X } from 'lucide-react';
-
 import CategoriesNav from './CategoriesNav';
 import MobileHeader from './MobileHeader';
 
@@ -27,7 +18,6 @@ const categories = [
 ];
 
 export default function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <header className="w-full">
@@ -37,8 +27,6 @@ export default function Header() {
 
         <MobileHeader />
       </div>
-
-
 
       {/* ================= DESKTOP HEADER (UNCHANGED) ================= */}
       <div className="hidden lg:block ">
