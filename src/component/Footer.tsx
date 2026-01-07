@@ -70,7 +70,6 @@ export default function Footer() {
                 <SiSubstack />
               </Link>
             </div>
-b
             <p className="mt-4 text-[11px] md:text-sm text-[#555555] leading-relaxed">
               Copyright 2026 PRPROMOTIONHUB. All Rights Reserved.   
             </p>
