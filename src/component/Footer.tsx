@@ -25,45 +25,50 @@ export default function Footer() {
             </div>
             {/* Social Icons */}
           <div className="flex gap-4 mt-4 text-xl text-white">
-  <a
+  <Link
     href="#"
+    title="twitter"
     aria-label="Twitter"
     className="hover:text-gray-400 transition"
   >
     <FaTwitter />
-  </a>
+  </Link>
 
-  <a
+  <Link
     href="#"
+    title="facebook"
     aria-label="Facebook"
     className="hover:text-gray-400 transition"
   >
     <FaFacebookF />
-  </a>
+  </Link>
 
-  <a
+  <Link
     href="#"
+    title="instagram"
     aria-label="Instagram"
     className="hover:text-gray-400 transition"
   >
     <FaInstagram />
-  </a>
+  </Link>
 
-  <a
+  <Link
     href="#"
+    title="medium"
     aria-label="Medium"
     className="hover:text-gray-400 transition"
   >
     <FaMediumM />
-  </a>
+  </Link>
 
-  <a
+  <Link
     href="#"
+    title="substack"
     aria-label="Substack"
     className="hover:text-gray-400 transition"
   >
     <SiSubstack />
-  </a>
+  </Link>
 </div>
 
             <p className="mt-4 text-sm text-[#555555] leading-relaxed">

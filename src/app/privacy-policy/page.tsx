@@ -37,14 +37,14 @@ export default function PrivacyPolicy() {
                                 <p className="text-xs uppercase tracking-widest font-bold text-gray-400">Contents</p>
                                 <nav className="flex flex-col gap-2">
                                     {sections.map((s) => (
-                                        <a
+                                        <Link
                                             key={s.id}
                                             href={`#${s.id}`}
                                             className="flex items-center gap-3 text-sm font-medium text-gray-600 hover:text-[#041f4a] p-2 rounded-lg hover:bg-gray-50 transition-all"
                                         >
                                             {s.icon}
                                             {s.title}
-                                        </a>
+                                        </Link>
                                     ))}
                                 </nav>
                             </div>

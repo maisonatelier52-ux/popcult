@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import { CheckCircle, ShieldCheck, Scale, AlertCircle, FileText } from "lucide-react";
+import Link from "next/link";
 
 export default function Editorial() {
   const sections = [
@@ -37,21 +38,18 @@ export default function Editorial() {
                 <p className="text-xs uppercase tracking-widest font-bold text-gray-400">Contents</p>
                 <nav className="flex flex-col gap-2">
                   {sections.map((s) => (
-                    <a
+                    <Link
                       key={s.id}
                       href={`#${s.id}`}
                       className="flex items-center gap-3 text-sm font-medium text-gray-600 hover:text-[#041f4a] p-2 rounded-lg hover:bg-gray-50 transition-all"
                     >
                       {s.icon}
                       {s.label}
-                    </a>
+                    </Link>
                   ))}
                 </nav>
               </div>
             </aside>
-            {/* Side Navigation */}
-
-
             {/* Content Area */}
             <div className="flex-1 space-y-5 md:space-y-16">
 

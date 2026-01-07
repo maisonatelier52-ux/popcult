@@ -27,12 +27,13 @@ export default function Contact() {
                                 </div>
                                 <h3 className="text-xl font-bold text-gray-900 text-center mb-3">General Inquiries</h3>
                                 <p className="text-gray-600 text-center mb-4 text-sm">For general questions and information</p>
-                                <a
+                                <Link
                                     href="mailto:info@prpromotionhub.com"
+                                    title='mail'
                                     className="block text-center text-blue-600 hover:text-blue-800 font-semibold text-sm break-all"
                                 >
                                     info@prpromotionhub.com
-                                </a>
+                                </Link>
                             </div>
 
                             {/* Editorial */}
@@ -44,12 +45,13 @@ export default function Contact() {
                                 </div>
                                 <h3 className="text-xl font-bold text-gray-900 text-center mb-3">Editorial Team</h3>
                                 <p className="text-gray-600 text-center mb-4 text-sm">News tips and editorial inquiries</p>
-                                <a
+                                <Link
                                     href="mailto:editorial@prpromotionhub.com"
+                                    title='editorial-mail'
                                     className="block text-center text-blue-600 hover:text-blue-800 font-semibold text-sm break-all"
                                 >
                                     editorial@prpromotionhub.com
-                                </a>
+                                </Link>
                             </div>
 
                             {/* News Tips */}
@@ -65,12 +67,13 @@ export default function Contact() {
                                 <p className="text-gray-600 text-center mb-4 text-sm">
                                     Share story ideas, tips, or information with our editorial team
                                 </p>
-                                <a
+                                <Link
                                     href="mailto:tips@prpromotionhub.com"
+                                    title='mail'
                                     className="block text-center text-blue-600 hover:text-blue-800 font-semibold text-sm break-all"
                                 >
                                     tips@prpromotionhub.com
-                                </a>
+                                </Link>
                             </div>
 
 
@@ -83,12 +86,13 @@ export default function Contact() {
                                 </div>
                                 <h3 className="text-xl font-bold text-gray-900 text-center mb-3">Press & Media</h3>
                                 <p className="text-gray-600 text-center mb-4 text-sm">Media and press inquiries</p>
-                                <a
+                                <Link
                                     href="mailto:press@prpromotionhub.com"
+                                    title='mail-press'
                                     className="block text-center text-blue-600 hover:text-blue-800 font-semibold text-sm break-all"
                                 >
                                     press@prpromotionhub.com
-                                </a>
+                                </Link>
                             </div>
                         </div>
 
