@@ -70,7 +70,7 @@ export default function SecondArticle({
           <span className="mx-2">•</span>
           <span>
             By{" "}
-            <span className="font-semibold text-[#041f4a] cursor-pointer hover:underline">
+            <span className="font-semibold text-[#041f4a]">
               {author.name}
             </span>
           </span>

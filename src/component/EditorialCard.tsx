@@ -38,7 +38,7 @@ export default function EditorialCard({
             <div>{date}</div>
             <div className="mt-1">
               By{" "}
-              <span className="text-[#041f4a] font-medium hover:underline cursor-pointer">
+              <span className="text-[#041f4a] font-medium">
                 {author}
               </span>
             </div>
@@ -85,7 +85,7 @@ export default function EditorialCard({
           <div>{date}</div>
           <div className="mt-1">
             By{" "}
-            <span className="text-[#041f4a] font-medium hover:underline cursor-pointer">
+            <span className="text-[#041f4a] font-medium">
               {author}
             </span>
           </div>

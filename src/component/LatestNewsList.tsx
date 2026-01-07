@@ -33,7 +33,7 @@ export default function LatestNewsList({data}:Props) {
     >
 
           <div key={item.slug} className="py-2">
-            <h3 className="text-[18px] font-semibold leading-tight hover:underline cursor-pointer">
+            <h3 className="text-[18px] font-semibold leading-tight">
               {item.title}
             </h3>
 

@@ -66,7 +66,7 @@ export default function HeroArticle({
             <span className="mx-2">•</span>
             <span>
               By{" "}
-              <span className="font-semibold text-[#041f4a] cursor-pointer hover:underline">
+              <span className="font-semibold text-[#041f4a]">
                 {data[0].author.name}
               </span>
             </span>

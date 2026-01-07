@@ -50,7 +50,7 @@ export default function HorizontalFeaturedArticle({ data }: Props) {
               <div>{data.date}</div>
               <div className="">
                 By{" "}
-                <span className="text-[#041f4a] font-medium hover:underline cursor-pointer">
+                <span className="text-[#041f4a] font-medium">
                   {data.author.name}
                 </span>
               </div>
@@ -100,7 +100,7 @@ export default function HorizontalFeaturedArticle({ data }: Props) {
               <div>{data.date}</div>
               <div className="mt-1">
                 By{" "}
-                <span className="text-[#041f4a] font-medium hover:underline cursor-pointer">
+                <span className="text-[#041f4a] font-medium">
                   {data.author.name}
                 </span>
               </div>
