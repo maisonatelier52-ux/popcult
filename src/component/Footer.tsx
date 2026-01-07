@@ -24,55 +24,55 @@ export default function Footer() {
               </Link>
             </div>
             {/* Social Icons */}
-          <div className="flex gap-4 mt-4 text-xl text-white">
-  <Link
-    href="#"
-    title="twitter"
-    aria-label="Twitter"
-    className="hover:text-gray-400 transition"
-  >
-    <FaTwitter />
-  </Link>
+            <div className="flex gap-4 mt-4 text-xl text-white">
+              <Link
+                href="#"
+                title="twitter"
+                aria-label="Twitter"
+                className="hover:text-gray-400 transition"
+              >
+                <FaTwitter />
+              </Link>
 
-  <Link
-    href="#"
-    title="facebook"
-    aria-label="Facebook"
-    className="hover:text-gray-400 transition"
-  >
-    <FaFacebookF />
-  </Link>
+              <Link
+                href="#"
+                title="facebook"
+                aria-label="Facebook"
+                className="hover:text-gray-400 transition"
+              >
+                <FaFacebookF />
+              </Link>
 
-  <Link
-    href="#"
-    title="instagram"
-    aria-label="Instagram"
-    className="hover:text-gray-400 transition"
-  >
-    <FaInstagram />
-  </Link>
+              <Link
+                href="#"
+                title="instagram"
+                aria-label="Instagram"
+                className="hover:text-gray-400 transition"
+              >
+                <FaInstagram />
+              </Link>
 
-  <Link
-    href="#"
-    title="medium"
-    aria-label="Medium"
-    className="hover:text-gray-400 transition"
-  >
-    <FaMediumM />
-  </Link>
+              <Link
+                href="#"
+                title="medium"
+                aria-label="Medium"
+                className="hover:text-gray-400 transition"
+              >
+                <FaMediumM />
+              </Link>
 
-  <Link
-    href="#"
-    title="substack"
-    aria-label="Substack"
-    className="hover:text-gray-400 transition"
-  >
-    <SiSubstack />
-  </Link>
-</div>
+              <Link
+                href="#"
+                title="substack"
+                aria-label="Substack"
+                className="hover:text-gray-400 transition"
+              >
+                <SiSubstack />
+              </Link>
+            </div>
 
             <p className="mt-4 text-sm text-[#555555] leading-relaxed">
-        Copyright 2026 PRPROMOTIONHUB. All Rights Reserved.
+              Copyright 2026 PRPROMOTIONHUB. All Rights Reserved.
 
             </p>
           </div>

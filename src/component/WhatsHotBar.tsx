@@ -18,7 +18,7 @@ export default function WhatsHotBar({data}: Props) {
   return (
 <div className="hidden md:block w-full bg-[#041f4a] text-white">
 
-  <div className="mx-auto px-4">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <Link
       href={`/${data.category}/${data.slug}`}
       title={data.title}
