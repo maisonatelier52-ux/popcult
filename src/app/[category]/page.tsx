@@ -4,7 +4,7 @@ import worldData from '../../../public/data/world.json';
 import usData from '../../../public/data/us.json';
 import marketingData from '../../../public/data/marketing.json';
 import financeData from '../../../public/data/finance.json';
-import techData from '../../../public/data/tech.json';
+import technologyData from '../../../public/data/technology.json';
 import entertainmentData from '../../../public/data/entertainment.json';
 import LatestNewsWithStickyPromo from '../../component/LatestNewsWithStickyPromo'
 import CategoryHeader from '@/component/CategoryHeader';
@@ -42,7 +42,7 @@ const allData: Record<string, NewsItem[]> = {
   us: usData,
   finance: financeData,
   marketing: marketingData,
-  tech: techData,
+  technology: technologyData,
   entertainment: entertainmentData
 };
 
@@ -91,7 +91,7 @@ export async function generateMetadata({
       description:
         "Discover marketing news, digital marketing strategies, branding insights, SEO trends, and growth tactics for modern businesses.",
     },
-    tech: {
+    technology: {
       title: "Technology News, AI & Innovation | PR Promotion Hub",
       description:
         "Discover the latest technology news, AI developments, startups, gadgets, software updates, and innovations shaping the digital world.",

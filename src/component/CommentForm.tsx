@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { FaRegCommentAlt } from "react-icons/fa";
 import { BiMessageRounded } from "react-icons/bi";
 import { FaCheckCircle } from "react-icons/fa";
 

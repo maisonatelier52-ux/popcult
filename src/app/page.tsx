@@ -1,4 +1,3 @@
-import Image from "next/image";
 import WhatsHotBar from "../component/WhatsHotBar";
 import FeaturedEditorialGrid from "../component/FeaturedEditorialGrid";
 import HeroSection from "../component/HeroSection";
@@ -11,7 +10,7 @@ import marketingData from '../../public/data/marketing.json';
 import worldData from '../../public/data/world.json';
 import usData from '../../public/data/us.json';
 import financeData from '../../public/data/finance.json';
-import techData from '../../public/data/tech.json';
+import techData from '../../public/data/technology.json';
 import entertainmentData from '../../public/data/entertainment.json';
 import CategorySectionHeader from "@/component/CategorySectionHeader";
 import Script from "next/script";
@@ -63,7 +62,8 @@ export default function Home() {
               "US",
               "Finance",
               "Entertainment",
-              "Marketing"
+              "Marketing",
+              "Technology"
             ],
             "url": [
               "https://www.prpromotionhub.com/prnews/",
@@ -71,13 +71,14 @@ export default function Home() {
               "https://www.prpromotionhub.com/us/",
               "https://www.prpromotionhub.com/finance/",
               "https://www.prpromotionhub.com/entertainment/",
-              "https://www.prpromotionhub.com/marketing/"
+              "https://www.prpromotionhub.com/marketing/",
+              "https://www.prpromotionhub.com/technology/"
             ]
           })
         }}
       />
 
-      <WhatsHotBar data={prnewsData[1]} />
+      <WhatsHotBar data={usData[7]} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FeaturedEditorialGrid data={[marketingData[2], financeData[4], usData[1]]} />
 

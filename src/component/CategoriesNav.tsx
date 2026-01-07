@@ -19,7 +19,7 @@ const categories: Category[] = [
   { label: 'Marketing', href: '/marketing' }, 
   { label: 'Finance', href: '/finance' },
   { label: 'Entertainment', href: '/entertainment' },
-  { label: 'Technology', href: '/tech' },
+  { label: 'Technology', href: '/technology' },
 ];
 
 export default function CategoriesNav() {

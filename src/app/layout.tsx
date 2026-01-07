@@ -25,7 +25,6 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.prpromotionhub.com"),
-
   title: "PR Promotion Hub – PR News & Global Business",
   description:
     "PR Promotion Hub delivers trusted PR news, marketing strategies, finance updates, global business coverage, and entertainment insights from around the world.",

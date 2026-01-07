@@ -1,6 +1,3 @@
-'use client';
-
-import React, { useEffect, useRef, useState } from 'react';
 import SocialShare from './SocialShare';
 import ArticleImage from './ArticleImage';
 import SocialShareList from './SocialShareList';
@@ -23,18 +20,17 @@ interface Author {
     substack?: string;
     medium?: string;
 }
+
 interface SubParagraph {
     subtitle: string;
     description: string;
 }
-interface SubParagraph2 {
-    subtitle: string;
-    description: string;
-}
+
 interface SubPoints {
     subline: string;
     points: string[];
 }
+
 interface NewsItem {
     category: string;
     title: string;
@@ -54,58 +50,38 @@ interface Props {
 }
 
 export default function JulioArticles({ article }: Props) {
-    const leftRef = useRef<HTMLDivElement>(null);
-    const stopRef = useRef<HTMLDivElement>(null);
-    const [stopScroll, setStopScroll] = useState(false);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                setStopScroll(entry.isIntersecting);
-            },
-            { root: null, threshold: 0.1 }
-        );
-
-        if (stopRef.current) observer.observe(stopRef.current);
-
-        return () => observer.disconnect();
-    }, []);
-
     return (
         <div>
             <JulioArticleHeader article={article} />
-            
+
             <SocialShare />
             <div className="flex flex-col lg:flex-row mt-2 md:gap-8 lg:gap-8">
                 <div className="w-full lg:w-300 mb-6 md:mb-0">
                     {/* Other components on the left */}
                     <ArticleImage src={article.image} alt={article.title} />
                     <div className="flex flex-col md:flex-row mt-8 gap-12">
-
+                        
                         {/* SocialShareList */}
                         <div className="hidden md:block sticky top-8 self-start">
                             <SocialShareList />
                         </div>
 
-<ClientArticleContent
-  description={article.description}
-  subpara={article.subpara}
-  subpoints={article.subpoints}
-  subpara2={article.subpara2}
-/>
-
+                        {/* Article Content */}
+                        <ClientArticleContent
+                            description={article.description}
+                            subpara={article.subpara}
+                            subpoints={article.subpoints}
+                            subpara2={article.subpara2}
+                        />
                     </div>
+
+                    {/* Share Component and Comment Form */}
                     <ShareComponent />
                     <CommentForm />
                 </div>
 
-                <div className="
-    w-full lg:w-1/3
-    lg:pl-8
-    lg:border-l-2
-    lg:border-dotted
-    lg:border-gray-200
-  ">
+                {/* Right Sidebar */}
+                <div className="w-full lg:w-1/3 lg:pl-8 lg:border-l-2 lg:border-dotted lg:border-gray-200">
                     <ArticleCard
                         data={[
                             prnewsData[0],
@@ -115,7 +91,6 @@ export default function JulioArticles({ article }: Props) {
                         ]}
                     />
                 </div>
-
             </div>
         </div>
     );

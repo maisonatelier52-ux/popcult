@@ -1,19 +1,15 @@
-import React from 'react';
-import { notFound } from 'next/navigation';
 import prnewsData from '../../../../public/data/prnews.json';
 import worldData from '../../../../public/data/world.json';
 import usData from '../../../../public/data/us.json';
 import marketingData from '../../../../public/data/marketing.json';
 import financeData from '../../../../public/data/finance.json';
-import techData from '../../../../public/data/tech.json';
+import technologyData from '../../../../public/data/technology.json';
 import entertainmentData from '../../../../public/data/entertainment.json';
 import Script from "next/script";
 import { Metadata } from 'next';
 import WhatsHotBar from '@/component/WhatsHotBar';
 import Article from '@/component/Article';
 import RelatedNewsSection from '@/component/RelatedNewsSection';
-import JulioArticles from '@/component/JulioArticles';
-import { julioHerreraArticle, julioHerreraArticle2, julioHerreraArticle3 } from '@/data/julioHerreraArticle';
 import JulioPage from '@/component/JulioPage';
 import JulioContentTwo from '@/component/JulioContentTwo';
 import JulioContentThree from '@/component/JulioContentThree';
@@ -26,7 +22,7 @@ export async function generateStaticParams() {
     { category: 'world', articles: worldData },
     { category: 'us', articles: usData },
     { category: 'finance', articles: financeData },
-    { category: 'tech', articles: techData },
+    { category: 'technology', articles: technologyData },
     { category: 'entertainment', articles: entertainmentData }
 
   ];
@@ -77,7 +73,7 @@ const allData: Record<string, NewsItem[]> = {
   world: worldData,
   us: usData,
   finance: financeData,
-  tech: techData,
+  technology: technologyData,
   entertainment: entertainmentData
 };
 
@@ -120,6 +116,8 @@ export async function generateMetadata(
     finance: financeData,
     entertainment: entertainmentData,
     marketing: marketingData,
+    technology: technologyData,
+
   };
 
   const articles = allDataMap[category] || [];

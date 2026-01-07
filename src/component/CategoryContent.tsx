@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import CategoryCard from "./CategoryCard";
 import UpgradePromoCard from "./UpgradePromoCard";
 import Pagination from "./Pagintation";

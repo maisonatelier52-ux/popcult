@@ -11,7 +11,7 @@ import usData from '../../public/data/us.json';
 import worldData from '../../public/data/world.json';
 import marketingData from '../../public/data/marketing.json';
 import entertainmentData from '../../public/data/entertainment.json';
-import technologyData from '../../public/data/tech.json';
+import technologyData from '../../public/data/technology.json';
 
 const latestNews = [
   prnewsData?.[0],
@@ -54,7 +54,7 @@ export default function MobileSidebar({ onClose }: Props) {
               ['/us', 'U.S'],
               ['/finance', 'Finance'],
               ['/marketing', 'Marketing'],
-              ['/tech', 'Technology'],
+              ['/technology', 'Technology'],
               ['/entertainment', 'Entertainment'],
             ].map(([href, label]) => (
               <li key={href}>

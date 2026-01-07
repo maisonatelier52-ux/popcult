@@ -9,7 +9,7 @@ const categories = [
   { name: 'World', link: '/world' },
   { name: 'US', link: '/us' },
   { name: 'Marketing', link: '/marketing' },
-  { name: 'Technology', link: '/tech' },
+  { name: 'Technology', link: '/technology' },
   { name: 'Entertainment', link: '/entertainment' },
 
 ];

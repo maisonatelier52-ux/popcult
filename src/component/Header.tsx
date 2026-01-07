@@ -12,9 +12,9 @@ import CategoriesNav from './CategoriesNav';
 import MobileHeader from './MobileHeader';
 
 const categories = [
-  'About',
-  'Contact',
-  'Terms of Use'
+  { name: 'About', href: '/about' },
+  { name: 'Contact', href: '/contact' },
+  { name: 'Terms of Use', href: '/terms-and-conditions' }
 ];
 
 export default function Header() {
@@ -49,11 +49,11 @@ export default function Header() {
 
               <span className="flex gap-3">
                 {categories.map((item, index) => (
-                  <Link key={item} href="#" title={item} className="flex items-center gap-3">
+                  <Link key={item.name} href={item.href} title={item.name} className="flex items-center gap-3">
                     {index !== 0 && (
                       <span className="w-2 h-2 bg-[#041f4a] inline-block" />
                     )}
-                    <span className="text-[14px] text-black">{item}</span>
+                    <span className="text-[14px] text-black">{item.name}</span>
                   </Link>
                 ))}
               </span>
