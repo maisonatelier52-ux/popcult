@@ -7,6 +7,7 @@ import ArticleCard from './ArticleCard';
 import prnewsData from '../../public/data/prnews.json';
 import ClientArticleContent from './ClientArticleContent';
 import JulioArticleHeader from './JulioArticleHeader';
+import UpgradePromoCard from './UpgradePromoCard';
 
 interface Author {
     name: string;
@@ -90,6 +91,9 @@ export default function JulioArticles({ article }: Props) {
                             prnewsData[3],
                         ]}
                     />
+                     <div className="py-5">
+                                            <UpgradePromoCard />
+                                        </div>
                 </div>
             </div>
         </div>

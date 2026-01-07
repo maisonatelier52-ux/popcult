@@ -6,6 +6,7 @@ import ShareComponent from './ShareComponent';
 import CommentForm from './CommentForm';
 import ArticleCard from './ArticleCard';
 import prnewsData from '../../public/data/prnews.json';
+import UpgradePromoCard from './UpgradePromoCard';
 
 interface Author {
     name: string;
@@ -89,7 +90,7 @@ export default function JulioFourthArticle({ article }: Props) {
                             </span>
                         </div>
                     </div>
-                    
+
                 </div>
 
                 <div className="text-gray-500 w-full text-[12px] md:text-[14px]">
@@ -141,6 +142,9 @@ export default function JulioFourthArticle({ article }: Props) {
                             prnewsData[3],
                         ]}
                     />
+                    <div className="py-5">
+                        <UpgradePromoCard />
+                    </div>
                 </div>
             </div>
         </div>
