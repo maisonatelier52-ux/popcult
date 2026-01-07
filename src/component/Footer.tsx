@@ -71,7 +71,7 @@ export default function Footer() {
               </Link>
             </div>
 
-            <p className="mt-4 text-sm text-[#555555] leading-relaxed">
+            <p className="mt-4 text-[11px] md:text-sm text-[#555555] leading-relaxed">
               Copyright 2026 PRPROMOTIONHUB. All Rights Reserved.
 
             </p>

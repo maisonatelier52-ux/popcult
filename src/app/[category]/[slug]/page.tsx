@@ -411,6 +411,7 @@ export default async function DetailPage({ params }: DetailPageProps) {
         <Article article={article} />
 
         <RelatedNewsSection data={[prnewsData[0]]} article={article} />
+        
       </div>
     </main>
   );

@@ -45,7 +45,7 @@ export default function LatestNewsWithStickyPromo({ data }: Props) {
 
   return (
     <div className="w-full mb-8 mt-8">
-      <div className="flex flex-col lg:flex-row gap-15">
+      <div className="flex flex-col lg:flex-row gap-8 md:gap-15">
 
         {/* LEFT SECTION */}
         <div className="relative w-full">
