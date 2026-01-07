@@ -12,7 +12,6 @@ export default function CommentForm() {
   const [commentSubmitted, setCommentSubmitted] = useState(false);
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log({ comment, name, email, website, saveInfo });
     setCommentSubmitted(true);
 
     setComment("");

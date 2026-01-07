@@ -52,7 +52,6 @@ export default function Editorial() {
             </aside>
             {/* Content Area */}
             <div className="flex-1 space-y-5 md:space-y-16">
-
               {/* Mission Section */}
               <section id="mission">
                 <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">

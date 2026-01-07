@@ -4,6 +4,15 @@ type CategoryHeaderProps = {
 };
 export default function CategoryHeader({category}:CategoryHeaderProps) {
 
+  let headerTitle: string;
+  
+  if (category === "prnews") {
+    headerTitle = "PR News";
+  } else if (category === "us") {
+    headerTitle = "U.S";
+  } else {
+    headerTitle = category;
+  }
 
   return (
     <header className={`py-5 relative overflow-hidden`}>
@@ -21,7 +30,7 @@ export default function CategoryHeader({category}:CategoryHeaderProps) {
       {/* Content */}
       <div className="container relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-[35px] md:text-[40px] font-bold capitalize">
-         {category}
+         {headerTitle}
         </h1>
       </div>
     </header>

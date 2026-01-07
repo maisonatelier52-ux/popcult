@@ -1,4 +1,3 @@
-import React from 'react';
 import prnewsData from '../../../public/data/prnews.json';
 import worldData from '../../../public/data/world.json';
 import usData from '../../../public/data/us.json';
@@ -174,9 +173,9 @@ export default async function CategoryPage({
   params: Promise<{ category: string }>;
 }) {
   const { category } = await params;
-  console.log(category, 'cag')
-  const data = allData[category];
 
+  const data = allData[category];
+const filteredData = category === "finance" ? data.slice(3) : data;
   if (!data) {
     return (
       <main className="max-w-7xl mx-auto h-screen px-6 flex flex-col items-center justify-center text-center">
@@ -195,7 +194,7 @@ export default async function CategoryPage({
       <WhatsHotBar data={data[0]} />
       <CategoryHeader category={data[0].category} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <CategoryContent data={data} />
+           <CategoryContent data={filteredData} />
       </div>
     </>
   );

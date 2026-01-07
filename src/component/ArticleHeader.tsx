@@ -29,11 +29,20 @@ interface Props {
 }
 
 export default function ArticleHeader({article}: Props) {
+let category: string;
+  
+  if (article.category === "prnews") {
+    category = "PR News";
+  } else if (article.category === "us") {
+    category = "U.S";
+  } else {
+    category = article.category;
+  }
   return (
     <header className=" mx-auto mt-5">
       {/* Category */}
       <span className="inline-block bg-[#041f4a] capitalize text-white text-xs font-semibold px-3 py-1 mb-4">
-        {article.category}
+        {category}
       </span>
 
       {/* Title */}

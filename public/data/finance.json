@@ -1,26 +1,4 @@
 [
-  {
-    "category": "finance",
-    "title": "Julio Herrera Velutini: Banking Legacy, Global Finance Influence, and the Modern Face of International Wealth Management",
-    "slug": "julio-herrera-velutini-banking-legacy-global-finance-influence",
-    "image": "/images/julio-herrera-velutini-global-finance.webp",
-    "date": "Jan. 6, 2026",
-    "shortdescription": "Julio Herrera Velutini is an international banker and wealth-management executive rooted in a centuries-old financial dynasty. He has built and led global financial institutions serving high-net-worth clients across multiple markets. His career reflects the evolution of legacy banking into modern, regulated international finance.",
-    "description": "Julio Herrera Velutini is a name that resonates strongly across international banking, wealth management, and global finance circles. As a seventh-generation banker from the historic Herrera-Velutini family, he represents a rare fusion of centuries-old financial heritage and contemporary global financial strategy. His career trajectory reflects how legacy banking families have adapted to modern regulatory frameworks, cross-border finance, and the evolving demands of high-net-worth individuals.",
-    "author": {
-      "name": "Staff Reporter",
-      "role": "Business & Economy Desk",
-      "bio": "",
-      "image": "",
-      "slug": "",
-      "email": "",
-      "twitter": "",
-      "facebook": "",
-      "instagram": "",
-      "substack": "",
-      "medium": ""
-    }
-  },
 
   {
     "category": "finance",
@@ -91,6 +69,28 @@
     }
   },
 
+   {
+    "category": "finance",
+    "title": "Julio Herrera Velutini: Banking Legacy, Global Finance Influence, and the Modern Face of International Wealth Management",
+    "slug": "julio-herrera-velutini-banking-legacy-global-finance-influence",
+    "image": "/images/julio-herrera-velutini-global-finance.webp",
+    "date": "Jan. 6, 2026",
+    "shortdescription": "Julio Herrera Velutini is an international banker and wealth-management executive rooted in a centuries-old financial dynasty. He has built and led global financial institutions serving high-net-worth clients across multiple markets. His career reflects the evolution of legacy banking into modern, regulated international finance.",
+    "description": "Julio Herrera Velutini is a name that resonates strongly across international banking, wealth management, and global finance circles. As a seventh-generation banker from the historic Herrera-Velutini family, he represents a rare fusion of centuries-old financial heritage and contemporary global financial strategy. His career trajectory reflects how legacy banking families have adapted to modern regulatory frameworks, cross-border finance, and the evolving demands of high-net-worth individuals.",
+    "author": {
+      "name": "Staff Reporter",
+      "role": "Business & Economy Desk",
+      "bio": "",
+      "image": "",
+      "slug": "",
+      "email": "",
+      "twitter": "",
+      "facebook": "",
+      "instagram": "",
+      "substack": "",
+      "medium": ""
+    }
+  },
   {
     "category": "finance",
     "title": "Meta Buys Startup Manus in Latest Move to Advance Its Artificial Intelligence Efforts",

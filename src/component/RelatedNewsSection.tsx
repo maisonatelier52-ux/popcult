@@ -37,7 +37,7 @@ export default function RelatedNewsSection({ data, article }: Props) {
 
   const isValid = (item: NewsData) => {
     if (!item?.slug) return false;
-    console.log(article)
+    
     if (article && item.slug === article.slug) return false;
     if (usedSlugs.has(item.slug)) return false;
     return true;

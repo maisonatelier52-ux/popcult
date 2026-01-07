@@ -51,7 +51,7 @@ export default function HeroArticle({
           />
           {/* Red small box with part inside the image */}
           <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-[#041f4a] text-white text-[9px] sm:text-[10px] md:text-[11px] lg:text-[12px] font-bold px-4 py-2 capitalize tracking-wide text-center" style={{ marginBottom: '-10px' }}>
-       {data[0].category}
+       {data[0].category=='prnews'?'PR News':data[0].category}
           </div>
         </div>
 
