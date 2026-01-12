@@ -24,7 +24,7 @@ data
   return (
     <div className="w-full">
     <ArticleImage src={data.image} alt={data.title} />
-    <SocialShareList />
+    <SocialShareList title={data.title}/>
     </div>
   );
 }

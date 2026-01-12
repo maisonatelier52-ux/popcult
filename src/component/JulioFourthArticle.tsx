@@ -99,7 +99,7 @@ export default function JulioFourthArticle({ article }: Props) {
             </header>
 
             {/* Social Share Section */}
-            <SocialShare />
+            <SocialShare title={article.title}/>
 
             {/* Main Content Section */}
             <div className="flex flex-col lg:flex-row mt-2 md:gap-8 lg:gap-8">
@@ -113,7 +113,7 @@ export default function JulioFourthArticle({ article }: Props) {
 
                         {/* Sticky Social Share List */}
                         <div className="hidden md:block sticky top-8 self-start">
-                            <SocialShareList />
+                            <SocialShareList title={article.title}/>
                         </div>
 
                         {/* Article Content */}
@@ -126,7 +126,7 @@ export default function JulioFourthArticle({ article }: Props) {
                     </div>
 
                     {/* Share Component */}
-                    <ShareComponent />
+                    <ShareComponent title={article.title}/>
 
                     {/* Comment Form */}
                     <CommentForm />

@@ -1,55 +1,111 @@
 "use client";
 
-import { FaTimes, FaShareAlt, FaLink, FaFlipboard } from 'react-icons/fa';
-import { FiShare } from 'react-icons/fi';
+import { useEffect, useState } from "react";
+import {
+  FaTimes,
+  FaLink,
+  FaFacebookF,
+  FaLinkedinIn,
+  FaRedditAlien,
+  FaWhatsapp,
+} from "react-icons/fa";
+import { FiShare } from "react-icons/fi";
+import { SiX } from "react-icons/si";
 
 interface ShareArticleProps {
-  url?: string;
-  title?: string;
+  title: string;
+  onClose?: () => void;
 }
 
-export default function ShareComponent({ url = "https://default-url.com", title = "Share This Article" }: ShareArticleProps) {
-  const shareToFacebook = () => {
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, "_blank");
-  };
+export default function ShareComponent({
+  title,
+  onClose,
+}: ShareArticleProps) {
 
-  const copyLink = () => {
-    navigator.clipboard.writeText(url);
-    alert("Link copied to clipboard!");
-  };
+    const [url, setUrl] = useState("");
+
+        useEffect(() => {
+            setUrl(window.location.href);
+        }, []);
+
+        const encodedUrl = encodeURIComponent(url);
+        const encodedTitle = encodeURIComponent(title);
+
+
+  const iconClass =
+    "p-2 bg-gray-100 hover:bg-gray-200 rounded transition";
 
   return (
     <div className="flex items-center justify-between border-t-2 border-b-2 border-dotted border-gray-200 mt-10 py-4 my-4">
       {/* Share Text */}
-      <button className="flex items-center gap-1 text-sm text-black">
-        <FiShare className="text-base" />
-<span className="hidden md:inline font-normal">{title}</span>
+      <div className="flex items-center gap-1 text-sm">
+        <FiShare /> Share this article
+      </div>
 
-      </button>
+      {/* Icons */}
+      <div className="flex items-center gap-3 flex-wrap">
+        {onClose && (
+          <button onClick={onClose} className={iconClass}>
+            <FaTimes />
+          </button>
+        )}
 
-      {/* Icon Buttons */}
-      <div className="flex items-center gap-3">
-        <button
-          onClick={() => alert("Close action")}
-          className="p-2 bg-gray-100 hover:bg-gray-200 rounded transition"
-          title="Close"
+        {/* Facebook (URL only, title from OG) */}
+        <a
+          href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={iconClass}
+          title="Share on Facebook"
         >
-          <FaTimes />
-        </button>
-        <button
-          onClick={shareToFacebook}
-          className="p-2 bg-gray-100 hover:bg-gray-200 rounded transition"
-          title="Share on Flipboard"
+          <FaFacebookF />
+        </a>
+
+        {/* X (URL + title) */}
+        <a
+          href={`https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={iconClass}
+          title="Share on X"
         >
-          <FaFlipboard />
-        </button>
-        <button
-          onClick={copyLink}
-          className="p-2 bg-gray-100 hover:bg-gray-200 rounded transition"
-          title="Copy Link"
+          <SiX />
+        </a>
+
+        {/* LinkedIn (URL only, title from OG) */}
+        <a
+          href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={iconClass}
+          title="Share on LinkedIn"
         >
-          <FaLink />
-        </button>
+          <FaLinkedinIn />
+        </a>
+
+        {/* WhatsApp (title + URL) */}
+        <a
+          href={`https://wa.me/?text=${encodedTitle}%20${encodedUrl}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={iconClass}
+          title="Share on WhatsApp"
+        >
+          <FaWhatsapp />
+        </a>
+
+        {/* Reddit (title + URL) */}
+        <a
+          href={`https://www.reddit.com/submit?url=${encodedUrl}&title=${encodedTitle}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={iconClass}
+          title="Share on Reddit"
+        >
+          <FaRedditAlien />
+        </a>
+
+   
       </div>
     </div>
   );

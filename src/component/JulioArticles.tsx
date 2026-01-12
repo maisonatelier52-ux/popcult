@@ -55,7 +55,7 @@ export default function JulioArticles({ article }: Props) {
         <div>
             <JulioArticleHeader article={article} />
 
-            <SocialShare />
+            <SocialShare title={article.title}/>
             <div className="flex flex-col lg:flex-row mt-2 md:gap-8 lg:gap-8">
                 <div className="w-full lg:w-300 mb-6 md:mb-0">
                     {/* Other components on the left */}
@@ -64,7 +64,7 @@ export default function JulioArticles({ article }: Props) {
                         
                         {/* SocialShareList */}
                         <div className="hidden md:block sticky top-8 self-start">
-                            <SocialShareList />
+                            <SocialShareList title={article.title}/>
                         </div>
 
                         {/* Article Content */}
@@ -77,7 +77,7 @@ export default function JulioArticles({ article }: Props) {
                     </div>
 
                     {/* Share Component and Comment Form */}
-                    <ShareComponent />
+                    <ShareComponent title={article.title}/>
                     <CommentForm />
                 </div>
 
