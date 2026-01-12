@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import CategorySectionHeader from './CategorySectionHeader';
 import NewsCard from './NewsCard';
-import { FaFacebookF, FaInstagram, FaMediumM, FaTwitter } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaMediumM, FaReddit, FaTwitter } from 'react-icons/fa';
 import { SiSubstack } from 'react-icons/si';
 import Image from 'next/image';
 
@@ -116,11 +116,18 @@ export default function MobileSidebar({ onClose }: Props) {
         <section>
           <CategorySectionHeader title="Socials" />
           <div className="flex items-center gap-4 mt-5">
-            <FaTwitter className="text-xl hover:opacity-70" />
-            <FaInstagram className="text-xl hover:opacity-70" />
-            <FaMediumM className="text-xl hover:opacity-70" />
-            <SiSubstack className="text-xl hover:opacity-70" />
-            <FaFacebookF className="text-xl hover:opacity-70" />
+            <Link href="https://x.com/promotionh77500" title="twitter" target="_blank" rel="noopener noreferrer">
+              <FaTwitter className="text-xl hover:opacity-70" />
+            </Link>
+            <Link href="https://medium.com/@prpromotionhub" title="medium" target="_blank" rel="noopener noreferrer">
+              <FaMediumM className="text-xl hover:opacity-70" />
+            </Link>
+            <Link href="https://substack.com/@prpromotionhub" title="substack" target="_blank" rel="noopener noreferrer">
+              <SiSubstack className="text-xl hover:opacity-70" />
+            </Link>
+            <Link href="https://www.reddit.com/user/PRPromotionHub3009/" title="reddit" target="_blank" rel="noopener noreferrer">
+              <FaReddit className="text-xl hover:opacity-70" />
+            </Link>
           </div>
         </section>
       </div>

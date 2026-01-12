@@ -32,7 +32,7 @@ export default function Contact() {
                                     title='mail'
                                     className="block text-center text-blue-600 hover:text-blue-800 font-semibold text-sm break-all"
                                 >
-                                    info@prpromotionhub.com
+                                   infoprpromotionhub@pm.me
                                 </Link>
                             </div>
 

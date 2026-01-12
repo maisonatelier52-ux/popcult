@@ -6,6 +6,7 @@ import {
   FaFacebookF,
   FaMediumM,
   FaEnvelope,
+  FaReddit,
 } from 'react-icons/fa';
 import { SiSubstack } from 'react-icons/si';
 import CategoriesNav from './CategoriesNav';
@@ -24,7 +25,6 @@ export default function Header() {
 
       {/* ================= MOBILE HEADER ================= */}
       <div className="lg:hidden border-b border-black">
-
         <MobileHeader />
       </div>
 
@@ -60,11 +60,18 @@ export default function Header() {
             </div>
 
             <div className="flex items-center gap-4 text-black">
-              <FaTwitter className="text-lg hover:opacity-70" />
-              <FaInstagram className="text-lg hover:opacity-70" />
-              <FaMediumM className="text-lg hover:opacity-70" />
-              <SiSubstack className="text-lg hover:opacity-70" />
-              <FaFacebookF className="text-lg hover:opacity-70" />
+              <Link href="https://x.com/promotionh77500" title="twitter" target="_blank" rel="noopener noreferrer">
+                <FaTwitter className="text-lg hover:opacity-70" />
+              </Link>
+              <Link href="https://medium.com/@prpromotionhub" title="medium" target="_blank" rel="noopener noreferrer">
+                <FaMediumM className="text-lg hover:opacity-70" />
+              </Link>
+              <Link href="https://substack.com/@prpromotionhub" title="substack" target="_blank" rel="noopener noreferrer">
+                <SiSubstack className="text-lg hover:opacity-70" />
+              </Link>
+              <Link href="https://www.reddit.com/user/PRPromotionHub3009/" title="reddit" target="_blank" rel="noopener noreferrer">
+                <FaReddit className='text-lg hover:opacity-70' />
+              </Link>
             </div>
           </div>
 

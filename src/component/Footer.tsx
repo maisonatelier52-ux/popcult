@@ -5,6 +5,7 @@ import {
   FaFacebookF,
   FaInstagram,
   FaMediumM,
+  FaReddit,
 } from "react-icons/fa";
 import { SiSubstack } from "react-icons/si";
 
@@ -26,52 +27,44 @@ export default function Footer() {
             {/* Social Icons */}
             <div className="flex gap-4 mt-4 text-xl text-white">
               <Link
-                href="#"
+                href="https://x.com/promotionh77500"
                 title="twitter"
                 aria-label="Twitter"
+                target="_blank"
                 className="hover:text-gray-400 transition"
               >
                 <FaTwitter />
               </Link>
-
               <Link
-                href="#"
-                title="facebook"
-                aria-label="Facebook"
-                className="hover:text-gray-400 transition"
-              >
-                <FaFacebookF />
-              </Link>
-
-              <Link
-                href="#"
-                title="instagram"
-                aria-label="Instagram"
-                className="hover:text-gray-400 transition"
-              >
-                <FaInstagram />
-              </Link>
-
-              <Link
-                href="#"
+                href="https://medium.com/@prpromotionhub"
                 title="medium"
                 aria-label="Medium"
+                target="_blank"
                 className="hover:text-gray-400 transition"
               >
                 <FaMediumM />
               </Link>
-
               <Link
-                href="#"
+                href="https://substack.com/@prpromotionhub"
                 title="substack"
                 aria-label="Substack"
+                target="_blank"
                 className="hover:text-gray-400 transition"
               >
                 <SiSubstack />
               </Link>
+              <Link
+                href="https://www.reddit.com/user/PRPromotionHub3009/"
+                title="reddit"
+                aria-label="Reddit"
+                target="_blank"
+                className="hover:text-gray-400 transition"
+              >
+                <FaReddit />
+              </Link>
             </div>
             <p className="mt-4 text-[11px] md:text-sm text-[#555555] leading-relaxed">
-              Copyright 2026 PRPROMOTIONHUB. All Rights Reserved.   
+              Copyright 2026 PRPROMOTIONHUB. All Rights Reserved.
             </p>
           </div>
           <div className="flex flex-row  gap-7 md:gap-20 mr-40 w-full md:w-auto">
