@@ -1,3 +1,4 @@
+"use client";
 import Link from 'next/link';
 
 import {
@@ -11,6 +12,7 @@ import {
 import { SiSubstack } from 'react-icons/si';
 import CategoriesNav from './CategoriesNav';
 import MobileHeader from './MobileHeader';
+import { useEffect, useState } from 'react';
 
 const categories = [
   { name: 'About', href: '/about' },
@@ -20,6 +22,17 @@ const categories = [
 
 export default function Header() {
 
+  const [date, setDate] = useState("");
+   useEffect(() => {
+    setDate(
+      new Date().toLocaleDateString("en-US", {
+        weekday: "long",
+        month: "short",
+        day: "2-digit",
+        year: "numeric",
+      })
+    );
+  }, []);
   return (
     <header className="w-full">
 
@@ -35,14 +48,9 @@ export default function Header() {
           {/* Top info bar */}
           <div className="flex items-center justify-between py-2 text-sm text-gray-600">
             <div className="flex items-center gap-4">
-              <span className="text-[14.4px] font-outfit font-bold text-black">
-                {new Date().toLocaleDateString("en-US", {
-                  weekday: "long",
-                  month: "short",
-                  day: "2-digit",
-                  year: "numeric",
-                })}
-              </span>
+                <span className="text-[14.4px] font-outfit font-bold text-black">
+                  {date}
+                </span>
 
 
               <span className="h-6 w-px bg-gray-300" />
