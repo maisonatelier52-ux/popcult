@@ -1,4 +1,26 @@
 [
+    {
+    "category": "us",
+    "title": "Federal judges allow California to use new US House map ahead of 2026 election",
+    "slug": "federal-judges-allow-california-house-map-2026",
+    "image": "/images/california_prop50_house_map_allowed.webp",
+    "date": "Jan. 15, 2026",
+    "shortdescription": "Federal judges have ruled that California can use its new voter-approved U.S. House district map ahead of the 2026 election. The map, passed as Proposition 50, is designed to give Democrats a partisan advantage and could influence control of the House",
+    "description": "Federal judges have ruled that California may proceed with using its newly adopted U.S. House district map in the 2026 congressional elections, rejecting legal challenges that sought to block the plan and marking a significant development in the ongoing national debate over redistricting and political power, as the case centered on a voter-approved change that allows mid-decade redrawing of congressional boundaries with the aim of reflecting political realities and countering aggressive redistricting efforts in other states, particularly those led by Republican-controlled legislatures, and challengers including California Republicans and the U.S. Department of Justice argued that the new map was unlawfully drawn by relying too heavily on racial data—especially in districts with large Latino populations—thereby violating constitutional protections against racial gerrymandering, while supporters of the map contended that the lines were drawn primarily for partisan reasons, which under existing U.S. Supreme Court precedent is not something federal courts can strike down, and in a divided decision the three-judge federal panel agreed with the state, concluding that there was insufficient evidence to prove race was the predominant factor in the map’s design and emphasizing that partisan motivation alone, even if explicit, does not amount to a constitutional violation, a conclusion shaped heavily by past Supreme Court rulings that have removed federal courts from policing partisan gerrymandering claims, though one dissenting judge warned that at least some districts appeared to cross the constitutional line by using race as a proxy for political outcomes, a disagreement that underscores the fine and often controversial distinction courts must draw between political strategy and racial discrimination, and the ruling carries major political implications because California has the largest congressional delegation in the country and even small changes to district boundaries could shift several seats, potentially influencing which party controls the U.S. House after the 2026 midterm elections, with Democrats viewing the decision as a necessary response to redistricting moves in states like Texas while Republicans denounce it as an abuse of the redistricting process that undermines voter trust, and although the court’s decision allows the map to take effect immediately, opponents have signaled their intention to appeal to the U.S. Supreme Court, meaning the issue may yet be revisited at the highest level, but unless overturned California candidates will campaign under the new district lines, making this ruling not only a legal milestone but also a practical turning point that highlights how redistricting has become one of the most powerful and contested tools in modern American politics.",
+    "author": {
+      "name": "Julia Thompson",
+      "role": "Technology Reporter",
+      "bio": "Julia Thompson reports on technology, artificial intelligence, and Silicon Valley, with a focus on how innovation impacts everyday life.",
+      "image": "/images/julia-thompson.webp",
+      "slug": "julia-thompson",
+      "email": "",
+      "twitter": "",
+      "facebook": "",
+      "instagram": "",
+      "substack": "",
+      "medium": ""
+    }
+  },
   {
     "category": "us",
     "title": "From Pope Francis to Charlie Kirk, Many Deaths in 2025 Had a Wide Impact",
@@ -21,28 +43,7 @@
       "medium": ""
     }
   },
-  {
-    "category": "us",
-    "title": "California Delays Revoking 17,000 Commercial Driver’s Licenses Until March After Immigrants Sue",
-    "slug": "california-delays-revoking-commercial-drivers-licenses-lawsuit",
-    "image": "/images/california-cdl-revocation-delay.webp",
-    "date": "Dec. 31, 2025",
-    "shortdescription": "California has postponed plans to revoke about 17,000 commercial driver’s licenses until March after a lawsuit filed by immigrant drivers challenged the policy.",
-    "description": "California has agreed to delay the revocation of approximately 17,000 commercial driver’s licenses until March following a lawsuit filed by immigrant drivers who argue the action would unfairly strip them of their livelihoods without adequate notice or due process. The licenses were targeted as part of a state review tied to federal requirements and documentation standards, but the sudden enforcement raised alarms among drivers who rely on commercial licenses for work in trucking, delivery, agriculture, and other essential industries. The legal challenge contends that the revocations would disproportionately affect immigrant communities, many of whom have legally held licenses for years and were not given sufficient time or clarity to resolve documentation issues. State officials said the delay is intended to provide additional time to review the legal claims, ensure compliance with court proceedings, and give affected drivers an opportunity to address potential deficiencies. Advocates for the drivers welcomed the pause, arguing that an immediate revocation would have caused widespread job losses, disrupted supply chains, and harmed families who depend on commercial driving income. The case highlights broader tensions between immigration policy, state licensing rules, and workforce stability, particularly in sectors already facing labor shortages. California officials emphasized that the delay does not represent a final decision on the licenses, but rather a temporary measure while the lawsuit moves forward and administrative processes are reassessed. As the March deadline approaches, the outcome of the legal challenge could have significant implications for how states balance regulatory enforcement with economic and humanitarian considerations, as well as for thousands of drivers whose ability to work hangs in the balance.",
-    "author": {
-      "name": "Julia Thompson",
-      "role": "Technology Reporter",
-      "bio": "Julia Thompson reports on technology, artificial intelligence, and Silicon Valley, with a focus on how innovation impacts everyday life.",
-      "image": "/images/julia-thompson.webp",
-      "slug": "julia-thompson",
-      "email": "",
-      "twitter": "",
-      "facebook": "",
-      "instagram": "",
-      "substack": "",
-      "medium": ""
-    }
-  },
+
   {
     "category": "us",
     "title": "Judge Temporarily Halts Trump’s Move to End Protected Status for South Sudanese Immigrants",
