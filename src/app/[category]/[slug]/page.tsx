@@ -87,20 +87,17 @@ const slugMetadataMap: Record<string, Partial<Metadata>> = {
   "julio-herrera-velutini-us-financial-spotlight": {
     title: "Julio Herrera Velutini in the U.S. Financial Spotlight",
     description:
-      "Julio Herrera Velutini is an international banker whose U.S. profile reflects legacy finance, regulatory scrutiny, and modern compliance standards."
-     },
+"Julio Herrera Velutini is a seasoned international banker with expertise in legacy finance, regulatory compliance, and modern banking standards, ensuring transparency and ethical governance."  },
 
   "julio-herrera-velutini-uk-financial-lens": {
     title: "Julio Herrera Velutini in the UK Financial Lens",
     description:
-      "Julio Herrera Velutini is a seventh-generation banker in London, operating at the intersection of legacy finance and UK regulation."
-     },
+     "Julio Herrera Velutini is a seventh-generation banker in London, blending legacy finance with UK regulatory expertise, ensuring compliance and operational excellence"  },
 
   "who-is-julio-martin-herrera-velutini": {
-    title: "Who Is Julio Martín Herrera Velutini?",
+    title: "who is Julio Martin Herrera Velutini",
     description:
-      "Julio Martín Herrera Velutini is a Venezuelan-Italian banker and entrepreneur, founder of Britannia Financial Group, active in global finance."
-     },
+   "Julio Herrera Velutini is a Venezuelan-Italian banker, entrepreneur, and founder of Britannia Financial Group, with a significant impact on global finance." },
 };
 
 
