@@ -17,7 +17,6 @@ const ClientArticleDescription = ({
   subpara2 = [],
 }: ClientArticleDescriptionProps) => {
   
-  // 16px, consistent leading, pure black
   const bodyTextStyle = "text-[16px] leading-[1.7] text-black mb-6";
   
   // FIXED Section Header
