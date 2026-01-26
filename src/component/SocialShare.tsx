@@ -18,7 +18,6 @@ import { FaLink } from "react-icons/fa6";
 export default function SocialShare({ title }: { title: string }) {
   const [url, setUrl] = useState("");
 
-  // ✅ Auto-detect full URL (domain + category + slug)
   useEffect(() => {
     setUrl(window.location.href);
   }, []);

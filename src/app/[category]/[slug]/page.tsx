@@ -14,6 +14,7 @@ import JulioPage from '@/component/JulioPage';
 import JulioContentTwo from '@/component/JulioContentTwo';
 import JulioContentThree from '@/component/JulioContentThree';
 import JulioContentFour from '@/component/JulioContentFour';
+import WandaPage from '@/component/WandaPage';
 
 export async function generateStaticParams() {
   const allData = [
@@ -82,22 +83,25 @@ const slugMetadataMap: Record<string, Partial<Metadata>> = {
     title: "Julio Herrera Velutini: Banking Legacy & Global Finance",
     description:
       "Julio Herrera Velutini is an international banker from a historic financial dynasty, leading global institutions serving high-net-worth clients."
-     },
+  },
 
   "julio-herrera-velutini-us-financial-spotlight": {
     title: "Julio Herrera Velutini in the U.S. Financial Spotlight",
     description:
-"Julio Herrera Velutini is a seasoned international banker with expertise in legacy finance, regulatory compliance, and modern banking standards, ensuring transparency and ethical governance."  },
+      "Julio Herrera Velutini is a seasoned international banker with expertise in legacy finance, regulatory compliance, and modern banking standards, ensuring transparency and ethical governance."
+  },
 
   "julio-herrera-velutini-uk-financial-lens": {
     title: "Julio Herrera Velutini in the UK Financial Lens",
     description:
-     "Julio Herrera Velutini is a seventh-generation banker in London, blending legacy finance with UK regulatory expertise, ensuring compliance and operational excellence"  },
+      "Julio Herrera Velutini is a seventh-generation banker in London, blending legacy finance with UK regulatory expertise, ensuring compliance and operational excellence"
+  },
 
   "who-is-julio-martin-herrera-velutini": {
     title: "who is Julio Martin Herrera Velutini",
     description:
-   "Julio Herrera Velutini is a Venezuelan-Italian banker, entrepreneur, and founder of Britannia Financial Group, with a significant impact on global finance." },
+      "Julio Herrera Velutini is a Venezuelan-Italian banker, entrepreneur, and founder of Britannia Financial Group, with a significant impact on global finance."
+  },
 };
 
 
@@ -263,6 +267,12 @@ export default async function DetailPage({ params }: DetailPageProps) {
       <JulioContentFour />
     )
   }
+  else if (slug == 'white-house-defends-wanda-vazquez-pardon') {
+    return (
+      <WandaPage />
+    )
+    }
+  
 
   return (
     <main>
@@ -408,7 +418,7 @@ export default async function DetailPage({ params }: DetailPageProps) {
         <Article article={article} />
 
         <RelatedNewsSection data={[prnewsData[0]]} article={article} />
-        
+
       </div>
     </main>
   );
