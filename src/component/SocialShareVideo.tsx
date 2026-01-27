@@ -80,17 +80,6 @@ export default function SocialShareVideo({ video }: Props) {
         </a>
 
 
-{/* Instagram */}
-<a
-  href={`https://www.instagram.com/?url=${encodedPageUrl}`}
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <CircleIcon>
-    <FaInstagram />
-  </CircleIcon>
-</a>
-
         {/* LinkedIn */}
         <a
           href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodedPageUrl}`}
