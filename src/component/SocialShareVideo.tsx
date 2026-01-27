@@ -57,15 +57,16 @@ export default function SocialShareVideo({ video }: Props) {
         </a>
 
         {/* X */}
-        <a
-          href={`https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedPageUrl}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <CircleIcon>
-            <SiX />
-          </CircleIcon>
-        </a>
+      <a
+  href={`https://twitter.com/intent/tweet?text=${encodedTitle}%0A%0AVideo:%20${encodedVideoUrl}%0A${encodedPageUrl}`}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <CircleIcon>
+    <SiX />
+  </CircleIcon>
+</a>
+
 
         {/* Facebook */}
         <a
