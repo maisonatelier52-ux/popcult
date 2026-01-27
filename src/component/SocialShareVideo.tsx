@@ -52,7 +52,7 @@ export default function SocialShareVideo({ video }: Props) {
 
         {/* X (Twitter) — title + video URL in text, page URL for preview */}
         <a
-     href={`https://twitter.com/intent/tweet?text=${encodedTitle}%0A${encodedVideoUrl}&url=${encodedPageUrl}`}
+     href={`https://twitter.com/intent/tweet?text=${encodedTitle}%0A&url=${encodedPageUrl}`}
 
           target="_blank"
           rel="noopener noreferrer"
