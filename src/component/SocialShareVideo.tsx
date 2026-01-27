@@ -23,8 +23,9 @@ interface Props {
 
 export default function SocialShareVideo({ video }: Props) {
   const pageUrl =
-    typeof window !== "undefined" ? window.location.href : "";
-
+  typeof window !== "undefined" ? window.location.href : "";
+  console.log(pageUrl,'pageUrl')
+  
   const encodedPageUrl = encodeURIComponent(pageUrl);
   const encodedTitle = encodeURIComponent(video.title);
   const encodedVideoUrl = encodeURIComponent(video.url);
@@ -52,8 +53,7 @@ export default function SocialShareVideo({ video }: Props) {
 
         {/* X (Twitter) — title + video URL in text, page URL for preview */}
         <a
-     href={`https://twitter.com/intent/tweet?text=${encodedTitle}%0A&url=${encodedPageUrl}`}
-
+          href={`https://twitter.com/intent/tweet?text=${encodedTitle}%0A${encodedVideoUrl}&url=${encodedPageUrl}`}
           target="_blank"
           rel="noopener noreferrer"
         >
