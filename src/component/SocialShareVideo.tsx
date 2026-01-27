@@ -7,6 +7,7 @@ import {
   FaFacebookF,
   FaLinkedinIn,
   FaRedditAlien,
+  FaInstagram,
 } from "react-icons/fa";
 import { SiX } from "react-icons/si";
 
@@ -77,6 +78,18 @@ export default function SocialShareVideo({ video }: Props) {
             <FaFacebookF />
           </CircleIcon>
         </a>
+
+
+{/* Instagram */}
+<a
+  href={`https://www.instagram.com/?url=${encodedPageUrl}`}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <CircleIcon>
+    <FaInstagram />
+  </CircleIcon>
+</a>
 
         {/* LinkedIn */}
         <a
