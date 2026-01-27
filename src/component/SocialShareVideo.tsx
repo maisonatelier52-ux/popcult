@@ -29,7 +29,6 @@ export default function SocialShareVideo({ video }: Props) {
 
   const encodedPageUrl = encodeURIComponent(pageUrl);
   const encodedTitle = encodeURIComponent(video.title);
-  const encodedVideoUrl = encodeURIComponent(video.url);
 
   return (
     <div className="flex items-center py-5 gap-3 text-sm text-black flex-wrap">
@@ -42,7 +41,7 @@ export default function SocialShareVideo({ video }: Props) {
 
         {/* WhatsApp */}
         <a
-          href={`https://wa.me/?text=${encodedTitle}%0A${encodedPageUrl}%0A%0AVideo:%20${encodedVideoUrl}`}
+          href={`https://wa.me/?text=${encodedTitle}%0A${encodedPageUrl}`}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -51,9 +50,9 @@ export default function SocialShareVideo({ video }: Props) {
           </CircleIcon>
         </a>
 
-        {/* X */}
+        {/* X (Twitter) */}
         <a
-          href={`https://twitter.com/intent/tweet?text=${encodedTitle}%0A%0A${encodedPageUrl}%0A%0AVideo:%20${encodedVideoUrl}`}
+          href={`https://twitter.com/intent/tweet?text=${encodedTitle}%0A%0A${encodedPageUrl}`}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -62,10 +61,9 @@ export default function SocialShareVideo({ video }: Props) {
           </CircleIcon>
         </a>
 
-
         {/* Facebook */}
         <a
-          href={`https://www.facebook.com/sharer/sharer.php?u=${encodedPageUrl}&quote=${encodedTitle}%0A%0AVideo:%20${encodedVideoUrl}`}
+          href={`https://www.facebook.com/sharer/sharer.php?u=${encodedPageUrl}&quote=${encodedTitle}`}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -74,10 +72,9 @@ export default function SocialShareVideo({ video }: Props) {
           </CircleIcon>
         </a>
 
-
         {/* LinkedIn */}
         <a
-          href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodedPageUrl}&summary=${encodedTitle}%0A%0AVideo:%20${encodedVideoUrl}`}
+          href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodedPageUrl}&summary=${encodedTitle}`}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -88,7 +85,7 @@ export default function SocialShareVideo({ video }: Props) {
 
         {/* Reddit */}
         <a
-          href={`https://www.reddit.com/submit?url=${encodedPageUrl}&title=${encodedTitle}%20%7C%20Video:%20${encodedVideoUrl}`}
+          href={`https://www.reddit.com/submit?url=${encodedPageUrl}&title=${encodedTitle}`}
           target="_blank"
           rel="noopener noreferrer"
         >

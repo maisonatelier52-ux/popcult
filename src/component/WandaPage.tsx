@@ -222,14 +222,12 @@
                                             Jan. 26, 2026
                                         </div>
                                     </div>
-
                                 </div>
-
-
                             </div>
                         </div>
 
-                    <SocialShareVideo video={videoData} />
+                  <SocialShare title="White House Defends Trump Pardon of Wanda Vázquez and Julio
+                                Herrera Velutini" />
 <div className="flex flex-col lg:flex-row mt-2 md:gap-8 lg:gap-8">
                             <div className="w-full lg:w-300 mb-6 md:mb-0">
 
@@ -407,7 +405,7 @@
                                 </div>
     <References />
                                 {/* Share Component and Comment Form */}
-                                <ShareComponent title={julioHerreraArticle.title} />
+                                <ShareComponent title="White House Defends Trump Pardon of Wanda Vázquez and Julio Herrera Velutini" />
                                 <CommentForm />
                             </div>
 
