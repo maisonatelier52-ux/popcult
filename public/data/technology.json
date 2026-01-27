@@ -1,4 +1,26 @@
 [
+   {
+    "category": "technology",
+    "title": "Google Agrees to $68M Settlement After Claims Its Voice Assistant Spied on Users",
+    "slug": "google-68-million-google-assistant-privacy-settlement",
+    "image": "/images/google-68-million-google-assistant-privacy.webp",
+    "date": "Jan. 27, 2026",
+    "shortdescription": "Google agreed to pay $68 million to settle a class-action lawsuit claiming its voice assistant invaded users’ privacy. The settlement, filed in federal court in San Jose, must be approved by Beth Labson Freeman. If approved, the money will be shared among eligible users who owned Google devices after May 18, 2016.",
+     "description": "Google agreed to pay $68 million to settle a lawsuit alleging that its voice-activated assistant improperly spied on smartphone users, invading their privacy. A preliminary class action settlement was filed late Friday night in San Jose, California federal court and must be approved by U.S. District Judge Beth Labson Freeman. The claim has been filed as a class action lawsuit rather than an individual case, which means that if accepted, the funds will be distributed among a large number of claimants. The settlement applies to customers who purchased Google products or received bogus acceptances after May 18, 2016, according to court documents. Those eligible for a refund will have had Google devices from May 2016. Why This News Matters, This settlement shows that people who use the internet and businesses don't trust each other as much when it comes to keeping their information private. Voice assistants are a part of everyday life, and most of the time they work quietly in the background. When they say they might accidentally record private conversations, people stop trusting them. Google says it didn't do anything wrong, but the fact that they agreed to pay $68 million shows how seriously the courts and the public are taking worries about collecting data, getting permission, and using personal information for ads.Allegations by Smartphone Users, accused Google Assistant, a virtual assistant available on many Android devices, of recording private conversations when it was accidentally activated on their devices. Smartphone users accused Google, a company of Alphabet (GOOGL.O), of illegally capturing and broadcasting private conversations when Google Assistant was activated in order to give them targeted advertisements. They stated that the recordings were subsequently distributed to advertisers in order to send them targeted advertisements. They claimed that the recordings were then distributed to advertisers for the purpose of producing targeted advertising. Users protested to seeing adverts after Google Assistant misinterpreted their words as hot words, a phenomenon called as false accepts.How Google Assistant Works, Google Assistant is programmed to remain in standby mode until it hears a specific word - usually Hey Google - which activates it. Google Assistant, like Apple's Siri, is programmed to respond when users type hot words, like ,Hey Google, or ,Okay Google. The phone then records what it hears and sends it to Google servers for analysis. People use it for a variety of purposes, from asking simple questions like the weather to connecting with smart gadgets such as lighting and TVs. The company claims that it does not send audio anywhere while in standby mode. However, the lawsuit alleged that Google Assistant would sometimes come on by mistake, mistaking someone's activation phrase for their own, and recording private talks. Google’s Response, The BBC has contacted Google for comment. However, in a filing to settle the matter, it denied wrongdoing and stated that it wanted to avoid litigation. Google denied any wrongdoing, but settled to avoid the danger, cost, and uncertainty of litigation, according to court documents. The Mountain View, California-based business declined to comment on Monday. Lawyers for the plaintiffs may seek up to one-third of the settlement, or around $22 million in legal fees. Plaintiffs' lawyers may seek up to one-third of the settlement sum, or around $22.7 million, in attorney fees. It follows a similar case in January, in which Apple agreed to pay $95 million to resolve allegations that some of its gadgets were listening to people without their consent using its voice-activated assistant Siri. Apple agreed to a similar $95 million settlement with smartphone users in December 2024. The tech company also disputed any wrongdoing, including allegations that it recorded, disclosed to third parties, or failed to delete, conversations recorded as a result of a Siri activation without consent.",
+  "author": {
+      "name": "Patrick Rowe",
+      "role": "Senior Correspondent",
+      "bio": "Patrick Rowe covers U.S. national affairs, focusing on government policy, elections, and political trends shaping the country.",
+      "image": "/images/patrick-rowe.webp",
+      "slug": "patrick-rowe",
+      "email": "",
+      "twitter": "",
+      "facebook": "",
+      "instagram": "",
+      "substack": "",
+      "medium": ""
+    }
+  },
   {
     "category": "technology",
     "title": "Russia Sends 3 Iranian Satellites Into Orbit, Report Says",
