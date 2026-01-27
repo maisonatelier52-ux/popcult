@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { FiShare } from "react-icons/fi";
 import {
   FaWhatsapp,
@@ -14,7 +15,8 @@ import { SiX } from "react-icons/si";
 /* ----------------------------- */
 interface VideoData {
   title: string;
-  url: string; // direct video URL
+  url: string;
+  poster?: string;
 }
 
 interface Props {
@@ -22,10 +24,12 @@ interface Props {
 }
 
 export default function SocialShareVideo({ video }: Props) {
-  const pageUrl =
-  typeof window !== "undefined" ? window.location.href : "";
-  console.log(pageUrl,'pageUrl')
-  
+  const [pageUrl, setPageUrl] = useState("");
+
+  useEffect(() => {
+    setPageUrl(window.location.href);
+  }, []);
+
   const encodedPageUrl = encodeURIComponent(pageUrl);
   const encodedTitle = encodeURIComponent(video.title);
   const encodedVideoUrl = encodeURIComponent(video.url);
@@ -38,9 +42,10 @@ export default function SocialShareVideo({ video }: Props) {
         <span>Share</span>
       </div>
 
+      {/* Icons */}
       <div className="flex items-center gap-2 flex-wrap">
 
-        {/* WhatsApp — title + page URL + video URL */}
+        {/* WhatsApp */}
         <a
           href={`https://wa.me/?text=${encodedTitle}%0A${encodedPageUrl}%0A%0AVideo:%20${encodedVideoUrl}`}
           target="_blank"
@@ -51,9 +56,9 @@ export default function SocialShareVideo({ video }: Props) {
           </CircleIcon>
         </a>
 
-        {/* X (Twitter) — title + video URL in text, page URL for preview */}
+        {/* X */}
         <a
-          href={`https://twitter.com/intent/tweet?text=${encodedTitle}%0A${encodedVideoUrl}&url=${encodedPageUrl}`}
+          href={`https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedPageUrl}`}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -62,7 +67,7 @@ export default function SocialShareVideo({ video }: Props) {
           </CircleIcon>
         </a>
 
-        {/* Facebook — page URL only (OG video preview) */}
+        {/* Facebook */}
         <a
           href={`https://www.facebook.com/sharer/sharer.php?u=${encodedPageUrl}`}
           target="_blank"
@@ -73,7 +78,8 @@ export default function SocialShareVideo({ video }: Props) {
           </CircleIcon>
         </a>
 
-        {/* LinkedIn — page URL only (OG video preview) */}
+
+        {/* LinkedIn */}
         <a
           href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodedPageUrl}`}
           target="_blank"
@@ -84,7 +90,7 @@ export default function SocialShareVideo({ video }: Props) {
           </CircleIcon>
         </a>
 
-        {/* Reddit — title + page URL */}
+        {/* Reddit */}
         <a
           href={`https://www.reddit.com/submit?url=${encodedPageUrl}&title=${encodedTitle}`}
           target="_blank"
