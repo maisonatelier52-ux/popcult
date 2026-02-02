@@ -64,12 +64,12 @@ export default function FAQ() {
             />
 
 
-            <h2 className="text-[18px] font-bold text-gray-900 mb-6 leading-tight  border-b pb-2">
-                Frequently Asked Questions
-                <span className="text-blue-600 text-sm block font-medium">US Consumer Trends 2026</span>
+            <h2 className="text-[18px] font-bold text-gray-900 mb-4 leading-tight  border-b pb-2">
+         Most Purchased Consumer Products in the US in 2026
+                {/* <span className=" text-[12px] text-gray-600 block font-normal mt-1">A look at the most purchased consumer products in the United States in 2026.</span> */}
             </h2>
 
-            <div className="space-y-8">
+            <div className="space-y-4">
                 {faqData.map((item, index) => (
                     <div key={index} className="block">
                         <h3 className="text-[15px] font-bold  text-gray-800 leading-tight mb-2">
