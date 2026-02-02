@@ -271,8 +271,8 @@ export default async function DetailPage({ params }: DetailPageProps) {
     return (
       <WandaPage />
     )
-    }
-  
+  }
+
 
   return (
     <main>
@@ -297,7 +297,7 @@ export default async function DetailPage({ params }: DetailPageProps) {
                 ? article.image
                 : `https://www.prpromotionhub.com${article.image}`,
               "width": 1200,
-              "height": 630
+              "height": 630 
             },
 
             "author": {

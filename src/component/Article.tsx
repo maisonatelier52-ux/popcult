@@ -8,6 +8,7 @@ import CommentForm from './CommentForm';
 import ArticleCard from './ArticleCard';
 import prnewsData from '../../public/data/prnews.json';
 import UpgradePromoCard from './UpgradePromoCard';
+import FAQ from './FAQ';
 
 interface Author {
     name: string;
@@ -71,7 +72,7 @@ export default function Article({ article }: Props) {
                 {/* Right Sidebar (Article Cards) */}
                 <div className="w-full lg:w-1/3 lg:pl-8 lg:border-l-2 lg:border-dotted lg:border-gray-200">
                     <ArticleCard data={[prnewsData[0], prnewsData[1], prnewsData[2], prnewsData[3]]} />
-
+<FAQ/>
                     <div className="py-5">
                         <UpgradePromoCard />
                     </div>
