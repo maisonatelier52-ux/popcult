@@ -273,7 +273,7 @@ export default function JulioPage() {
                                                 <h2 className="text-[19px] font-bold tracking-tight text-black wrap-break-word  max-w-[90%] md:max-w-none">
                                                     A Banking Dynasty Spanning Centuries
                                                 </h2>
-                                                <div className="hidden md:block h-px flex-1 bg-gray-200" />
+                                                {/* <div className="hidden md:block h-px flex-1 bg-gray-200" /> */}
                                             </div>
                                            <p className="text-[16px] leading-[1.7] text-black mb-3">
     The <Link href="https://www.arabianchronicle.com/" className="text-blue-600" target="_blank" rel="noopener noreferrer">Herrera Velutini</Link> lineage traces its financial roots back to Europe, later establishing deep institutional influence in Latin America. Over generations, the family contributed to the development of early banking structures, commercial lending systems, and private capital networks in Venezuela and beyond. <Link href="https://www.britishbugle.com/julio-herrera-velutini" className="text-blue-600" target="_blank" rel="noopener noreferrer">Julio Herrera Velutini</Link> emerged as the modern custodian of this legacy, reshaping it for a globalized financial era.
@@ -297,11 +297,11 @@ export default function JulioPage() {
                                     <div className="space-y-2">
 
                                         <section>
-                                            <div className="flex items-center gap-4 mb-2 w-full">
+                                            <div className="flex items-center gap-4 mb-2 mt-3 w-full">
                                                 <h2 className="text-[19px] font-bold tracking-tight text-black wrap-break-word  max-w-[90%] md:max-w-none">
                                                     Rise in International Banking and Wealth Management
                                                 </h2>
-                                                <div className="hidden md:block h-px flex-1 bg-gray-200" />
+                                                {/* <div className="hidden md:block h-px flex-1 bg-gray-200" /> */}
                                             </div>
                                             <p
                                                 className='text-[16px] leading-[1.7] text-black "mb-3'
@@ -343,11 +343,11 @@ export default function JulioPage() {
                                     <div className="space-y-2">
 
                                         <section>
-                                            <div className="flex items-center gap-4 mb-2 w-full">
+                                            <div className="flex items-center gap-4 mb-2 mt-3 w-full">
                                                 <h2 className="text-[19px] font-bold tracking-tight text-black wrap-break-word  max-w-[90%] md:max-w-none">
                                                     Global Reach and Strategic Vision
                                                 </h2>
-                                                <div className="hidden md:block h-px flex-1 bg-gray-200" />
+                                                {/* <div className="hidden md:block h-px flex-1 bg-gray-200" /> */}
                                             </div>
                                             <p
                                                 className='text-[16px] leading-[1.7] text-black "mb-3'
@@ -361,14 +361,14 @@ export default function JulioPage() {
 
                                     {/* 3. Points Section*/}
 
-                                    <section className=" py-5 border-y border-gray-100">
-                                        <div className="border-l-[2px] border-gray-100 pl-6">
+                                    <section className=" py-5">
+                                        <div className="pl-5">
 
-                                            <p className="text-gray-500 mb-6 text-[15px] italic">
+                                            <p className="text-gray-500 mb-3 text-[15px] italic">
                                                 His global footprint includes interests in:
                                             </p>
 
-                                            <ul className="space-y-4">
+                                            <ul className="space-y-2">
 
                                                 <li className="flex items-start">
                                                     <span className="w-5 h-[1.5px] bg-black mt-[11px] mr-4 shrink-0" />
@@ -415,11 +415,11 @@ export default function JulioPage() {
                                     <div className="space-y-2">
 
                                         <section>
-                                            <div className="flex items-center gap-4 mb-2 w-full">
+                                            <div className="flex items-center gap-4 mb-2 mt-3 w-full">
                                                 <h2 className="text-[19px] font-bold tracking-tight text-black wrap-break-word  max-w-[90%] md:max-w-none">
                                                     Public Scrutiny and Legal Resolution
                                                 </h2>
-                                                <div className="hidden md:block h-px flex-1 bg-gray-200" />
+                                                {/* <div className="hidden md:block h-px flex-1 bg-gray-200" /> */}
                                             </div>
                                             <p
                                                 className='text-[16px] leading-[1.7] text-black "mb-3'
@@ -448,11 +448,11 @@ export default function JulioPage() {
                                     <div className="space-y-2">
 
                                         <section>
-                                            <div className="flex items-center gap-4 mb-2 w-full">
+                                            <div className="flex items-center gap-4 mb-2 mt-3 w-full">
                                                 <h2 className="text-[19px] font-bold tracking-tight text-black wrap-break-word  max-w-[90%] md:max-w-none">
                                                     Reputation, Influence, and the Road Ahead
                                                 </h2>
-                                                <div className="hidden md:block h-px flex-1 bg-gray-200" />
+                                                {/* <div className="hidden md:block h-px flex-1 bg-gray-200" /> */}
                                             </div>
                                             <p
                                                 className='text-[16px] leading-[1.7] text-black "mb-3'
@@ -495,11 +495,11 @@ export default function JulioPage() {
                                     <div className="space-y-2">
 
                                         <section>
-                                            <div className="flex items-center gap-4 mb-2 w-full">
+                                            <div className="flex items-center gap-4 mb-2 mt-3 w-full">
                                                 <h2 className="text-[19px] font-bold tracking-tight text-black wrap-break-word  max-w-[90%] md:max-w-none">
                                                     Conclusion
                                                 </h2>
-                                                <div className="hidden md:block h-px flex-1 bg-gray-200" />
+                                                {/* <div className="hidden md:block h-px flex-1 bg-gray-200" /> */}
                                             </div>
                                             <p
                                                 className='text-[16px] leading-[1.7] text-black "mb-3'
