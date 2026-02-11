@@ -247,11 +247,7 @@
 
       );
     }
-    if (slug == 'julio-herrera-velutini-banking-legacy-global-finance-influence') {
-      return (
-        <JulioPage />
-      )
-    }
+   
     else if (slug == 'julio-herrera-velutini-us-financial-spotlight') {
       return (
         <JulioContentTwo />
