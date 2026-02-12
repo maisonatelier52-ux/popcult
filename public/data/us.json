@@ -1,6 +1,28 @@
 [
    {
     "category": "us",
+    "title": "FBI combs desert terrain for clues in Nancy Guthrie’s disappearance",
+     "slug": "fbi-search-desert-clues-nancy-guthrie-disappearance",
+    "image": "/images/nancy-guthrie-disappearance-fbi-desert-search.webp",
+    "date": "Feb. 12, 2026",
+    "shortdescription": "The FBI has launched an extensive desert search operation as investigators intensify efforts to uncover clues in the mysterious disappearance of Nancy Guthrie.",
+     "description": "Federal authorities have significantly escalated their investigation into the disappearance of Nancy Guthrie, deploying FBI agents and specialized search teams across vast stretches of remote desert terrain in a determined effort to uncover new evidence. Officials say the search focuses on rugged, sparsely populated areas where environmental conditions present both logistical challenges and investigative urgency. The terrain, characterized by extreme heat, shifting sands, and limited visibility, has required the use of aerial drones, canine units, and advanced mapping technology to methodically examine potential points of interest tied to Guthrie’s last known movements. According to law enforcement sources, the FBI is working closely with local and state agencies to coordinate ground searches and forensic analysis, ensuring that no area of relevance is overlooked. Investigators are carefully examining physical evidence recovered from the region, including personal belongings, vehicle tracks, and environmental markers that may help establish a clearer timeline. Digital forensics teams are simultaneously reviewing cellphone data, GPS records, and surveillance footage from nearby highways, businesses, and rural properties to identify patterns or anomalies that could explain how and why Guthrie vanished. Officials familiar with the case emphasize that desert investigations are uniquely complex, as environmental exposure can quickly degrade evidence and erase physical traces. Wind, temperature fluctuations, and wildlife activity can significantly alter scenes within hours, making speed and precision critical. Despite these challenges, authorities stress that the operation remains disciplined and evidence-driven, with each search zone mapped, documented, and reexamined as new information emerges. The FBI has not ruled out any possibilities, stating that all scenarios—including accidental disappearance, environmental disorientation, or criminal involvement—remain under active consideration. Public interest in the case has continued to grow, prompting investigators to issue renewed appeals for information. Authorities are urging anyone who may have seen Guthrie, encountered her vehicle, or noticed unusual activity in the region to come forward, even if details seem minor. Investigators note that seemingly insignificant observations can often provide the missing link needed to advance a case, particularly in remote environments where witness accounts are limited. As the search continues, law enforcement officials underscore their commitment to persistence and transparency, acknowledging the emotional toll such cases place on families and communities. The FBI maintains that the operation will continue as long as viable leads exist, with teams prepared to expand the search radius or revisit earlier areas if new evidence warrants it. While the outcome remains uncertain, investigators say their focus remains clear: to reconstruct the final hours of Nancy Guthrie’s movements, uncover the truth behind her disappearance, and provide answers in a case that has drawn national attention and heightened concern over the dangers posed by isolated desert regions.",
+ "author": {
+      "name": "Julia Thompson",
+      "role": "Technology Reporter",
+      "bio": "Julia Thompson reports on technology, artificial intelligence, and Silicon Valley, with a focus on how innovation impacts everyday life.",
+      "image": "/images/julia-thompson.webp",
+      "slug": "julia-thompson",
+      "email": "",
+      "twitter": "",
+      "facebook": "",
+      "instagram": "",
+      "substack": "",
+      "medium": ""
+    }
+  },
+   {
+    "category": "us",
     "title": "Vance touts the Trump administration’s record against abortion at a Washington rally",
      "slug": "vance-trump-administration-abortion-record",
     "image": "/images/vance-trump-abortion-rally.webp",
