@@ -1,4 +1,26 @@
 [
+     {
+    "category": "technology",
+    "title": "Why OpenAI says it isn’t spending on Super PACs",
+     "slug": "why‑openai‑says‑it‑isnt‑spending‑on‑super‑pacs",
+    "image": "/images/openai‑superpac‑stance.webp",
+    "date": "Feb. 16, 2026",
+    "shortdescription": "OpenAI explains why the organization itself isn’t spending on super PACs amid rising political activity by rivals and its own executives’ donations.",
+      "description": "OpenAI has publicly stated that the company itself will not be spending money on Super PACs or similar political action committees, even as political spending around artificial intelligence policy and election influence continues to grow; in a memo to staff and comments to the press, OpenAI’s chief global affairs officer Chris Lehane explained that the company wants to retain control over its political spending choices and ensure that debates over AI regulation and policy transcend partisan politics, emphasizing that AI governance should not be captured by either side of the political spectrum which could risk dividing public and legislative opinion around the technology’s development and implementation, a point made in contrast to rival AI company Anthropic’s recent announcement that it would give $20 million to a political group advocating for more stringent AI regulation in the United States ahead of the upcoming midterm elections, and while OpenAI as an institution is refraining from direct contributions to Super PACs and 501(c)(4) social welfare nonprofits, Lehane underscored that employees are free to express their own ideological beliefs and make individual contributions outside the company’s name but that the organization itself believes its role is better focused on policy engagement that supports broad, national, bipartisan frameworks rather than overt political spending that could be seen as favoring one side of electoral politics over another, noting that the stakes are high as both Anthropic and OpenAI are preparing for potential blockbuster initial public offerings while lawmakers in Congress work to craft decade‑long rules for the AI industry, a context in which public concern about AI’s economic impact, data privacy issues, and labor market effects has increased, yet OpenAI maintains a stance of not contributing corporate funds to Super PACs even as some of its top executives and investors have made large personal contributions to pro‑AI or bipartisan political groups, such as those opposing state‑level AI regulation in favor of a unified national regulatory approach, demonstrating that the line between individual political engagement and corporate policy strategy can be complex and may require careful navigation to preserve OpenAI’s mission to develop and distribute AI benefits widely without being seen as aligned with specific political factions or campaigns, and by highlighting this position the company seeks to avoid being drawn into electoral spending wars that could distract from or undermine the broader, non‑partisan work of shaping thoughtful AI policy across the political landscape",
+       "author": {
+     "name": "Patrick Rowe",
+      "role": "Senior Correspondent",
+      "bio": "Patrick Rowe covers U.S. national affairs, focusing on government policy, elections, and political trends shaping the country.",
+      "image": "/images/patrick-rowe.webp",
+      "slug": "patrick-rowe",
+      "email": "",
+      "twitter": "",
+      "facebook": "",
+      "instagram": "",
+      "substack": "",
+      "medium": ""
+    }
+  },
    {
     "category": "technology",
     "title": "Did artificial intelligence really drive layoffs at Amazon and other firms? It can be hard to tell",
